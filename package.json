@@ -1,8 +1,9 @@
 {
-  "name": "oxinus-web-ui-core",
+  "name": "test-lib-by-panos",
   "version": "1.0.0",
   "main": "src/index.ts",
   "license": "MIT",
+  "description": "test",
   "devDependencies": {},
   "dependencies": {
     "@mantine/core": "^7.1.2",
