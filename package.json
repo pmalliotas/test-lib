@@ -1,29 +1,29 @@
 {
   "name": "test-lib-by-panos",
   "version": "1.0.6",
-  "main": "dist/index.js",
-  "module": "dist/index.es.js",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/index.d.ts",
   "license": "MIT",
   "description": "test",
   "scripts": {
-    "build": "rollup -c",
-    "watch": "rollup -cw"
+    "build": "rollup -c --bundleConfigAsCjs"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^25.0.5",
     "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-typescript": "^11.1.5",
     "rollup": "^4.0.2",
+    "rollup-plugin-dts": "^6.1.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
-    "rollup-plugin-typescript2": "^0.36.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "tslib": "^2.6.2",
     "typescript": "^5.2.2"
   },
   "dependencies": {
     "@mantine/core": "^7.1.2",
     "@mantine/dates": "^7.1.2",
     "@mantine/hooks": "^7.1.2",
-    "@mantine/notifications": "^7.1.2"
-  },
-  "peerDependencies": {
     "@types/react": ">=18.2.27",
     "autoprefixer": ">=10.4.16",
     "dayjs": ">=1.11.10",
@@ -35,12 +35,12 @@
     "typescript": ">=5.2.2",
     "zod": ">=3.22.4"
   },
+  "peerDependencies": {},
   "files": [
     "./base.tsconfig.json",
     "./tailwind.config.js",
     "./postcss.config.js",
     "./src/styles/styles.css",
     "dist"
-  ],
-  "types": "dist/index.d.ts"
+  ]
 }
