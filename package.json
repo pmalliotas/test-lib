@@ -1,0 +1,32 @@
+{
+  "name": "oxinus-web-ui-core",
+  "version": "1.0.0",
+  "main": "src/index.ts",
+  "license": "MIT",
+  "devDependencies": {},
+  "dependencies": {
+    "@mantine/core": "^7.1.2",
+    "@mantine/dates": "^7.1.2",
+    "@mantine/hooks": "^7.1.2",
+    "@mantine/notifications": "^7.1.2"
+  },
+  "peerDependencies": {
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.3.3",
+    "typescript": "^5.2.2",
+    "@tailwindcss/line-clamp": "^0.4.4",
+    "@types/react": "^18.2.27",
+    "dayjs": "^1.11.10",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.47.0",
+    "zod": "^3.22.4"
+  },
+  "files": [
+    "./tsconfig.json",
+    "./tailwindcss.config.js",
+    "./postcss.config.js",
+    "./src/styles/styles.css"
+  ]
+}
