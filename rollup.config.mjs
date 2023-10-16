@@ -45,9 +45,10 @@ const outputs = Object.keys(inputs).map(name => ({
       include: ['src/**/*']
     }),
     alias({
-      entries: [
-        { find: name, replacement: `./dist/${name}/index.js` },
-      ]
+      entries: {
+        [`@test-lib-by-panos/${name}`]: `./dist/${name}/index.js`
+      },
+
     })
   ],
   external: [...Object.keys(packageJson.peerDependencies)],
