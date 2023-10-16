@@ -1,21 +1,12 @@
-// rollup.config.js
 import commonjs from '@rollup/plugin-commonjs';
 import resolve from '@rollup/plugin-node-resolve';
 import typescript from '@rollup/plugin-typescript';
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 import { terser } from 'rollup-plugin-terser';
-import postcss from 'rollup-plugin-postcss';
-import livereload from 'rollup-plugin-livereload';
-import serve from 'rollup-plugin-serve';
 import image from '@rollup/plugin-image';
 import json from '@rollup/plugin-json';
-import replace from '@rollup/plugin-replace';
-import del from 'rollup-plugin-delete';
 
 import packageJson from "./package.json" assert { type: "json"}
-
-// Check if we're in development mode
-const isDev = process.env.NODE_ENV !== 'production';
 
 const inputs = {
   core: 'src/core/index.ts',
@@ -26,17 +17,13 @@ const inputs = {
 
 const outputs = Object.keys(inputs).map(name => ({
   input: inputs[name],
-  output: [
-    {
-      dir: `dist/${name}`,
-      format: 'esm',
-      sourcemap: true, // sourcemaps should be output as separate files
-      // entryFileNames:"[name].js"
-    },
-  ],
+  output: {
+    dir: `dist/${name}`,
+    format: 'esm',
+    sourcemap: true,
+  },
   // Apply plugins
   plugins: [
-
     peerDepsExternal(),
     resolve(),
     commonjs(),
@@ -44,21 +31,13 @@ const outputs = Object.keys(inputs).map(name => ({
     image(),
 
     typescript({
-      declarationDir: `./dist/${name}/`,
-      declaration: true,  // Ensure this is true for producing type definitions
-      outDir: `./dist/${name}/`,
-      rootDir: 'src/',
+      declaration: true,
+      declarationDir: `dist/${name}`,
+      // rootDir: 'src',
+      outDir: `dist/${name}`,
+      include: [`src/${name}/**/*`],
     }),
-
-    // Handle .css, .scss, .less files
-    // postcss({
-    //   extract: false,
-    //   modules: true,
-    //   use: ['sass'],
-    // }),
-
     terser(),
-
   ],
   external: [...Object.keys(packageJson.peerDependencies)],
 }))

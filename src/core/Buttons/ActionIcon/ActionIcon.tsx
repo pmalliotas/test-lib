@@ -2,7 +2,7 @@ import { ActionIcon as MantineActionIcon, createPolymorphicComponent } from "@ma
 import { type ActionIconProps as MantineActionIconProps } from "@mantine/core"
 import { forwardRef } from "react"
 
-export type ActionIconProps = MantineActionIconProps
+export type ActionIconProps = MantineActionIconProps & {}
 
 export const ActionIcon = createPolymorphicComponent<"button", ActionIconProps>(forwardRef<HTMLButtonElement, ActionIconProps>((props, ref) => {
     return (
