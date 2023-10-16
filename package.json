@@ -1,6 +1,6 @@
 {
   "name": "test-lib-by-panos",
-  "version": "1.9.38",
+  "version": "1.9.39",
   "license": "MIT",
   "description": "test",
   "type": "module",
@@ -66,6 +66,5 @@
     "./forms": "./dist/forms/index.js",
     "./dates": "./dist/dates/index.js",
     "./hooks": "./dist/hooks/index.js"
-    
   }
 }
