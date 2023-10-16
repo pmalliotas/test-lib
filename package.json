@@ -44,6 +44,10 @@
     "dist"
   ],
   "exports": {
+    ".": {
+      "import": "./dist/index/index.js",
+      "require": "./dist/index/index.js"
+    },
     "./core": {
       "import": "./dist/core/index.js",
       "require": "./dist/core/index.js"
