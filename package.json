@@ -1,8 +1,7 @@
 {
   "name": "test-lib-by-panos",
   "version": "1.9.18",
-  "main": "dist/my-library.cjs.js",
-  "module": "dist/my-library.esm.js",
+  "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "license": "MIT",
   "description": "test",
