@@ -12,14 +12,24 @@ import json from '@rollup/plugin-json';
 import replace from '@rollup/plugin-replace';
 import del from 'rollup-plugin-delete';
 
+import packageJson from "./package.json" assert { type: "json"}
+
 // Check if we're in development mode
 const isDev = process.env.NODE_ENV !== 'production';
 
-export default {
-  input: 'src/index.ts', // our source file
+const inputs = {
+  index: 'src/index.ts',
+  core: 'src/core/index.ts',
+  dates: 'src/dates/index.ts',
+  forms: 'src/forms/index.ts',
+  hooks: 'src/hooks/index.ts',
+};
+
+const outputs = Object.keys(inputs).map(name => ({
+  input: `src/${name}`, // our source file
   output: [
     {
-      dir: 'dist', // the directory for output files
+      dir: `dist/${name}`, // the directory for output files
       format: 'esm', // suitable format for tree-shaking
       sourcemap: true, // sourcemaps should be output as separate files
     },
@@ -81,5 +91,7 @@ export default {
       : []),
   ],
   // Specify here external modules which you don't want to include in your bundle (for instance: 'lodash', 'moment', etc.)
-  external: [/* 'react', 'react-dom' */],
-};
+  external: [...Object.keys(packageJson.peerDependencies)],
+}))
+
+export default outputs;

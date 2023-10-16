@@ -1,4 +1,4 @@
-export * from "./components/core"
-export * from "./components/dates"
-export * from "./components/forms"
+export * from "./core"
+export * from "./dates"
+export * from "./forms"
 export * from "@mantine/hooks"

@@ -25,6 +25,7 @@
     "rollup-plugin-serve": "^2.0.2",
     "rollup-plugin-terser": "^7.0.2",
     "tslib": "^2.6.2",
+    "postcss": ">=8.4.31",
     "typescript": "^5.2.2"
   },
   "dependencies": {
@@ -36,7 +37,6 @@
     "@types/react": ">=18.2.27",
     "autoprefixer": ">=10.4.16",
     "dayjs": ">=1.11.10",
-    "postcss": ">=8.4.31",
     "react": ">=18.2.0",
     "react-dom": ">=18.2.0",
     "react-hook-form": ">=7.47.0",
@@ -46,5 +46,22 @@
   },
   "files": [
     "dist"
-  ]
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.js"
+    },
+    "./core": {
+      "import": "./dist/core/index.js"
+    },
+    "./forms": {
+      "import": "./dist/forms/index.js"
+    },
+    "./dates": {
+      "import": "./dist/dates/index.js"
+    },
+    "./hooks": {
+      "import": "./dist/hooks/index.js"
+    }
+  }
 }
