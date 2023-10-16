@@ -21,7 +21,7 @@ const outputs = Object.keys(inputs).map(name => ({
   input: inputs[name],
   output: {
     dir: `dist/${name}`,
-    format: 'esm',
+    format: 'es',
     sourcemap: true,
   },
   plugins: [
