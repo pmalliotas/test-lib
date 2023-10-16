@@ -2,7 +2,7 @@ import { type UseControllerProps, useController, type FieldValues } from "react-
 import {
   JsonInput as $JsonInput,
   type JsonInputProps as $JsonInputProps,
-} from "../../core/Inputs/JsonInput/JsonInput"
+} from "src/core/Inputs/JsonInput/JsonInput"
 
 export type JsonInputFormProps<T extends FieldValues> = UseControllerProps<T> & Omit<$JsonInputProps, "value" | "defaultValue">
 

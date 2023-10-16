@@ -2,7 +2,7 @@ import { type UseControllerProps, useController, type FieldValues } from "react-
 import {
   Slider as $Slider,
   type SliderProps as $SliderProps,
-} from "../../core"
+} from "src/core"
 
 export type SliderFormProps<T extends FieldValues> = UseControllerProps<T> & Omit<$SliderProps, "value" | "defaultValue">
 

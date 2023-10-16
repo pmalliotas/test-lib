@@ -2,7 +2,7 @@ import { type UseControllerProps, useController, type FieldValues } from "react-
 import {
   Textarea as $Textarea,
   type TextareaProps as $TextareaProps,
-} from "../../core"
+} from "src/core"
 
 export type TextareaFormProps<T extends FieldValues> = UseControllerProps<T> & Omit<$TextareaProps, "value" | "defaultValue">
 

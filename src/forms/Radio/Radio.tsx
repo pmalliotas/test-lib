@@ -1,5 +1,5 @@
 import { type UseControllerProps, useController, type FieldValues } from "react-hook-form"
-import { Radio as $Radio, type RadioProps as $RadioProps } from "../../core"
+import { Radio as $Radio, type RadioProps as $RadioProps } from "src/core"
 import { RadioGroupForm } from "./RadioGroup/RadioGroup"
 
 export type RadioFormProps<T extends FieldValues> = UseControllerProps<T> &

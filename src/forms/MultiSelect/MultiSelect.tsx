@@ -2,7 +2,7 @@ import { type UseControllerProps, useController, type FieldValues } from "react-
 import {
   MultiSelect as $MultiSelect,
   type MultiSelectProps as $MultiSelectProps,
-} from "../../core/Combobox/MultiSelect/MultiSelect"
+} from "src/core/Combobox/MultiSelect/MultiSelect"
 
 export type MultiSelectFormProps<T extends FieldValues> = UseControllerProps<T> &
   Omit<$MultiSelectProps, "value" | "defaultValue">

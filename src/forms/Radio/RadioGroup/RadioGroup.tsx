@@ -2,7 +2,7 @@ import { type UseControllerProps, useController, type FieldValues } from "react-
 import {
   RadioGroup as $RadioGroup,
   type RadioGroupProps as $RadioGroupProps,
-} from "../../../core"
+} from "src/core"
 
 export type RadioGroupFormProps<T extends FieldValues> = UseControllerProps<T> &
   Omit<$RadioGroupProps, "value" | "defaultValue">

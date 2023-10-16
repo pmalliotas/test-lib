@@ -2,7 +2,7 @@ import { type UseControllerProps, useController, type FieldValues } from "react-
 import {
   Switch as $Switch,
   type SwitchProps as $SwitchProps,
-} from "../../core"
+} from "src/core"
 import { SwitchGroupForm } from "./SwitchGroup/SwitchGroup"
 
 export type SwitchFormProps<T extends FieldValues> = UseControllerProps<T> & Omit<$SwitchProps, "value" | "checked" | "defaultValue">

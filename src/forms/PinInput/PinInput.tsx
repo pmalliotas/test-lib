@@ -2,7 +2,7 @@ import { type UseControllerProps, useController, type FieldValues } from "react-
 import {
   PinInput as $PinInput,
   type PinInputProps as $PinInputProps,
-} from "../../core"
+} from "src/core"
 
 export type PinInputFormProps<T extends FieldValues> = UseControllerProps<T> & Omit<$PinInputProps, "value" | "defaultValue">
 

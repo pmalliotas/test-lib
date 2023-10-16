@@ -1,6 +1,6 @@
 import { type UseControllerProps, useController, type FieldValues } from "react-hook-form"
-import { ColorPicker as $ColorPicker } from "../../core"
-import { type ColorPickerProps as $ColorPickerProps } from "../../core"
+import { ColorPicker as $ColorPicker } from "src/core"
+import { type ColorPickerProps as $ColorPickerProps } from "src/core"
 
 export type ColorPickerFormProps<T extends FieldValues> = UseControllerProps<T> & Omit<$ColorPickerProps, "value" | "defaultValue">
 

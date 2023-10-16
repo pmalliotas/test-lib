@@ -2,7 +2,7 @@ import { type UseControllerProps, useController, type FieldValues } from "react-
 import {
   PasswordInput as $PasswordInput,
   type PasswordInputProps as $PasswordInputProps,
-} from "../../core"
+} from "src/core"
 
 export type PasswordInputFormProps<T extends FieldValues> = UseControllerProps<T> & Omit<$PasswordInputProps, "value" | "defaultValue">
 

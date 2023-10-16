@@ -1,5 +1,5 @@
 import { type FieldValues, useController, type UseControllerProps } from "react-hook-form"
-import { DateInput as $DateInput, type DateInputProps as $DateInputProps } from "../../dates"
+import { DateInput as $DateInput, type DateInputProps as $DateInputProps } from "src/dates"
 
 export type DateInputFormProps<T extends FieldValues> = UseControllerProps<T> & Omit<$DateInputProps, "value" | "defaultValue">
 

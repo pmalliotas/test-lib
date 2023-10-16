@@ -2,7 +2,7 @@ import { type UseControllerProps, useController, type FieldValues } from "react-
 import {
   NumberInput as $NumberInput,
   type NumberInputProps as $NumberInputProps,
-} from "../../core"
+} from "src/core"
 
 export type NumberInputFormProps<T extends FieldValues> = UseControllerProps<T> & Omit<$NumberInputProps, "value" | "defaultValue">
 

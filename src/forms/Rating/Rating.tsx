@@ -2,7 +2,7 @@ import { type UseControllerProps, useController, type FieldValues } from "react-
 import {
   Rating as $Rating,
   type RatingProps as $RatingProps,
-} from "../../core"
+} from "src/core"
 
 export type RatingFormProps<T extends FieldValues> = UseControllerProps<T> & Omit<$RatingProps, "value" | "defaultValue">
 
