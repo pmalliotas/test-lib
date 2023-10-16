@@ -44,8 +44,10 @@ const outputs = Object.keys(inputs).map(name => ({
     image(),
 
     typescript({
-      tsconfig: "./tsconfig.json",
-      declarationDir: `dist/${name}`
+      declarationDir: `./dist/${name}/`,
+      declaration: true,  // Ensure this is true for producing type definitions
+      outDir: `./dist/${name}/`,
+      rootDir: 'src/',
     }),
 
     // Handle .css, .scss, .less files
