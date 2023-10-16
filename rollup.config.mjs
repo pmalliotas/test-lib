@@ -18,7 +18,6 @@ import packageJson from "./package.json" assert { type: "json"}
 const isDev = process.env.NODE_ENV !== 'production';
 
 const inputs = {
-  index: 'src/index.ts',
   core: 'src/core/index.ts',
   dates: 'src/dates/index.ts',
   forms: 'src/forms/index.ts',
