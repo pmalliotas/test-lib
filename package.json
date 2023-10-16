@@ -1,6 +1,6 @@
 {
   "name": "test-lib-by-panos",
-  "version": "1.9.10",
+  "version": "1.9.11",
   "types": "dist/index.d.ts",
   "license": "MIT",
   "description": "test",
