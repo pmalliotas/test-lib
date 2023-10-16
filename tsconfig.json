@@ -4,7 +4,7 @@
     "strict": true,
     "skipLibCheck": true,
     "jsx": "react-jsx",
-    "module": "ESNext",
+    "module": "ES2015",
     "declaration": true,
     "declarationDir": "types",
     "sourceMap": true,

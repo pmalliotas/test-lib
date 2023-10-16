@@ -15,11 +15,10 @@ export default [
       hooks: "src/hooks/index.ts",
       index: "src/index.ts"
     },
-    output:
-    {
-      dir: "dist",
-      format: "es",
-      sourcemap: true,
+    output: {
+      format: 'es',
+      dir: 'dist',
+      entryFileNames: '[name]/index.js',
     },
     plugins: [
       peerDepsExternal(),
@@ -28,13 +27,13 @@ export default [
       typescript({ tsconfig: "./tsconfig.json", declarationDir: "dist" }),
       terser(),
       babel({
-      exclude: 'node_modules/**', // Exclude node_modules
-      babelHelpers: 'runtime',
-      presets: [
-        ['@babel/preset-env', { targets: 'last 2 versions, > 1%' }],
-        '@babel/preset-react',
-      ],
-      plugins: ['@babel/plugin-transform-runtime'],
+        exclude: 'node_modules/**', // Exclude node_modules
+        babelHelpers: 'runtime',
+        presets: [
+          ['@babel/preset-env', { targets: 'last 2 versions, > 1%' }],
+          '@babel/preset-react',
+        ],
+        plugins: ['@babel/plugin-transform-runtime'],
       }),
     ],
     external: [
