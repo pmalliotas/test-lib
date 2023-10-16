@@ -1,26 +1,35 @@
 {
   "name": "test-lib-by-panos",
   "version": "1.9.17",
-  "main": "dist/cjs/index.js",
-  "module": "dist/esm/index.js",
+  "main": "dist/my-library.cjs.js",
+  "module": "dist/my-library.esm.js",
   "types": "dist/index.d.ts",
   "license": "MIT",
   "description": "test",
   "scripts": {
-    "build": "rm -rf dist && rollup -c --bundleConfigAsCjs"
+    "build": "rollup -c",
+    "start": "rollup -c --watch"
   },
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^25.0.5",
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-image": "^3.0.3",
+    "@rollup/plugin-json": "^6.0.1",
     "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-replace": "^5.0.4",
     "@rollup/plugin-typescript": "^11.1.5",
     "rollup": "^4.0.2",
+    "rollup-plugin-delete": "^2.0.0",
     "rollup-plugin-dts": "^6.1.0",
+    "rollup-plugin-livereload": "^2.0.5",
     "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-serve": "^2.0.2",
     "rollup-plugin-terser": "^7.0.2",
     "tslib": "^2.6.2",
     "typescript": "^5.2.2"
   },
-  "dependencies": {
+  "dependencies": {},
+  "peerDependencies": {
     "@mantine/core": "^7.1.2",
     "@mantine/dates": "^7.1.2",
     "@mantine/hooks": "^7.1.2",
@@ -35,7 +44,6 @@
     "typescript": "^5.2.2",
     "zod": ">=3.22.4"
   },
-  "peerDependencies": {},
   "files": [
     "dist"
   ]
