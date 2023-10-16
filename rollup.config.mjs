@@ -11,7 +11,6 @@ import alias from "@rollup/plugin-alias"
 import packageJson from "./package.json" assert { type: "json"}
 
 const inputs = {
-  ".": "src/index.ts",
   core: 'src/core/index.ts',
   dates: 'src/dates/index.ts',
   forms: 'src/forms/index.ts',
