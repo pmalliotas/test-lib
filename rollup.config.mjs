@@ -12,8 +12,7 @@ export default [
       core: "src/components/core/index.ts",
       dates: "src/components/dates/index.ts",
       forms: "src/components/forms/index.ts",
-      hooks: "src/hooks/index.ts",
-      index: "src/index.ts"
+      hooks: "src/hooks/index.ts"
     },
     output: {
       format: 'es',
