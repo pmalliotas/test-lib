@@ -9,14 +9,14 @@ import babel from "rollup-plugin-babel"
 export default [
   {
     input: {
-      core: "src/components/core/index.ts",
-      dates: "src/components/dates/index.ts",
-      forms: "src/components/forms/index.ts",
+      "components/core": "src/components/core/index.ts",
+      "components/dates": "src/components/dates/index.ts",
+      "components/forms": "src/components/forms/index.ts",
       hooks: "src/hooks/index.ts",
       index: "src/index.ts"
     },
     output: {
-      format: 'es',
+      format: 'esm',
       dir: 'dist',
       entryFileNames: '[name]/index.js',
     },
@@ -28,12 +28,12 @@ export default [
       terser(),
       babel({
         exclude: 'node_modules/**', // Exclude node_modules
-        babelHelpers: 'runtime',
-        presets: [
-          ['@babel/preset-env', { targets: 'last 2 versions, > 1%' }],
-          '@babel/preset-react',
-        ],
-        plugins: ['@babel/plugin-transform-runtime'],
+        // babelHelpers: 'runtime',
+        // presets: [
+        //   ['@babel/preset-env', { targets: 'last 2 versions, > 1%' }],
+        //   '@babel/preset-react',
+        // ],
+        // plugins: ['@babel/plugin-transform-runtime'],
       }),
     ],
     external: [
