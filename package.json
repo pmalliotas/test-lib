@@ -1,6 +1,6 @@
 {
   "name": "test-lib-by-panos",
-  "version": "1.9.13",
+  "version": "1.9.14",
   "main": "dist/index/index.js",
   "module": "dist/index/index.js",
   "types": "dist/index.d.ts",
