@@ -1,9 +1,8 @@
 {
   "name": "test-lib-by-panos",
-  "version": "1.9.40",
+  "version": "1.9.41",
   "license": "MIT",
   "description": "test",
-
   "scripts": {
     "build": "rm -rf dist && rollup -c",
     "start": "rollup -c --watch"
