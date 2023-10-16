@@ -58,25 +58,9 @@
     "zod": ">=3.22.4"
   },
   "exports": {
-    "./core": {
-      "import": "./dist/core/index.js",
-      "require": "./dist/core/index.js",
-      "types": "./dist/core/index.d.ts"
-    },
-    "./forms": {
-      "import": "./dist/forms/index.js",
-      "require": "./dist/forms/index.js",
-      "types": "./dist/forms/index.d.ts"
-    },
-    "./dates": {
-      "import": "./dist/dates/index.js",
-      "require": "./dist/dates/index.js",
-      "types": "./dist/dates/index.d.ts"
-    },
-    "./hooks": {
-      "import": "./dist/hooks/index.js",
-      "require": "./dist/hooks/index.js",
-      "types": "./dist/hooks/index.d.ts"
-    }
+    "./core": "./dist/core/index.js",
+    "./forms": "./dist/forms/index.js",
+    "./dates": "./dist/dates/index.js",
+    "./hooks": "./dist/hooks/index.js"
   }
 }
