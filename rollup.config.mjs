@@ -27,15 +27,15 @@ export default [
       commonjs(),
       typescript({ tsconfig: "./tsconfig.json", declarationDir: "dist" }),
       terser(),
-      // babel({
-      // exclude: 'node_modules/**', // Exclude node_modules
-      // babelHelpers: 'runtime',
-      // presets: [
-      //   ['@babel/preset-env', { targets: 'last 2 versions, > 1%' }],
-      //   '@babel/preset-react',
-      // ],
-      // plugins: ['@babel/plugin-transform-runtime'],
-      // }),
+      babel({
+      exclude: 'node_modules/**', // Exclude node_modules
+      babelHelpers: 'runtime',
+      presets: [
+        ['@babel/preset-env', { targets: 'last 2 versions, > 1%' }],
+        '@babel/preset-react',
+      ],
+      plugins: ['@babel/plugin-transform-runtime'],
+      }),
     ],
     external: [
       "react",
