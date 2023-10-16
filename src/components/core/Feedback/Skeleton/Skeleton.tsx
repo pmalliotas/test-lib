@@ -8,3 +8,5 @@ export function Skeleton(props: SkeletonProps) {
         <MantineSkeleton {...props} />
     )
 }
+
+export default Skeleton

@@ -9,3 +9,5 @@ export function Spoiler(props: SpoilerProps) {
         <MantineSpoiler {...props} />
     )
 }
+
+export default Spoiler

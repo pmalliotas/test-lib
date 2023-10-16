@@ -9,3 +9,5 @@ export const Card = createPolymorphicComponent<"div", CardProps>(forwardRef<HTML
         <MantineCard {...props} ref={ref} />
     )
 }))
+
+export default Card

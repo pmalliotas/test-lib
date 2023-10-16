@@ -1,6 +1,8 @@
 import { FileButton as MantineFileButton } from "@mantine/core"
 import { type FileButtonProps as MantineFileButtonProps } from "@mantine/core"
 
+export type FileButtonProps = MantineFileButtonProps & {}
+
 export function FileButton(props: MantineFileButtonProps) {
 
     return (
@@ -8,4 +10,4 @@ export function FileButton(props: MantineFileButtonProps) {
     )
 }
 
-export type FileButtonProps = MantineFileButtonProps
+export default FileButton

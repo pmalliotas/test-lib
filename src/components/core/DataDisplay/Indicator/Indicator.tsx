@@ -9,3 +9,5 @@ export function Indicator(props: IndicatorProps) {
         <MantineIndicator {...props} />
     )
 }
+
+export default Indicator

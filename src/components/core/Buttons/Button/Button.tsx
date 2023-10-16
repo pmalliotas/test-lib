@@ -9,3 +9,5 @@ export const Button = createPolymorphicComponent<"button", ButtonProps>(forwardR
         <MantineButton {...props} ref={ref} />
     )
 }))
+
+export default Button

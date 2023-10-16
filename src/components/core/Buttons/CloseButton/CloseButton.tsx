@@ -9,3 +9,5 @@ export function CloseButton(props: CloseButtonProps) {
         <MantineCloseButton {...props} />
     )
 }
+
+export default CloseButton

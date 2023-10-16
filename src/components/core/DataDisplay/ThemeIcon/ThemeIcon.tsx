@@ -9,3 +9,5 @@ export function ThemeIcon(props: ThemeIconProps) {
         <MantineThemeIcon {...props} />
     )
 }
+
+export default ThemeIcon

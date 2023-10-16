@@ -9,3 +9,5 @@ export const UnstyledButton = createPolymorphicComponent<"button", UnstyledButto
         <MantineUnstyledButton {...props} ref={ref} />
     )
 }))
+
+export default UnstyledButton

@@ -9,3 +9,5 @@ export function Alert(props: AlertProps) {
         <MantineAlert {...props} />
     )
 }
+
+export default Alert

@@ -36,8 +36,8 @@ declare function CloseButton(props: CloseButtonProps): react_jsx_runtime.JSX.Ele
 type CopyButtonProps = CopyButtonProps$1 & {};
 declare function CopyButton(props: CopyButtonProps): react_jsx_runtime.JSX.Element;
 
+type FileButtonProps = FileButtonProps$1 & {};
 declare function FileButton(props: FileButtonProps$1): react_jsx_runtime.JSX.Element;
-type FileButtonProps = FileButtonProps$1;
 
 type UnstyledButtonProps = UnstyledButtonProps$1 & {};
 declare const UnstyledButton: (<C = "button">(props: _mantine_core_lib_core_factory_create_polymorphic_component.PolymorphicComponentProps<C, UnstyledButtonProps$1>) => react.ReactElement<any, string | react.JSXElementConstructor<any>>) & Omit<react.FunctionComponent<(UnstyledButtonProps$1 & {
@@ -50,26 +50,26 @@ declare const UnstyledButton: (<C = "button">(props: _mantine_core_lib_core_fact
     renderRoot?(props: Record<string, any>): any;
 })>, never> & Record<string, never>;
 
+type AutocompleteProps = AutocompleteProps$1 & {};
 declare function Autocomplete(props: AutocompleteProps$1): react_jsx_runtime.JSX.Element;
-type AutocompleteProps = AutocompleteProps$1;
 
+type ComboboxProps = ComboboxProps$1 & {};
 declare function Combobox(props: ComboboxProps$1): react_jsx_runtime.JSX.Element;
-type ComboboxProps = ComboboxProps$1;
 
+type MultiSelectProps = MultiSelectProps$1 & {};
 declare function MultiSelect(props: MultiSelectProps$1): react_jsx_runtime.JSX.Element;
-type MultiSelectProps = MultiSelectProps$1;
 
+type PillProps = PillProps$1 & {};
 declare function Pill(props: PillProps$1): react_jsx_runtime.JSX.Element;
-type PillProps = PillProps$1;
 
+type PillsInputProps = PillsInputProps$1 & {};
 declare function PillsInput(props: PillsInputProps$1): react_jsx_runtime.JSX.Element;
-type PillsInputProps = PillsInputProps$1;
 
+type SelectProps = SelectProps$1 & {};
 declare function Select(props: SelectProps$1): react_jsx_runtime.JSX.Element;
-type SelectProps = SelectProps$1;
 
+type TagsInputProps = TagsInputProps$1 & {};
 declare function TagsInput(props: TagsInputProps$1): react_jsx_runtime.JSX.Element;
-type TagsInputProps = TagsInputProps$1;
 
 type AccordionProps = AccordionProps$1 & {};
 declare function Accordion(props: AccordionProps): react_jsx_runtime.JSX.Element;
@@ -173,10 +173,10 @@ declare function RingProgress(props: RingProgressProps): react_jsx_runtime.JSX.E
 type SkeletonProps = SkeletonProps$1 & {};
 declare function Skeleton(props: SkeletonProps): react_jsx_runtime.JSX.Element;
 
+type CheckboxProps = CheckboxProps$1 & {};
+type CheckboxGroupProps = CheckboxGroupProps$1 & {};
 declare function Checkbox(props: CheckboxProps$1): react_jsx_runtime.JSX.Element;
 declare function CheckboxGroup(props: CheckboxGroupProps$1): react_jsx_runtime.JSX.Element;
-type CheckboxProps = CheckboxProps$1;
-type CheckboxGroupProps = CheckboxGroupProps$1;
 
 type ChipProps = ChipProps$1 & {};
 type ChipGroupProps<T> = ChipGroupProps$1<T extends boolean ? boolean : boolean> & {};

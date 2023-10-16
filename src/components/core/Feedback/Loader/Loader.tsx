@@ -9,3 +9,5 @@ export function Loader(props: LoaderProps) {
         <MantineLoader {...props} />
     )
 }
+
+export default Loader

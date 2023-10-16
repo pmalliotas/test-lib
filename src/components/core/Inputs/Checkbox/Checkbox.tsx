@@ -1,6 +1,10 @@
 import { Checkbox as MantineCheckbox, CheckboxGroup as MantineCheckboxGroup } from "@mantine/core"
 import { type CheckboxProps as MantineCheckboxProps, type CheckboxGroupProps as MantineCheckboxGroupProps } from "@mantine/core"
 
+export type CheckboxProps = MantineCheckboxProps & {}
+
+export type CheckboxGroupProps = MantineCheckboxGroupProps & {}
+
 export function Checkbox(props: MantineCheckboxProps) {
 
     return (
@@ -14,5 +18,4 @@ export function CheckboxGroup(props: MantineCheckboxGroupProps) {
     )
 }
 
-export type CheckboxProps = MantineCheckboxProps
-export type CheckboxGroupProps = MantineCheckboxGroupProps
+export default Checkbox

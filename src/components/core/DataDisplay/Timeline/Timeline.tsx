@@ -9,3 +9,5 @@ export function Timeline(props: TimelineProps) {
         <MantineTimeline {...props} />
     )
 }
+
+export default Timeline

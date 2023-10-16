@@ -9,3 +9,5 @@ export const Image = createPolymorphicComponent<"img", ImageProps>(forwardRef<HT
         <MantineImage {...props} ref={ref} />
     )
 }))
+
+export default Image

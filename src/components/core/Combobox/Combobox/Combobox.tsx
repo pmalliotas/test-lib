@@ -1,6 +1,8 @@
 import { Combobox as MantineCombobox } from "@mantine/core"
 import { type ComboboxProps as MantineComboboxProps } from "@mantine/core"
 
+export type ComboboxProps = MantineComboboxProps & {}
+
 export function Combobox(props: MantineComboboxProps) {
 
     return (
@@ -8,4 +10,4 @@ export function Combobox(props: MantineComboboxProps) {
     )
 }
 
-export type ComboboxProps = MantineComboboxProps
+export default Combobox

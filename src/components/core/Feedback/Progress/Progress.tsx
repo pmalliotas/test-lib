@@ -9,3 +9,5 @@ export function Progress(props: ProgressProps) {
         <MantineProgress {...props} />
     )
 }
+
+export default Progress

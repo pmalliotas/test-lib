@@ -9,3 +9,5 @@ export function Kbd(props: KbdProps) {
         <MantineKbd {...props} />
     )
 }
+
+export default Kbd

@@ -9,3 +9,5 @@ export const ActionIcon = createPolymorphicComponent<"button", ActionIconProps>(
         <MantineActionIcon {...props} ref={ref} />
     )
 }))
+
+export default ActionIcon

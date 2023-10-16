@@ -9,3 +9,5 @@ export const Badge = createPolymorphicComponent<"p", BadgeProps>(forwardRef<HTML
         <MantineBadge {...props} ref={ref} />
     )
 }))
+
+export default Badge

@@ -9,3 +9,5 @@ export function Notification(props: NotificationProps) {
         <MantineNotification {...props} />
     )
 }
+
+export default Notification

@@ -9,3 +9,5 @@ export function RingProgress(props: RingProgressProps) {
         <MantineRingProgress {...props} />
     )
 }
+
+export default RingProgress

@@ -9,3 +9,5 @@ export const ColorSwatch = createPolymorphicComponent<"div", ColorSwatchProps>(f
         <MantineColorSwatch {...props} ref={ref} />
     )
 }))
+
+export default ColorSwatch

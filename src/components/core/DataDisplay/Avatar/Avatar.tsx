@@ -9,3 +9,6 @@ export const Avatar = createPolymorphicComponent<"div", AvatarProps>(forwardRef<
         <MantineAvatar {...props} ref={ref} />
     )
 }))
+
+
+export default Avatar

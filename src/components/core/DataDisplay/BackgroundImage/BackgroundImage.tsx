@@ -9,3 +9,5 @@ export const BackgroundImage = createPolymorphicComponent<"div", BackgroundImage
         <MantineBackgroundImage {...props} ref={ref} />
     )
 }))
+
+export default BackgroundImage

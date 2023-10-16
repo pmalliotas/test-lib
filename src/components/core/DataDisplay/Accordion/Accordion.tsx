@@ -9,3 +9,5 @@ export function Accordion(props: AccordionProps) {
         <MantineAccordion {...props} />
     )
 }
+
+export default Accordion
