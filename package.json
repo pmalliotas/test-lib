@@ -1,6 +1,6 @@
 {
   "name": "test-lib-by-panos",
-  "version": "1.9.39",
+  "version": "1.9.38",
   "license": "MIT",
   "description": "test",
   "type": "module",
@@ -62,9 +62,21 @@
     "dist"
   ],
   "exports": {
-    "./core": "./dist/core/index.js",
-    "./forms": "./dist/forms/index.js",
-    "./dates": "./dist/dates/index.js",
-    "./hooks": "./dist/hooks/index.js"
+    "./core": {
+      "default": "./dist/core/index.js",
+      "types": "./dist/core/index.d.ts"
+    },
+    "./forms": {
+      "default": "./dist/forms/index.js",
+      "types": "./dist/forms/index.d.ts"
+    },
+    "./dates": {
+      "default": "./dist/dates/index.js",
+      "types": "./dist/dates/index.d.ts"
+    },
+    "./hooks": {
+      "default": "./dist/hooks/index.js",
+      "types": "./dist/hooks/index.d.ts"
+    }
   }
 }
