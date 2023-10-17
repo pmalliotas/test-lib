@@ -3,7 +3,6 @@
   "version": "1.9.63",
   "license": "MIT",
   "description": "test",
-  "main": "./dist/index.js",
   "scripts": {
     "build": "rm -rf dist && rollup -c",
     "start": "rollup -c --watch"
