@@ -1,2 +1,2 @@
-export { default } from "./TagsInput"
+export { TagsInput } from "./TagsInput"
 export type { TagsInputProps } from "./TagsInput"

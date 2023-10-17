@@ -63,10 +63,9 @@
     "zod": ">=3.22.4"
   },
   "files": [
-    "dist"
+    "./dist"
   ],
   "exports": {
-    ".": "./dist/index.js",
     "./core": "./dist/core/index.js",
     "./forms": "./dist/forms/index.js",
     "./dates": "./dist/dates/index.js",

@@ -1,2 +1,2 @@
-export { default } from "./Checkbox"
-export type { CheckboxProps } from "./Checkbox"
+export { Checkbox, CheckboxGroup } from "./Checkbox"
+export type { CheckboxProps, CheckboxGroupProps } from "./Checkbox"

@@ -12,12 +12,11 @@ import { visualizer } from "rollup-plugin-visualizer"
 import packageJson from "./package.json" assert { type: "json"}
 
 const inputs = {
-  // ".": "src/index.ts",
-  "Button": "src/core/Buttons/index.ts",
-  // core: 'src/core/index.ts',
-  // dates: 'src/dates/index.ts',
-  // forms: 'src/forms/index.ts',
-  // hooks: 'src/hooks/index.ts',
+  ".": "src/index.ts",
+  core: 'src/core/index.ts',
+  dates: 'src/dates/index.ts',
+  forms: 'src/forms/index.ts',
+  hooks: 'src/hooks/index.ts',
 }
 
 const outputs = Object.keys(inputs).map(name => ({
