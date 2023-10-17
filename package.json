@@ -9,7 +9,8 @@
     "start": "rollup -c --watch"
   },
   "files": [
-    "dist/*"
+    "dist/*",
+    "src/*"
   ],
   "exports": {
     ".": {
