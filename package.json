@@ -4,7 +4,9 @@
   "license": "MIT",
   "description": "test",
   "type": "module",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "module": "dist/index.js",
   "scripts": {
     "build": "rm -rf dist && rollup -c",
     "start": "rollup -c --watch"
