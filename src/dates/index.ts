@@ -1,12 +1,12 @@
-export * from "./Calendar/Calendar";
-export * from "./DateInput/DateInput";
-export * from "./DatePickerInput/DatePickerInput";
-export * from "./DateTimePicker/DateTimePicker";
-export * from "./MonthPicker/MonthPicker";
-export * from "./MonthPickerInput/MonthPickerInput";
-export * from "./TimeInput/TimeInput";
-export * from "./YearPicker/YearPicker";
-export * from "./YearPickerInput/YearPickerInput";
+export * from "./Calendar";
+export * from "./DateInput";
+export * from "./DatePickerInput";
+export * from "./DateTimePicker";
+export * from "./MonthPicker";
+export * from "./MonthPickerInput";
+export * from "./TimeInput";
+export * from "./YearPicker";
+export * from "./YearPickerInput";
 
 export type { DatePickerType } from "@mantine/dates"
 export { DatesProvider } from "@mantine/dates"

@@ -12,17 +12,27 @@ import { visualizer } from "rollup-plugin-visualizer"
 import packageJson from "./package.json" assert { type: "json"}
 
 const inputs = {
-  "index": "src/index.ts",
-  // core: 'src/core/index.ts',
-  // dates: 'src/dates/index.ts',
-  // forms: 'src/forms/index.ts',
-  // hooks: 'src/hooks/index.ts',
+  ".": {
+    entryFile: "src/index.ts",
+  },
+  core: {
+    entryFile: 'src/core/index.ts'
+  },
+  dates: {
+    entryFile: 'src/dates/index.ts'
+  },
+  forms: {
+    entryFile: 'src/forms/index.ts'
+  },
+  hooks: {
+    entryFile: 'src/hooks/index.ts'
+  },
 }
 
 const outputs = Object.keys(inputs).map(name => ({
-  input: inputs[name],
+  input: inputs[name].entryFile,
   output: {
-    file: `dist/index.js`,
+    dir: `dist/${name}`,
     format: "esm",
     sourcemap: true,
   },
@@ -38,13 +48,13 @@ const outputs = Object.keys(inputs).map(name => ({
     typescript({
       tsconfig: "./tsconfig.json",
       declaration: true,
-      // declarationDir: `dist/${name}`,
-      // outDir: `dist/${name}`,
+      declarationDir: `dist/${name}`,
+      outDir: `dist/${name}`,
+      resolveJsonModule: true,
       // include: [`src/${name}/**/*`],
-      // resolveJsonModule: true,
     }),
     babel({
-      babelHelpers: 'inline',
+      babelHelpers: 'bundled',
       extensions: ['.ts', '.tsx'],
       exclude: /node_modules/,
       include: [`src/${name}/**/*`]

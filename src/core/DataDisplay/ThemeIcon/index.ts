@@ -1,2 +1,2 @@
-export { default } from "./ThemeIcon"
+export { ThemeIcon } from "./ThemeIcon"
 export type { ThemeIconProps } from "./ThemeIcon"
