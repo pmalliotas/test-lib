@@ -66,6 +66,7 @@
     "dist"
   ],
   "exports": {
+    ".": "./dist/index.js",
     "./core": "./dist/core/index.js",
     "./forms": "./dist/forms/index.js",
     "./dates": "./dist/dates/index.js",
