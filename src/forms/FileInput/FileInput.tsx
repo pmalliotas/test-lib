@@ -2,7 +2,7 @@ import { type UseControllerProps, useController, type FieldValues } from "react-
 import {
   FileInput as $FileInput,
   type FileInputProps as $FileInputProps,
-} from "src/core/Inputs/FileInput/FileInput"
+} from "src/core"
 
 export type FileInputFormProps<T extends FieldValues> = UseControllerProps<T> & Omit<$FileInputProps, "value" | "defaultValue">
 

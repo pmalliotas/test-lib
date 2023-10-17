@@ -21,12 +21,14 @@ const outputs = Object.keys(inputs).map(name => ({
   input: inputs[name],
   output: {
     dir: `dist/${name}`,
-    format: "esm",
+    format: "es",
     sourcemap: true,
   },
   plugins: [
     peerDepsExternal(),
-    resolve(),
+    resolve({
+      extensions: [".ts", ".tsx"]
+    }),
     commonjs(),
     terser(),
     json(),
@@ -37,15 +39,27 @@ const outputs = Object.keys(inputs).map(name => ({
       declarationDir: `dist/${name}`,
       outDir: `dist/${name}`,
       include: [`src/${name}/**/*`],
+      resolveJsonModule: true
     }),
     babel({
       babelHelpers: 'bundled',
       extensions: ['.ts', '.tsx'],
       exclude: /node_modules/,
-      include: ['src/**/*']
+      include: [`src/${name}/**/*`]
+    }),
+    alias({
+      entries: [
+        { find: 'src', replacement: './src' },
+      ],
     }),
   ],
   external: [...Object.keys(packageJson.peerDependencies)],
+  onwarn(warning, warn) {
+    if (warning.code === 'MODULE_LEVEL_DIRECTIVE') {
+      return
+    }
+    warn(warning)
+  }
 }))
 
 export default outputs

@@ -2,7 +2,7 @@ import { type FieldValues, useController, type UseControllerProps } from "react-
 import {
   MonthPickerInput as $MonthPickerInput,
   type MonthPickerInputProps as $MonthPickerInputProps,
-} from "src/dates/MonthPickerInput/MonthPickerInput"
+} from "src/dates"
 
 export type MonthPickerInputFormProps<T extends FieldValues> =
   UseControllerProps<T> &

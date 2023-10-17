@@ -12,7 +12,8 @@
     "emitDeclarationOnly": true,
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
-    "baseUrl": "."
+    "isolatedModules": true,
+    "baseUrl": ".",
   },
   "exclude": [
     "dist",

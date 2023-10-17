@@ -1,6 +1,6 @@
 import { type FieldValues, useController, type UseControllerProps } from "react-hook-form"
-import { Checkbox as $Checkbox } from "src/core"
-import { type CheckboxProps as $CheckboxProps } from "src/core"
+import { Checkbox as $Checkbox } from "../../core"
+import { type CheckboxProps as $CheckboxProps } from "../../core"
 import { CheckboxGroupForm } from "./CheckboxGroup/CheckboxGroup"
 
 export type CheckboxFormProps<T extends FieldValues> = UseControllerProps<T> & Omit<$CheckboxProps, "checked" | "defaultValue">
