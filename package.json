@@ -1,6 +1,6 @@
 {
   "name": "test-lib-by-panos",
-  "version": "1.9.67",
+  "version": "1.9.68",
   "license": "MIT",
   "description": "test",
   "main": "./dist/index.js",
