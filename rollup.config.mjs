@@ -12,7 +12,7 @@ import { visualizer } from "rollup-plugin-visualizer"
 import packageJson from "./package.json" assert { type: "json"}
 
 const inputs = {
-  ".": "src/index.ts",
+  "index": "src/index.ts",
   // core: 'src/core/index.ts',
   // dates: 'src/dates/index.ts',
   // forms: 'src/forms/index.ts',
@@ -22,7 +22,7 @@ const inputs = {
 const outputs = Object.keys(inputs).map(name => ({
   input: inputs[name],
   output: {
-    dir: `dist/${name}`,
+    file: `dist/index.js`,
     format: "esm",
     sourcemap: true,
   },
@@ -38,10 +38,10 @@ const outputs = Object.keys(inputs).map(name => ({
     typescript({
       tsconfig: "./tsconfig.json",
       declaration: true,
-      declarationDir: `dist/${name}`,
-      outDir: `dist/${name}`,
-      include: [`src/${name}/**/*`],
-      resolveJsonModule: true,
+      // declarationDir: `dist/${name}`,
+      // outDir: `dist/${name}`,
+      // include: [`src/${name}/**/*`],
+      // resolveJsonModule: true,
     }),
     babel({
       babelHelpers: 'inline',
