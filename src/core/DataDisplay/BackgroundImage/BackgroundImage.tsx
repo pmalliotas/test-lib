@@ -4,7 +4,7 @@ import { forwardRef } from "react"
 
 export type BackgroundImageProps = MantineBackgroundImageProps & {}
 
-export const BackgroundImage = createPolymorphicComponent<"div", BackgroundImageProps>(forwardRef<HTMLDivElement, BackgroundImageProps>((props, ref) => {
+export const BackgroundImage: React.FC<BackgroundImageProps> = createPolymorphicComponent<"div", BackgroundImageProps>(forwardRef<HTMLDivElement, BackgroundImageProps>((props, ref) => {
     return (
         <MantineBackgroundImage {...props} ref={ref} />
     )

@@ -4,7 +4,7 @@ import { forwardRef } from "react"
 
 export type BoxProps = MantineBoxProps & {}
 
-export const Box = createPolymorphicComponent<"div", BoxProps>(forwardRef<HTMLDivElement, BoxProps>((props, ref) => {
+export const Box: React.FC<BoxProps> = createPolymorphicComponent<"div", BoxProps>(forwardRef<HTMLDivElement, BoxProps>((props, ref) => {
     return (
         <MantineBox {...props} ref={ref} />
     )

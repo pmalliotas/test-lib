@@ -4,7 +4,7 @@ import { forwardRef } from "react"
 
 export type ActionIconProps = MantineActionIconProps & {}
 
-export const ActionIcon = createPolymorphicComponent<"button", ActionIconProps>(forwardRef<HTMLButtonElement, ActionIconProps>((props, ref) => {
+export const ActionIcon: React.FC<ActionIconProps> = createPolymorphicComponent<"button", ActionIconProps>(forwardRef<HTMLButtonElement, ActionIconProps>((props, ref) => {
     return (
         <MantineActionIcon {...props} ref={ref} />
     )

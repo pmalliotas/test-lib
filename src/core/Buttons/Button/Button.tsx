@@ -4,7 +4,7 @@ import { forwardRef } from "react"
 
 export type ButtonProps = MantineButtonProps & {}
 
-export const Button = createPolymorphicComponent<"button", ButtonProps>(forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => {
+export const Button: React.FC<ButtonProps> = createPolymorphicComponent<"button", ButtonProps>(forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => {
     return (
         <MantineButton {...props} ref={ref} />
     )

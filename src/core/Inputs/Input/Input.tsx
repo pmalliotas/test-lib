@@ -4,7 +4,7 @@ import { forwardRef } from "react"
 
 export type InputProps = MantineInputProps & {}
 
-export const Input = createPolymorphicComponent<"input", InputProps>(forwardRef<HTMLInputElement, InputProps>((props, ref) => {
+export const Input: React.FC<InputProps> = createPolymorphicComponent<"input", InputProps>(forwardRef<HTMLInputElement, InputProps>((props, ref) => {
     return (
         <MantineInput {...props} ref={ref} />
     )

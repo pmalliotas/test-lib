@@ -4,7 +4,7 @@ import { forwardRef } from "react"
 
 export type ColorSwatchProps = MantineColorSwatchProps & {}
 
-export const ColorSwatch = createPolymorphicComponent<"div", ColorSwatchProps>(forwardRef<HTMLDivElement, ColorSwatchProps>((props, ref) => {
+export const ColorSwatch: React.FC<ColorSwatchProps> = createPolymorphicComponent<"div", ColorSwatchProps>(forwardRef<HTMLDivElement, ColorSwatchProps>((props, ref) => {
     return (
         <MantineColorSwatch {...props} ref={ref} />
     )

@@ -4,7 +4,7 @@ import { forwardRef } from "react"
 
 export type ImageProps = MantineImageProps & {}
 
-export const Image = createPolymorphicComponent<"img", ImageProps>(forwardRef<HTMLImageElement, ImageProps>((props, ref) => {
+export const Image: React.FC<ImageProps> = createPolymorphicComponent<"img", ImageProps>(forwardRef<HTMLImageElement, ImageProps>((props, ref) => {
     return (
         <MantineImage {...props} ref={ref} />
     )

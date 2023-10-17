@@ -14,7 +14,7 @@
     "declaration": true,
     "declarationDir": "dist",
     "sourceMap": true,
-    "moduleResolution": "Node10",
+    "moduleResolution": "Bundler",
     "emitDeclarationOnly": true,
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,

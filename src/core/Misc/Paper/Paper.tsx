@@ -4,7 +4,7 @@ import { forwardRef } from "react"
 
 export type PaperProps = MantinePaperProps & {}
 
-export const Paper = createPolymorphicComponent<"div", PaperProps>(forwardRef<HTMLDivElement, PaperProps>((props, ref) => {
+export const Paper: React.FC<PaperProps> = createPolymorphicComponent<"div", PaperProps>(forwardRef<HTMLDivElement, PaperProps>((props, ref) => {
     return (
         <MantinePaper {...props} ref={ref} />
     )

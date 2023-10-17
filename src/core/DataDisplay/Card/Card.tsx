@@ -4,7 +4,7 @@ import { forwardRef } from "react"
 
 export type CardProps = MantineCardProps & {}
 
-export const Card = createPolymorphicComponent<"div", CardProps>(forwardRef<HTMLDivElement, CardProps>((props, ref) => {
+export const Card: React.FC<CardProps> = createPolymorphicComponent<"div", CardProps>(forwardRef<HTMLDivElement, CardProps>((props, ref) => {
     return (
         <MantineCard {...props} ref={ref} />
     )
