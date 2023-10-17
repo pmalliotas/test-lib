@@ -13,10 +13,10 @@ import packageJson from "./package.json" assert { type: "json"}
 
 const inputs = {
   ".": "src/index.ts",
-  core: 'src/core/index.ts',
-  dates: 'src/dates/index.ts',
-  forms: 'src/forms/index.ts',
-  hooks: 'src/hooks/index.ts',
+  // core: 'src/core/index.ts',
+  // dates: 'src/dates/index.ts',
+  // forms: 'src/forms/index.ts',
+  // hooks: 'src/hooks/index.ts',
 }
 
 const outputs = Object.keys(inputs).map(name => ({
@@ -40,11 +40,11 @@ const outputs = Object.keys(inputs).map(name => ({
       declaration: true,
       declarationDir: `dist/${name}`,
       outDir: `dist/${name}`,
-      // include: [`src/${name}/**/*`],
+      include: [`src/${name}/**/*`],
       resolveJsonModule: true,
     }),
     babel({
-      babelHelpers: 'bundled',
+      babelHelpers: 'inline',
       extensions: ['.ts', '.tsx'],
       exclude: /node_modules/,
       include: [`src/${name}/**/*`]
