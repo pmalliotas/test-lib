@@ -14,23 +14,23 @@
   "exports": {
     ".": {
       "import": "./dist/index.js",
-      "types": "./dist/index.d.ts"
+      "types": "./dist/types/**/*"
     },
     "./core": {
-      "import": "./dist/core/index.js",
-      "types": "./dist/core/index.d.ts"
+      "import": "./dist/core.js",
+      "types": "./dist/types/**/*"
     },
     "./forms": {
-      "import": "./dist/forms/index.js",
-      "types": "./dist/forms/index.d.ts"
+      "import": "./dist/forms.js",
+      "types": "./dist/types/**/*"
     },
     "./dates": {
-      "import": "./dist/dates/index.js",
-      "types": "./dist/dates/index.d.ts"
+      "import": "./dist/dates.js",
+      "types": "./dist/types/**/*"
     },
     "./hooks": {
-      "import": "./dist/hooks/index.js",
-      "types": "./dist/hooks/index.d.ts"
+      "import": "./dist/hooks.js",
+      "types": "./dist/types/**/*"
     },
     "./styles.css": "./src/styles/styles.css"
   },
