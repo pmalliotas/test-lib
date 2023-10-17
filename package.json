@@ -3,35 +3,34 @@
   "version": "1.9.58",
   "license": "MIT",
   "description": "test",
-  "type": "module",
-  "main": "dist/index.js",
+  "main": "./dist/index.js",
   "scripts": {
     "build": "rm -rf dist && rollup -c",
     "start": "rollup -c --watch"
   },
   "files": [
-    "dist"
+    "dist/*"
   ],
   "exports": {
     ".": {
-      "default": "./dist/*.js",
-      "types": "./dist/*.d.ts"
+      "default": "./dist/index.js",
+      "types": "./dist/index.d.ts"
     },
     "./core": {
-      "default": "./dist/core/*.js",
-      "types": "./dist/core/*.d.ts"
+      "default": "./dist/core/index.js",
+      "types": "./dist/core/index.d.ts"
     },
     "./forms": {
-      "default": "./dist/forms/*.js",
-      "types": "./dist/forms/*.d.ts"
+      "default": "./dist/forms/index.js",
+      "types": "./dist/forms/index.d.ts"
     },
     "./dates": {
-      "default": "./dist/dates/*.js",
-      "types": "./dist/dates/*.d.ts"
+      "default": "./dist/dates/index.js",
+      "types": "./dist/dates/index.d.ts"
     },
     "./hooks": {
-      "default": "./dist/hooks/*.js",
-      "types": "./dist/hooks/*.d.ts"
+      "default": "./dist/hooks/index.js",
+      "types": "./dist/hooks/index.d.ts"
     },
     "./styles.css": "./src/styles/styles.css"
   },
