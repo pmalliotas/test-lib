@@ -18,19 +18,19 @@
     },
     "./core": {
       "import": "./dist/core.js",
-      "types": "./dist/types/**/*"
+      "types": "./dist/types/core/**/*"
     },
     "./forms": {
       "import": "./dist/forms.js",
-      "types": "./dist/types/**/*"
+      "types": "./dist/types/forms/**/*"
     },
     "./dates": {
       "import": "./dist/dates.js",
-      "types": "./dist/types/**/*"
+      "types": "./dist/types/dates/**/*"
     },
     "./hooks": {
       "import": "./dist/hooks.js",
-      "types": "./dist/types/**/*"
+      "types": "./dist/types/hooks/**/*"
     },
     "./styles.css": "./src/styles/styles.css"
   },
