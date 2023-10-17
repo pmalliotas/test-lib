@@ -17,8 +17,8 @@
       "types": "./dist/types/index.d.ts"
     },
     "./core": {
-      "import": "./dist/index.js",
-      "types": "./dist/types/core/index.d.ts"
+      "import": "./dist/core/index.js",
+      "types": "./dist/core/types/index.d.ts"
     },
     "./styles.css": "./src/styles/styles.css"
   },
