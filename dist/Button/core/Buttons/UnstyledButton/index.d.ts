@@ -1,2 +1,2 @@
-export { default } from "./UnstyledButton";
+export { UnstyledButton } from "./UnstyledButton";
 export type { UnstyledButtonProps } from "./UnstyledButton";

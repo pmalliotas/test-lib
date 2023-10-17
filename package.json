@@ -88,5 +88,6 @@
         "./dist/hooks/hooks/index.d.ts"
       ]
     }
-  }
+  },
+  "sideEffects": false
 }
