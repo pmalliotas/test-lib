@@ -1,81 +1,38 @@
-import commonjs from '@rollup/plugin-commonjs'
-import resolve from '@rollup/plugin-node-resolve'
-import typescript from '@rollup/plugin-typescript'
-import peerDepsExternal from 'rollup-plugin-peer-deps-external'
-import { terser } from 'rollup-plugin-terser'
-import image from '@rollup/plugin-image'
-import json from '@rollup/plugin-json'
-import babel from "@rollup/plugin-babel"
-import alias from "@rollup/plugin-alias"
-import { visualizer } from "rollup-plugin-visualizer"
+import peerDepsExternal from "rollup-plugin-peer-deps-external";
+import resolve from "@rollup/plugin-node-resolve";
+import commonjs from "@rollup/plugin-commonjs";
+import typescript from "@rollup/plugin-typescript";
+import { terser } from "rollup-plugin-terser";
+import json from '@rollup/plugin-json';
 
-import packageJson from "./package.json" assert { type: "json"}
+const packageJson = require("./package.json");
 
-const inputs = {
-  ".": {
-    entryFile: "src/index.ts",
-  },
-  core: {
-    entryFile: 'src/core/index.ts'
-  },
-  // dates: {
-  //   entryFile: 'src/dates/index.ts'
-  // },
-  // forms: {
-  //   entryFile: 'src/forms/index.ts'
-  // },
-  // hooks: {
-  //   entryFile: 'src/hooks/index.ts'
-  // },
-}
-
-const outputs = Object.keys(inputs).map(name => ({
-  input: inputs[name].entryFile,
-  output: {
-    file: `dist/${name}/index.js`,
-    format: "esm",
-    sourcemap: true,
-  },
+export default {
+  input: "src/index.ts", // Or your entry file
+  output: [
+    {
+      file: packageJson.main,
+      format: "cjs",
+      sourcemap: true,
+    },
+    {
+      file: packageJson.module,
+      format: "esm",
+      sourcemap: true,
+    },
+  ],
   plugins: [
     peerDepsExternal(),
-    resolve({
-      extensions: [".ts", ".tsx"]
-    }),
+    resolve(),
     commonjs(),
-    terser(),
-    json(),
-    image(),
     typescript({
-      tsconfig: "./tsconfig.json",
+      tsconfig: './tsconfig.json',
+      declarationDir: './dist/types',
       declaration: true,
-      declarationDir: `dist/${name}/types`,
-      outDir: `dist/${name}/types`,
-      resolveJsonModule: true,
-      include: [`src/${name}/**/*`],
+      include: ['src/**/*.ts', 'src/**/*.tsx'],
     }),
-    // babel({
-    //   babelHelpers: 'bundled',
-    //   extensions: ['.ts', '.tsx'],
-    //   exclude: /node_modules/,
-    //   include: [`src/${name}/**/*`]
-    // }),
-    alias({
-      entries: [
-        { find: 'src', replacement: './src' },
-      ],
-    }),
-    visualizer({ filename: 'dist/stats.html' }),
+    json(),
+    terser(),
   ],
-  external: Object.keys(packageJson.peerDependencies || {}),
-  onwarn(warning, warn) {
-    if (warning.code === 'MODULE_LEVEL_DIRECTIVE') {
-      return
-    }
-    warn(warning)
-  },
-  treeshake: {
-    moduleSideEffects: 'no-external'
-  },
-}))
-
-export default outputs
+  external: Object.keys(packageJson.peerDependencies || {})
+};

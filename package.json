@@ -3,25 +3,16 @@
   "version": "1.9.72",
   "license": "MIT",
   "description": "test",
-  "main": "./dist/index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "build": "rm -rf dist && rollup -c",
+    "build": "rm -rf dist && rollup -c --bundleConfigAsCjs",
     "start": "rollup -c --watch"
   },
   "files": [
     "dist/**/*"
   ],
-  "exports": {
-    ".": {
-      "import": "./dist/index.js",
-      "types": "./dist/types/index.d.ts"
-    },
-    "./core": {
-      "import": "./dist/core/index.js",
-      "types": "./dist/core/types/index.d.ts"
-    },
-    "./styles.css": "./src/styles/styles.css"
-  },
   "devDependencies": {
     "@babel/core": "^7.23.2",
     "@babel/preset-env": "^7.23.2",
