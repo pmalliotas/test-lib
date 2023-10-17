@@ -66,22 +66,11 @@
     "./dist"
   ],
   "exports": {
-    "./core": {
-      "default": "./dist/core/index.js",
-      "types": "./dist/core/index.d.ts"
-    },
-    "./forms": {
-      "default": "./dist/forms/index.js",
-      "types": "./dist/forms/index.d.ts"
-    },
-    "./dates": {
-      "default": "./dist/dates/index.js",
-      "types": "./dist/dates/index.d.ts"
-    },
-    "./hooks": {
-      "default": "./dist/hooks/index.js",
-      "types": "./dist/hooks/index.d.ts"
+    ".": {
+      "default": "./dist/index.js",
+      "types": "./dist/index.d.ts"
     },
     "./styles.css": "./src/styles/styles.css"
   }
 }
+
