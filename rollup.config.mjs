@@ -53,12 +53,12 @@ const outputs = Object.keys(inputs).map(name => ({
       resolveJsonModule: true,
       // include: [`src/${name}/**/*`],
     }),
-    babel({
-      babelHelpers: 'bundled',
-      extensions: ['.ts', '.tsx'],
-      exclude: /node_modules/,
-      include: [`src/${name}/**/*`]
-    }),
+    // babel({
+    //   babelHelpers: 'bundled',
+    //   extensions: ['.ts', '.tsx'],
+    //   exclude: /node_modules/,
+    //   include: [`src/${name}/**/*`]
+    // }),
     alias({
       entries: [
         { find: 'src', replacement: './src' },
