@@ -14,6 +14,12 @@ export declare const Accordion: {
         stylesNames: import("@mantine/core/lib/components/Accordion/AccordionPanel/AccordionPanel").AccordionPanelStylesNames;
         compound: true;
     }>;
+    Control: import("@mantine/core").MantineComponent<{
+        props: import("@mantine/core").AccordionControlProps;
+        ref: HTMLButtonElement;
+        stylesNames: import("@mantine/core/lib/components/Accordion/AccordionControl/AccordionControl").AccordionControlStylesNames;
+        compound: true;
+    }>;
     Chevron: typeof import("@mantine/core").AccordionChevron;
 };
 export default Accordion;

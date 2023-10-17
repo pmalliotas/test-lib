@@ -12,6 +12,7 @@ export const Accordion = (props: AccordionProps) => {
 
 Accordion.Item = MantineAccordion.Item
 Accordion.Panel = MantineAccordion.Panel
+Accordion.Control = MantineAccordion.Control
 Accordion.Chevron = MantineAccordion.Chevron
 
 export default Accordion
