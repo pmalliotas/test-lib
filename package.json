@@ -62,10 +62,10 @@
     "dist"
   ],
   "exports": {
-    "./core/index.js": "./dist/core/index.js",
-    "./forms/index.js": "./dist/forms/index.js",
-    "./dates/index.js": "./dist/dates/index.js",
-    "./hooks/index.js": "./dist/hooks/index.js",
+    "./core": "./dist/core/index.js",
+    "./forms": "./dist/forms/index.js",
+    "./dates": "./dist/dates/index.js",
+    "./hooks": "./dist/hooks/index.js",
     "./styles.css": "./src/styles/styles.css"
   },
   "typesVersions": {
