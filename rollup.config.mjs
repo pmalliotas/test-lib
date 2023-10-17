@@ -7,6 +7,7 @@ import image from '@rollup/plugin-image'
 import json from '@rollup/plugin-json'
 import babel from "@rollup/plugin-babel"
 import alias from "@rollup/plugin-alias"
+import { visualizer } from "rollup-plugin-visualizer"
 
 import packageJson from "./package.json" assert { type: "json"}
 
@@ -38,8 +39,8 @@ const outputs = Object.keys(inputs).map(name => ({
       declaration: true,
       declarationDir: `dist/${name}`,
       outDir: `dist/${name}`,
-      include: [`src/${name}/**/*`],
-      resolveJsonModule: true
+      // include: [`src/${name}/**/*`],
+      resolveJsonModule: true,
     }),
     babel({
       babelHelpers: 'bundled',
@@ -52,8 +53,9 @@ const outputs = Object.keys(inputs).map(name => ({
         { find: 'src', replacement: './src' },
       ],
     }),
+    visualizer({ filename: 'dist/stats.html' }),
   ],
-  external: [...Object.keys(packageJson.peerDependencies)],
+  external: Object.keys(packageJson.peerDependencies || {}),
   onwarn(warning, warn) {
     if (warning.code === 'MODULE_LEVEL_DIRECTIVE') {
       return

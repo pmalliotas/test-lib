@@ -7,5 +7,5 @@ export * from "./MonthPickerInput/MonthPickerInput";
 export * from "./TimeInput/TimeInput";
 export * from "./YearPicker/YearPicker";
 export * from "./YearPickerInput/YearPickerInput";
-export { type DatePickerType } from "@mantine/dates";
+export type { DatePickerType } from "@mantine/dates";
 export { DatesProvider } from "@mantine/dates";
