@@ -12,27 +12,27 @@ import { visualizer } from "rollup-plugin-visualizer"
 import packageJson from "./package.json" assert { type: "json"}
 
 const inputs = {
-  index: {
+  ".": {
     entryFile: "src/index.ts",
   },
   core: {
     entryFile: 'src/core/index.ts'
   },
-  dates: {
-    entryFile: 'src/dates/index.ts'
-  },
-  forms: {
-    entryFile: 'src/forms/index.ts'
-  },
-  hooks: {
-    entryFile: 'src/hooks/index.ts'
-  },
+  // dates: {
+  //   entryFile: 'src/dates/index.ts'
+  // },
+  // forms: {
+  //   entryFile: 'src/forms/index.ts'
+  // },
+  // hooks: {
+  //   entryFile: 'src/hooks/index.ts'
+  // },
 }
 
 const outputs = Object.keys(inputs).map(name => ({
   input: inputs[name].entryFile,
   output: {
-    file: `dist/${name}.js`,
+    file: `dist/${name}/index.js`,
     format: "esm",
     sourcemap: true,
   },
@@ -48,10 +48,10 @@ const outputs = Object.keys(inputs).map(name => ({
     typescript({
       tsconfig: "./tsconfig.json",
       declaration: true,
-      declarationDir: `dist/types`,
-      outDir: `dist/types`,
+      declarationDir: `dist/${name}/types`,
+      outDir: `dist/${name}/types`,
       resolveJsonModule: true,
-      // include: [`src/${name}/**/*`],
+      include: [`src/${name}/**/*`],
     }),
     // babel({
     //   babelHelpers: 'bundled',
