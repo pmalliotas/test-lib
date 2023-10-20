@@ -3,7 +3,6 @@ import { nodeResolve } from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import json from '@rollup/plugin-json';
 import { terser } from 'rollup-plugin-terser';
-import babel from '@rollup/plugin-babel';
 import pkg from './package.json' assert { type: "json"}
 import postcss from 'rollup-plugin-postcss';
 import copy from 'rollup-plugin-copy'
@@ -15,7 +14,7 @@ const external = [
 ];
 
 const rollupConfig = {
-  input: 'src/index.ts',
+  input: 'src/lib/index.ts',
   output: {
     dir: "dist",
     format: 'es',
@@ -58,7 +57,7 @@ const rollupConfig = {
     terser(),
     copy({
       targets: [
-        { src: 'src/styles/styles.css', dest: 'dist/styles' },
+        { src: 'src/lib/styles/styles.css', dest: 'dist/styles' },
       ]
     })
   ],
