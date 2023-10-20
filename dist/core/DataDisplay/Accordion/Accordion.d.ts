@@ -1,5 +1,5 @@
 import { type AccordionProps as MantineAccordionProps } from "@mantine/core";
-export declare type AccordionProps = MantineAccordionProps & {};
+export type AccordionProps = MantineAccordionProps & {};
 export declare const Accordion: {
     (props: AccordionProps): import("react/jsx-runtime").JSX.Element;
     Item: import("@mantine/core").MantineComponent<{
