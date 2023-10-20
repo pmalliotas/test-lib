@@ -12,7 +12,10 @@ var __assign = (this && this.__assign) || function () {
 import { jsx as _jsx } from "react/jsx-runtime";
 import { Button as MantineButton, createPolymorphicComponent } from "@mantine/core";
 import { forwardRef } from "react";
+import classes from "./Button.module.css";
 export var Button = createPolymorphicComponent(forwardRef(function (props, ref) {
-    return (_jsx(MantineButton, __assign({}, props, { ref: ref })));
+    return (_jsx(MantineButton, __assign({ classNames: {
+            label: classes.label,
+        } }, props, { ref: ref })));
 }));
 export default Button;
