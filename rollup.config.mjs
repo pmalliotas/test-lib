@@ -47,7 +47,9 @@ const rollupConfig = {
     //   // Allow importing from node_modules directory
     //   importLoaders: 1,
     // }),
-    css(),
+    css({
+      modules: true
+    }),
     terser(),
     copy({
       targets: [
