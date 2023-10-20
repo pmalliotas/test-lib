@@ -7,6 +7,7 @@ import babel from '@rollup/plugin-babel';
 import pkg from './package.json';
 import postcss from 'rollup-plugin-postcss';
 import copy from 'rollup-plugin-copy'
+import css from "rollup-plugin-import-css"
 
 const external = [
   ...Object.keys(pkg.dependencies || {}),
@@ -36,16 +37,17 @@ const rollupConfig = {
       presets: ['@babel/preset-env'],
       babelHelpers: 'bundled',
     }),
-    postcss({
-      // Extract CSS to the same location where the JS file is generated
-      extract: true,
-      // Use CSS modules
-      modules: true,
-      // Minimize CSS - you might want to use a dedicated plugin for this
-      minimize: true,
-      // Allow importing from node_modules directory
-      importLoaders: 1,
-    }),
+    // postcss({
+    //   // Extract CSS to the same location where the JS file is generated
+    //   extract: true,
+    //   // Use CSS modules
+    //   modules: true,
+    //   // Minimize CSS - you might want to use a dedicated plugin for this
+    //   minimize: true,
+    //   // Allow importing from node_modules directory
+    //   importLoaders: 1,
+    // }),
+    css(),
     terser(),
     copy({
       targets: [
