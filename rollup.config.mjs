@@ -4,10 +4,10 @@ import commonjs from '@rollup/plugin-commonjs';
 import json from '@rollup/plugin-json';
 import { terser } from 'rollup-plugin-terser';
 import babel from '@rollup/plugin-babel';
-import pkg from './package.json';
+import pkg from './package.json' assert { type: "json"}
 import postcss from 'rollup-plugin-postcss';
 import copy from 'rollup-plugin-copy'
-import css from "rollup-plugin-import-css"
+import autoprefixer from "autoprefixer";
 
 const external = [
   ...Object.keys(pkg.dependencies || {}),
@@ -16,6 +16,11 @@ const external = [
 
 const rollupConfig = {
   input: 'src/index.ts',
+  output: {
+    dir: "dist",
+    format: 'es',
+    sourcemap: true,
+  },
   external,
   plugins: [
     typescript({
@@ -32,23 +37,23 @@ const rollupConfig = {
     commonjs(),
 
     json(),
-    babel({
-      exclude: 'node_modules/**',
-      presets: ['@babel/preset-env'],
-      babelHelpers: 'bundled',
-    }),
-    // postcss({
-    //   // Extract CSS to the same location where the JS file is generated
-    //   extract: true,
-    //   // Use CSS modules
-    //   modules: true,
-    //   // Minimize CSS - you might want to use a dedicated plugin for this
-    //   minimize: true,
-    //   // Allow importing from node_modules directory
-    //   importLoaders: 1,
+    // babel({
+    //   exclude: 'node_modules/**',
+    //   presets: ['@babel/preset-env'],
+    //   babelHelpers: 'bundled',
     // }),
-    css({
-      modules: true
+    postcss({
+      // Extract CSS to the same location where the JS file is generated
+      extract: true,
+      // Use CSS modules
+      modules: true,
+      // Minimize CSS - you might want to use a dedicated plugin for this
+      minimize: true,
+      // Allow importing from node_modules directory
+      importLoaders: 1,
+      plugins: [
+        autoprefixer(),
+      ]
     }),
     terser(),
     copy({
@@ -56,18 +61,6 @@ const rollupConfig = {
         { src: 'src/styles/styles.css', dest: 'dist/styles' },
       ]
     })
-  ],
-  output: [
-    {
-      file: pkg.main,
-      format: 'cjs',
-      sourcemap: true,
-    },
-    {
-      file: pkg.module,
-      format: 'es',
-      sourcemap: true,
-    },
   ],
   onwarn: function (warning, warn) {
     if (warning.code === 'THIS_IS_UNDEFINED') {

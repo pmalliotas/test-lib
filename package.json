@@ -7,7 +7,7 @@
   "module": "dist/index.js",
   "types": "dist/types/index.d.ts",
   "scripts": {
-    "build": "rm -rf dist && rollup -c --bundleConfigAsCjs",
+    "build": "rm -rf dist && rollup -c",
     "start": "rollup -c --watch",
     "tsc": "rm -rf dist && tsc"
   },
@@ -29,7 +29,7 @@
     "@rollup/plugin-replace": "^5.0.4",
     "@rollup/plugin-typescript": "^11.1.5",
     "@types/react": ">=18.2.27",
-    "autoprefixer": ">=10.4.16",
+    "autoprefixer": "^10.4.16",
     "dayjs": ">=1.11.10",
     "postcss": ">=8.4.31",
     "react": ">=18.2.0",
