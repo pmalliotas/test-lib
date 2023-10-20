@@ -6,6 +6,7 @@ import { terser } from 'rollup-plugin-terser';
 import babel from '@rollup/plugin-babel';
 import pkg from './package.json';
 import postcss from 'rollup-plugin-postcss';
+import copy from 'rollup-plugin-copy'
 
 const external = [
   ...Object.keys(pkg.dependencies || {}),
@@ -46,6 +47,11 @@ const rollupConfig = {
       importLoaders: 1,
     }),
     terser(),
+    copy({
+      targets: [
+        { src: 'src/styles/styles.css', dest: 'dist/styles' },
+      ]
+    })
   ],
   output: [
     {
