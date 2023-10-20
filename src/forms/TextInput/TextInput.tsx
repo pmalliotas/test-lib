@@ -2,7 +2,7 @@ import { type UseControllerProps, useController, type FieldValues } from "react-
 import {
   TextInput as $TextInput,
   type TextInputProps as $TextInputProps,
-} from "src/core"
+} from "../../core"
 
 export type TextInputFormProps<T extends FieldValues> = UseControllerProps<T> & Omit<$TextInputProps, "value" | "defaultValue">
 

@@ -1,6 +1,6 @@
 import { type UseControllerProps, useController, type FieldValues } from "react-hook-form"
-import { Chip as $Chip } from "src/core"
-import { type ChipProps as $ChipProps } from "src/core"
+import { Chip as $Chip } from "../../core"
+import { type ChipProps as $ChipProps } from "../../core"
 import { ChipGroupForm } from "./ChipGroup/ChipGroup"
 
 export type ChipFormProps<T extends FieldValues> = UseControllerProps<T> & Omit<$ChipProps, "value" | "defaultValue">

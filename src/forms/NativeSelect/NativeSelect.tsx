@@ -2,7 +2,7 @@ import { type UseControllerProps, useController, type FieldValues } from "react-
 import {
   NativeSelect as $NativeSelect,
   type NativeSelectProps as $NativeSelectProps,
-} from "src/core"
+} from "../../core"
 
 
 export type NativeSelectFormProps<T extends FieldValues> = UseControllerProps<T> & Omit<$NativeSelectProps, "value" | "defaultValue">

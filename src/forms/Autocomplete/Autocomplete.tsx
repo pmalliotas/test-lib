@@ -1,7 +1,7 @@
 import type { FieldValues, UseControllerProps } from "react-hook-form"
 import { useController } from "react-hook-form"
-import { Autocomplete as $Autocomplete } from "src/core"
-import type { AutocompleteProps as $AutocompleteProps } from "src/core"
+import { Autocomplete as $Autocomplete } from "../../core"
+import type { AutocompleteProps as $AutocompleteProps } from "../../core"
 
 export type AutocompleteFormProps<T extends FieldValues> = UseControllerProps<T> & Omit<$AutocompleteProps, "value" | "defaultValue">
 

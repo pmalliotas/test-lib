@@ -2,7 +2,7 @@ import { type UseControllerProps, useController, type FieldValues } from "react-
 import {
   SegmentedControl as $SegmentedControl,
   type SegmentedControlProps as $SegmentedControlProps,
-} from "src/core"
+} from "../../core"
 
 export type SegmentedControlFormProps<T extends FieldValues> = UseControllerProps<T> & Omit<$SegmentedControlProps, "values" | "defaultValues">
 

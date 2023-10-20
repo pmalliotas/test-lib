@@ -2,7 +2,7 @@ import { type UseControllerProps, useController, type FieldValues } from "react-
 import {
   Select as $Select,
   type SelectProps as $SelectProps,
-} from "src/core"
+} from "../../core"
 
 export type SelectFormProps<T extends FieldValues> = UseControllerProps<T> & Omit<$SelectProps, "value" | "defaultValue">
 
