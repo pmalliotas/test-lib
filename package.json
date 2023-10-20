@@ -12,8 +12,7 @@
     "tsc": "rm -rf dist && tsc"
   },
   "files": [
-    "dist/index.js",
-    "dist/types/index.d.ts",
+    "dist",
     "dist/styles/styles.css"
   ],
   "devDependencies": {
