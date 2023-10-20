@@ -1,11 +1,12 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { ButtonStory } from "./Button";
+import { Button } from "./Button";
+// import type { ButtonProps } from "./Button";
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta = {
   title: 'Example/Button',
-  component: ButtonStory,
+  component: Button,
   parameters: {
     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/react/configure/story-layout
     layout: 'centered',
@@ -16,7 +17,7 @@ const meta = {
   argTypes: {
     // backgroundColor: { control: 'color' },
   },
-} satisfies Meta<typeof ButtonStory>;
+} satisfies Meta<typeof Button>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -25,26 +26,23 @@ type Story = StoryObj<typeof meta>;
 export const Primary: Story = {
   args: {
     // primary: true,
-    label: 'Button',
+    children: "Button"
   },
 };
 
-export const Secondary: Story = {
-  args: {
-    label: 'Button',
-  },
-};
+// export const Secondary: Story = {
+//   args: {
+//   },
+// };
 
-export const Large: Story = {
-  args: {
-    size: 'large',
-    label: 'Button',
-  },
-};
+// export const Large: Story = {
+//   args: {
+//     size: 'large',
+//   },
+// };
 
-export const Small: Story = {
-  args: {
-    size: 'small',
-    label: 'Button',
-  },
-};
+// export const Small: Story = {
+//   args: {
+//     size: 'small',
+//   },
+// };

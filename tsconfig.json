@@ -30,6 +30,6 @@
       "node"
     ],
   },
-  "include": ["src/lib"],
+  "include": ["src", "src/core", "src/dates", "src/forms", "src/hooks", "src/declarations.d.ts", "src/index.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

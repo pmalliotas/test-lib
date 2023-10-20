@@ -14,7 +14,7 @@ const external = [
 ];
 
 const rollupConfig = {
-  input: 'src/lib/index.ts',
+  input: 'src/index.ts',
   output: {
     dir: "dist",
     format: 'es',
@@ -57,7 +57,7 @@ const rollupConfig = {
     terser(),
     copy({
       targets: [
-        { src: 'src/lib/styles/styles.css', dest: 'dist/styles' },
+        { src: 'src/styles/styles.css', dest: 'dist/styles' },
       ]
     })
   ],
