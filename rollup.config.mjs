@@ -5,6 +5,7 @@ import json from '@rollup/plugin-json';
 import { terser } from 'rollup-plugin-terser';
 import babel from '@rollup/plugin-babel';
 import pkg from './package.json';
+import postcss from 'rollup-plugin-postcss';
 
 const external = [
   ...Object.keys(pkg.dependencies || {}),
@@ -21,7 +22,7 @@ const rollupConfig = {
       declarationDir: 'dist/types/',
       outDir: 'dist',
     }),
-    
+
     nodeResolve({
       extensions: ['.js', '.jsx', '.ts', '.tsx'],
       modulesOnly: true,
@@ -34,7 +35,16 @@ const rollupConfig = {
       presets: ['@babel/preset-env'],
       babelHelpers: 'bundled',
     }),
-
+    postcss({
+      // Extract CSS to the same location where the JS file is generated
+      extract: true,
+      // Use CSS modules
+      modules: true,
+      // Minimize CSS - you might want to use a dedicated plugin for this
+      minimize: true,
+      // Allow importing from node_modules directory
+      importLoaders: 1,
+    }),
     terser(),
   ],
   output: [

@@ -1,1 +1,0 @@
-export { PillsInput } from "./PillsInput";

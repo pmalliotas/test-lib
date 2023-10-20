@@ -14,7 +14,8 @@
     "isolatedModules": true, // Transpile each file as a separate module (similar to 'ts.transpileModule').
     "jsx": "react-jsx", // Specify JSX code generation: "preserve", "react-native", "react", "react-jsx" (use with React 17 or later)
     "outDir": "./dist",
-    "declaration": true
+    "declaration": true,
+    "plugins": [{ "name": "typescript-plugin-css-modules" }]
   },
   "include": ["src"], // Specify the root folder of your source files
   "exclude": ["node_modules", "build"] // Specify folders to exclude from compilation

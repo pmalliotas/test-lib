@@ -1,1 +1,0 @@
-export { RingProgress } from "./RingProgress";
