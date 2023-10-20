@@ -1,6 +1,6 @@
 import { type UseControllerProps, type FieldValues } from "react-hook-form";
-import { Chip as $Chip } from "src/core";
-import { type ChipProps as $ChipProps } from "src/core";
+import { Chip as $Chip } from "../../core";
+import { type ChipProps as $ChipProps } from "../../core";
 export declare type ChipFormProps<T extends FieldValues> = UseControllerProps<T> & Omit<$ChipProps, "value" | "defaultValue">;
 export declare const ChipForm: {
     <T extends FieldValues>({ name, control, defaultValue, rules, shouldUnregister, onChange, ...props }: ChipFormProps<T>): import("react/jsx-runtime").JSX.Element;

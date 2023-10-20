@@ -22,7 +22,7 @@ var __rest = (this && this.__rest) || function (s, e) {
 };
 import { jsx as _jsx } from "react/jsx-runtime";
 import { useController } from "react-hook-form";
-import { TextInput as $TextInput, } from "src/core";
+import { TextInput as $TextInput, } from "../../core";
 export function TextInputForm(_a) {
     var _b;
     var name = _a.name, control = _a.control, defaultValue = _a.defaultValue, rules = _a.rules, shouldUnregister = _a.shouldUnregister, onChange = _a.onChange, props = __rest(_a, ["name", "control", "defaultValue", "rules", "shouldUnregister", "onChange"]);

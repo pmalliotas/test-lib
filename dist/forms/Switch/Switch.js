@@ -22,7 +22,7 @@ var __rest = (this && this.__rest) || function (s, e) {
 };
 import { jsx as _jsx } from "react/jsx-runtime";
 import { useController } from "react-hook-form";
-import { Switch as $Switch, } from "src/core";
+import { Switch as $Switch, } from "../../core";
 import { SwitchGroupForm } from "./SwitchGroup/SwitchGroup";
 export function SwitchForm(_a) {
     var _b;

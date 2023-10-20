@@ -22,7 +22,7 @@ var __rest = (this && this.__rest) || function (s, e) {
 };
 import { jsx as _jsx } from "react/jsx-runtime";
 import { useController } from "react-hook-form";
-import { DatePickerInput as $DatePickerInput, } from "src/dates";
+import { DatePickerInput as $DatePickerInput, } from "../../dates";
 export function DatePickerInputForm(_a) {
     var _b;
     var name = _a.name, control = _a.control, defaultValue = _a.defaultValue, rules = _a.rules, shouldUnregister = _a.shouldUnregister, onChange = _a.onChange, props = __rest(_a, ["name", "control", "defaultValue", "rules", "shouldUnregister", "onChange"]);

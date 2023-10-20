@@ -21,7 +21,7 @@ var __rest = (this && this.__rest) || function (s, e) {
     return t;
 };
 import { jsx as _jsx } from "react/jsx-runtime";
-import { CheckboxGroup as $CheckboxGroup } from "src/core";
+import { CheckboxGroup as $CheckboxGroup } from "../../../core";
 import { useController } from "react-hook-form";
 export var CheckboxGroupForm = function (_a) {
     var _b;

@@ -2,7 +2,7 @@ import { type FieldValues, useController, type UseControllerProps } from "react-
 import {
   TimeInput as $TimeInput,
   type TimeInputProps as $TimeInputProps,
-} from "src/dates"
+} from "../../dates"
 
 export type TimeInputFormProps<T extends FieldValues> = UseControllerProps<T> & Omit<$TimeInputProps, "value" | "defaultValue">
 

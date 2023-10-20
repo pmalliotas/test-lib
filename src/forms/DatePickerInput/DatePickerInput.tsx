@@ -3,7 +3,7 @@ import { type FieldValues, useController, type UseControllerProps } from "react-
 import {
   DatePickerInput as $DatePickerInput,
   type DatePickerInputProps as $DatePickerInputProps,
-} from "src/dates"
+} from "../../dates"
 
 export type DatePickerInputFormProps<T extends FieldValues> = UseControllerProps<T> & Omit<$DatePickerInputProps, "value" | "defaultValue">
 
