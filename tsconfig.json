@@ -1,45 +1,44 @@
 {
   "compilerOptions": {
-    "target": "es5", // Specify ECMAScript target version
+    "target": "es5",
     "lib": [
       "dom",
       "dom.iterable",
       "esnext"
-    ], // List of library files to be included in the compilation
-    "allowJs": true, // Allow JavaScript files to be compiled
-    "skipLibCheck": true, // Skip type checking of all declaration files (*.d.ts)
-    "esModuleInterop": true, // Enables emit interoperability between CommonJS and ES Modules via creation of namespace objects
-    "allowSyntheticDefaultImports": true, // Allow default imports from modules with no default export
-    "strict": true, // Enable all strict type-checking options
-    "forceConsistentCasingInFileNames": true, // Disallow inconsistently-cased references to the same file
-    "module": "esnext", // Specify module code generation
-    "moduleResolution": "node", // Resolve modules using Node.js style
-    "resolveJsonModule": true, // Include modules imported with .json extension
-    "noImplicitAny": true, // Raise error on expressions and declarations with an implied 'any' type
-    "noUnusedLocals": true, // Report errors on unused locals
-    "noUnusedParameters": true, // Report errors on unused parameters
-    "noImplicitReturns": true, // Report error when not all code paths in function return a value
-    "noFallthroughCasesInSwitch": true, // Report errors for fallthrough cases in switch statement
-    "jsx": "react-jsx", // Specify JSX code generation: 'preserve', 'react', or 'react-native'
-    "declaration": true, // Generates corresponding '.d.ts' file
-    "outDir": "./dist", // Redirect output structure to the directory
-    // "rootDir": "./src", // Specify the root directory of input files
-    "baseUrl": ".", // Use this base URL to resolve non-relative module names
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "noImplicitAny": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "jsx": "react-jsx",
+    "declaration": true,
+    "outDir": "./dist",
+    "baseUrl": ".",
     "paths": {
-      // Add path mappings here if needed
+   
     },
     "types": [
       "node"
-    ], // Type declaration files to be included in compilation
-    "isolatedModules": true // Ensure that each file can be safely transpiled without relying on other imports
+    ],
+    "isolatedModules": true
   },
   "include": [
-    "src/**/*" // Files to be included in compilation
+    "src/**/*"
   ],
   "exclude": [
-    "node_modules", // Don't include in compilation
-    "dist", // Built files location
-    "**/*.spec.ts", // Exclude test files
-    "**/*.test.ts" // Exclude test files
+    "node_modules",
+    "dist",
+    "**/*.spec.ts",
+    "**/*.test.ts"
   ]
 }
