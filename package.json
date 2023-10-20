@@ -12,7 +12,8 @@
     "tsc": "rm -rf dist && tsc"
   },
   "files": [
-    "dist"
+    "dist",
+    "./src/styles/styles.css"
   ],
   "devDependencies": {
     "@babel/core": "^7.23.2",
