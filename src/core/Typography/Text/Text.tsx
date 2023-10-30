@@ -1,11 +1,16 @@
-import { Text as MantineText, createPolymorphicComponent } from "@mantine/core"
+import { Text as MantineText, TextFactory, polymorphicFactory } from "@mantine/core"
 import { type TextProps as MantineTextProps } from "@mantine/core"
-import { forwardRef } from "react"
 
 export type TextProps = MantineTextProps & {}
 
-export const Text = createPolymorphicComponent<"p", TextProps>(forwardRef<HTMLParagraphElement, TextProps>((props, ref) => {
+type TextType = TextFactory & {
+    props: TextProps
+}
+
+export const Text = polymorphicFactory<TextType>(((props, ref) => {
     return (
         <MantineText {...props} ref={ref} />
     )
 }))
+
+Text.extend = MantineText.extend

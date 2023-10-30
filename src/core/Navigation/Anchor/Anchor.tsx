@@ -1,11 +1,16 @@
-import { Anchor as MantineAnchor, createPolymorphicComponent } from "@mantine/core"
+import { AnchorFactory, Anchor as MantineAnchor, polymorphicFactory } from "@mantine/core"
 import { type AnchorProps as MantineAnchorProps } from "@mantine/core"
-import { forwardRef } from "react"
 
 export type AnchorProps = MantineAnchorProps & {}
 
-export const Anchor = createPolymorphicComponent<"a", AnchorProps>(forwardRef<HTMLAnchorElement, AnchorProps>((props, ref) => {
+type AnchorType = AnchorFactory & {
+    props: AnchorProps
+}
+
+export const Anchor = polymorphicFactory<AnchorType>(((props, ref) => {
     return (
         <MantineAnchor {...props} ref={ref} />
     )
 }))
+
+Anchor.extend = MantineAnchor.extend

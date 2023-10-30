@@ -1,13 +1,18 @@
-import { Image as MantineImage, createPolymorphicComponent } from "@mantine/core"
+import { ImageFactory, Image as MantineImage, polymorphicFactory } from "@mantine/core"
 import { type ImageProps as MantineImageProps } from "@mantine/core"
-import { forwardRef } from "react"
 
 export type ImageProps = MantineImageProps & {}
 
-export const Image = createPolymorphicComponent<"img", ImageProps>(forwardRef<HTMLImageElement, ImageProps>((props, ref) => {
+type ImageType = ImageFactory & {
+    props: ImageProps
+}
+
+export const Image = polymorphicFactory<ImageType>(((props, ref) => {
     return (
         <MantineImage {...props} ref={ref} />
     )
 }))
+
+Image.extend = MantineImage.extend
 
 export default Image

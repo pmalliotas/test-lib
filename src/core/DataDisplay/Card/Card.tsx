@@ -1,13 +1,17 @@
-import { Card as MantineCard, createPolymorphicComponent } from "@mantine/core"
+import { CardFactory, Card as MantineCard, polymorphicFactory } from "@mantine/core"
 import { type CardProps as MantineCardProps } from "@mantine/core"
-import { forwardRef } from "react"
 
 export type CardProps = MantineCardProps & {}
 
-export const Card = createPolymorphicComponent<"div", CardProps>(forwardRef<HTMLDivElement, CardProps>((props, ref) => {
+type CardType = CardFactory & {
+    props: CardProps
+}
+export const Card = polymorphicFactory<CardType>(((props, ref) => {
     return (
         <MantineCard {...props} ref={ref} />
     )
 }))
+
+Card.extend = MantineCard.extend
 
 export default Card

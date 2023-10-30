@@ -1,14 +1,19 @@
-import { Avatar as MantineAvatar, createPolymorphicComponent } from "@mantine/core"
+import { AvatarFactory, Avatar as MantineAvatar, polymorphicFactory } from "@mantine/core"
 import { type AvatarProps as MantineAvatarProps } from "@mantine/core"
-import { forwardRef } from "react"
 
 export type AvatarProps = MantineAvatarProps & {}
 
-export const Avatar = createPolymorphicComponent<"div", AvatarProps>(forwardRef<HTMLDivElement, AvatarProps>((props, ref) => {
+type AvatarType = AvatarFactory & {
+    props: AvatarProps
+}
+
+export const Avatar = polymorphicFactory<AvatarType>(((props, ref) => {
     return (
         <MantineAvatar {...props} ref={ref} />
     )
 }))
 
+Avatar.extend = MantineAvatar.extend
+Avatar.Group = MantineAvatar.Group
 
 export default Avatar

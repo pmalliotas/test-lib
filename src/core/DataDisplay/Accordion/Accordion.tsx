@@ -15,4 +15,6 @@ Accordion.Panel = MantineAccordion.Panel
 Accordion.Control = MantineAccordion.Control
 Accordion.Chevron = MantineAccordion.Chevron
 
+Accordion.extend = MantineAccordion.extend
+
 export default Accordion

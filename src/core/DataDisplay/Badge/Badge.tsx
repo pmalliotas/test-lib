@@ -1,13 +1,19 @@
-import { Badge as MantineBadge, createPolymorphicComponent } from "@mantine/core"
+import { BadgeFactory, Badge as MantineBadge, polymorphicFactory } from "@mantine/core"
 import { type BadgeProps as MantineBadgeProps } from "@mantine/core"
-import { forwardRef } from "react"
 
 export type BadgeProps = MantineBadgeProps & {}
 
-export const Badge = createPolymorphicComponent<"p", BadgeProps>(forwardRef<HTMLDivElement, BadgeProps>((props, ref) => {
+type BadgeType = BadgeFactory & {
+    props: BadgeProps
+}
+
+export const Badge = polymorphicFactory<BadgeType>(((props, ref) => {
     return (
         <MantineBadge {...props} ref={ref} />
     )
 }))
+
+Badge.extend = MantineBadge.extend
+Badge.Group = MantineBadge.Group
 
 export default Badge

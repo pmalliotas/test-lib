@@ -1,11 +1,16 @@
-import { Paper as MantinePaper, createPolymorphicComponent } from "@mantine/core"
+import { Paper as MantinePaper, PaperFactory, polymorphicFactory } from "@mantine/core"
 import { type PaperProps as MantinePaperProps } from "@mantine/core"
-import { forwardRef } from "react"
 
 export type PaperProps = MantinePaperProps & {}
 
-export const Paper = createPolymorphicComponent<"div", PaperProps>(forwardRef<HTMLDivElement, PaperProps>((props, ref) => {
+type PaperType = PaperFactory & {
+    props: PaperProps
+}
+
+export const Paper = polymorphicFactory<PaperType>(((props, ref) => {
     return (
         <MantinePaper {...props} ref={ref} />
     )
 }))
+
+Paper.extend = MantinePaper.extend

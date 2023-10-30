@@ -1,12 +1,16 @@
-import { NavLink as MantineNavLink, createPolymorphicComponent } from "@mantine/core"
+import { NavLink as MantineNavLink, NavLinkFactory, polymorphicFactory } from "@mantine/core"
 import { type NavLinkProps as MantineNavLinkProps } from "@mantine/core"
-import { forwardRef } from "react"
 
 export type NavLinkProps = MantineNavLinkProps & {}
 
-export const NavLink = createPolymorphicComponent<"a", NavLinkProps>(forwardRef<HTMLAnchorElement, NavLinkProps>((props, ref) => {
+type NavLinkType = NavLinkFactory & {
+    props: NavLinkProps
+}
+
+export const NavLink = polymorphicFactory<NavLinkType>(((props, ref) => {
     return (
         <MantineNavLink {...props} ref={ref} />
     )
 }))
 
+NavLink.extend = MantineNavLink.extend

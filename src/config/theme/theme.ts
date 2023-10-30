@@ -49,9 +49,9 @@ export const theme: MantineThemeOverride = createTheme({
         },
     },
     components: {
-        // Button: Button.extend({
+        Button: Button.extend({
 
-        // })
+        })
     },
     other: {
 

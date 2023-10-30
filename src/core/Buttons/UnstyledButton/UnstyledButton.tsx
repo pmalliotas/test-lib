@@ -1,13 +1,18 @@
-import { UnstyledButton as MantineUnstyledButton, createPolymorphicComponent } from "@mantine/core"
+import { UnstyledButton as MantineUnstyledButton, UnstyledButtonFactory, polymorphicFactory } from "@mantine/core"
 import { type UnstyledButtonProps as MantineUnstyledButtonProps } from "@mantine/core"
-import { forwardRef } from "react"
 
 export type UnstyledButtonProps = MantineUnstyledButtonProps & {}
 
-export const UnstyledButton = createPolymorphicComponent<"button", UnstyledButtonProps>(forwardRef<HTMLButtonElement, UnstyledButtonProps>((props, ref) => {
+type UnstyledButtonType = UnstyledButtonFactory & {
+    props: UnstyledButtonProps
+}
+
+export const UnstyledButton = polymorphicFactory<UnstyledButtonType>(((props, ref) => {
     return (
         <MantineUnstyledButton {...props} ref={ref} />
     )
 }))
+
+UnstyledButton.extend = MantineUnstyledButton.extend
 
 export default UnstyledButton

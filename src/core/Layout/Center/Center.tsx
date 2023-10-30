@@ -1,12 +1,16 @@
-import { Center as MantineCenter, createPolymorphicComponent } from "@mantine/core"
+import { CenterFactory, Center as MantineCenter, polymorphicFactory } from "@mantine/core"
 import { type CenterProps as MantineCenterProps } from "@mantine/core"
-import { forwardRef } from "react"
 
 export type CenterProps = MantineCenterProps & {}
 
-export const Center = createPolymorphicComponent<"div", CenterProps>(forwardRef<HTMLDivElement, CenterProps>((props, ref) => {
+type CenterType = CenterFactory & {
+    props: CenterProps
+}
+
+export const Center = polymorphicFactory<CenterType>(((props, ref) => {
     return (
         <MantineCenter {...props} ref={ref} />
     )
 }))
 
+Center.extend = MantineCenter.extend

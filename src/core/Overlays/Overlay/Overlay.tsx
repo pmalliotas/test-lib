@@ -1,11 +1,16 @@
-import { Overlay as MantineOverlay, createPolymorphicComponent } from "@mantine/core"
+import { Overlay as MantineOverlay, OverlayFactory, polymorphicFactory } from "@mantine/core"
 import { type OverlayProps as MantineOverlayProps } from "@mantine/core"
-import { forwardRef } from "react"
 
 export type OverlayProps = MantineOverlayProps & {}
 
-export const Overlay = createPolymorphicComponent<"div", OverlayProps>(forwardRef<HTMLDivElement, OverlayProps>((props, ref) => {
+type OverlayType = OverlayFactory & {
+    props: OverlayProps
+}
+
+export const Overlay = polymorphicFactory<OverlayType>(((props, ref) => {
     return (
         <MantineOverlay {...props} ref={ref} />
     )
 }))
+
+Overlay.extend = MantineOverlay.extend
