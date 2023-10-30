@@ -1,4 +1,4 @@
-import { Button as MantineButton, createPolymorphicComponent } from "@mantine/core"
+import { createPolymorphicComponent, Button as MantineButton } from "@mantine/core"
 import { type ButtonProps as MantineButtonProps } from "@mantine/core"
 import { forwardRef } from "react"
 
@@ -10,9 +10,10 @@ export const Button = createPolymorphicComponent<"button", ButtonProps>(forwardR
     return (
         <MantineButton
             classNames={{
-                label: classes.label,
+                label: classes.label
             }}
-            {...props} ref={ref}
+            ref={ref}
+            {...props}
         />
     )
 }))
