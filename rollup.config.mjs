@@ -1,7 +1,6 @@
 import typescript from '@rollup/plugin-typescript';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
-import json from '@rollup/plugin-json';
 import { terser } from 'rollup-plugin-terser';
 import pkg from './package.json' assert { type: "json"}
 import postcss from 'rollup-plugin-postcss';
@@ -35,7 +34,6 @@ const rollupConfig = {
     }),
     commonjs(),
 
-    json(),
     // babel({
     //   exclude: 'node_modules/**',
     //   presets: ['@babel/preset-env'],

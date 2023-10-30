@@ -4,7 +4,7 @@ import { forwardRef } from "react"
 
 export type TextProps = MantineTextProps & {}
 
-export const Text: React.FC<TextProps> = createPolymorphicComponent<"p", TextProps>(forwardRef<HTMLParagraphElement, TextProps>((props, ref) => {
+export const Text = createPolymorphicComponent<"p", TextProps>(forwardRef<HTMLParagraphElement, TextProps>((props, ref) => {
     return (
         <MantineText {...props} ref={ref} />
     )

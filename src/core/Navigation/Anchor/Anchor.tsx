@@ -4,7 +4,7 @@ import { forwardRef } from "react"
 
 export type AnchorProps = MantineAnchorProps & {}
 
-export const Anchor: React.FC<AnchorProps> = createPolymorphicComponent<"a", AnchorProps>(forwardRef<HTMLAnchorElement, AnchorProps>((props, ref) => {
+export const Anchor = createPolymorphicComponent<"a", AnchorProps>(forwardRef<HTMLAnchorElement, AnchorProps>((props, ref) => {
     return (
         <MantineAnchor {...props} ref={ref} />
     )

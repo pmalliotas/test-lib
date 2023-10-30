@@ -6,7 +6,7 @@ import classes from "./ActionIcon.module.css"
 
 export type ActionIconProps = MantineActionIconProps & {}
 
-export const ActionIcon: React.FC<ActionIconProps> = createPolymorphicComponent<"button", ActionIconProps>(forwardRef<HTMLButtonElement, ActionIconProps>((props, ref) => {
+export const ActionIcon = createPolymorphicComponent<"button", ActionIconProps>(forwardRef<HTMLButtonElement, ActionIconProps>((props, ref) => {
     return (
         <MantineActionIcon
             classNames={{

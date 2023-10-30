@@ -4,7 +4,7 @@ import { forwardRef } from "react"
 
 export type NavLinkProps = MantineNavLinkProps & {}
 
-export const NavLink: React.FC<NavLinkProps> = createPolymorphicComponent<"a", NavLinkProps>(forwardRef<HTMLAnchorElement, NavLinkProps>((props, ref) => {
+export const NavLink = createPolymorphicComponent<"a", NavLinkProps>(forwardRef<HTMLAnchorElement, NavLinkProps>((props, ref) => {
     return (
         <MantineNavLink {...props} ref={ref} />
     )

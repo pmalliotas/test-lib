@@ -4,7 +4,7 @@ import { forwardRef } from "react"
 
 export type OverlayProps = MantineOverlayProps & {}
 
-export const Overlay: React.FC<OverlayProps> = createPolymorphicComponent<"div", OverlayProps>(forwardRef<HTMLDivElement, OverlayProps>((props, ref) => {
+export const Overlay = createPolymorphicComponent<"div", OverlayProps>(forwardRef<HTMLDivElement, OverlayProps>((props, ref) => {
     return (
         <MantineOverlay {...props} ref={ref} />
     )

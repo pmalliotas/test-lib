@@ -4,7 +4,7 @@ import { forwardRef } from "react"
 
 export type AvatarProps = MantineAvatarProps & {}
 
-export const Avatar: React.FC<AvatarProps> = createPolymorphicComponent<"div", AvatarProps>(forwardRef<HTMLDivElement, AvatarProps>((props, ref) => {
+export const Avatar = createPolymorphicComponent<"div", AvatarProps>(forwardRef<HTMLDivElement, AvatarProps>((props, ref) => {
     return (
         <MantineAvatar {...props} ref={ref} />
     )

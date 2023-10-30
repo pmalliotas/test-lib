@@ -4,7 +4,7 @@ import { forwardRef } from "react"
 
 export type BadgeProps = MantineBadgeProps & {}
 
-export const Badge: React.FC<BadgeProps> = createPolymorphicComponent<"p", BadgeProps>(forwardRef<HTMLDivElement, BadgeProps>((props, ref) => {
+export const Badge = createPolymorphicComponent<"p", BadgeProps>(forwardRef<HTMLDivElement, BadgeProps>((props, ref) => {
     return (
         <MantineBadge {...props} ref={ref} />
     )
