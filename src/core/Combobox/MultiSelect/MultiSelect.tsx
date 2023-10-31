@@ -10,4 +10,6 @@ export function MultiSelect(props: MantineMultiSelectProps) {
     )
 }
 
+MultiSelect.extend = MantineMultiSelect.extend
+
 export default MultiSelect

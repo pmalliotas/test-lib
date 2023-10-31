@@ -9,3 +9,5 @@ export function Fieldset(props: FieldsetProps) {
         <MantineFieldset {...props} />
     )
 }
+
+Fieldset.extend = MantineFieldset.extend

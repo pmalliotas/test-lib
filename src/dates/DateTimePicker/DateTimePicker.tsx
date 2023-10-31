@@ -9,3 +9,5 @@ export function DateTimePicker(props: DateTimePickerProps) {
         <MantineDateTimePicker {...props} />
     )
 }
+
+DateTimePicker.extend = MantineDateTimePicker.extend

@@ -9,3 +9,6 @@ export function Grid(props: GridProps) {
         <MantineGrid {...props} />
     )
 }
+
+Grid.Col = MantineGrid.Col
+Grid.extend = MantineGrid.extend

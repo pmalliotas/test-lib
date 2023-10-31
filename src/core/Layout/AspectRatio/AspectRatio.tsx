@@ -9,3 +9,5 @@ export function AspectRatio(props: AspectRatioProps) {
         <MantineAspectRatio {...props} />
     )
 }
+
+AspectRatio.extend = MantineAspectRatio.extend

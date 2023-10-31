@@ -9,3 +9,5 @@ export function Stack(props: StackProps) {
         <MantineStack {...props} />
     )
 }
+
+Stack.extend = MantineStack.extend

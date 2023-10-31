@@ -10,4 +10,6 @@ export function Loader(props: LoaderProps) {
     )
 }
 
+Loader.extend = MantineLoader.extend
+
 export default Loader

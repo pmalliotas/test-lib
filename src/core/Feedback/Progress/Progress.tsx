@@ -10,4 +10,6 @@ export function Progress(props: ProgressProps) {
     )
 }
 
+Progress.extend = MantineProgress.extend
+
 export default Progress

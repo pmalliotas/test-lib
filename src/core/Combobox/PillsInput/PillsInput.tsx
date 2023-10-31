@@ -10,4 +10,6 @@ export function PillsInput(props: MantinePillsInputProps) {
     )
 }
 
+PillsInput.extend = MantinePillsInput.extend
+
 export default PillsInput

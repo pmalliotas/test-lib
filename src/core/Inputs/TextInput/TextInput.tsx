@@ -9,3 +9,5 @@ export function TextInput(props: TextInputProps) {
         <MantineTextInput {...props} />
     )
 }
+
+TextInput.extend = MantineTextInput.extend

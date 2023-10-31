@@ -8,3 +8,9 @@ export function Tabs(props: TabsProps) {
         <MantineTabs {...props} />
     )
 }
+
+Tabs.List = MantineTabs.List
+Tabs.Panel = MantineTabs.Panel
+Tabs.Tab = MantineTabs.Tab
+
+Tabs.extend = MantineTabs.extend

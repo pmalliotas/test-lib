@@ -10,4 +10,7 @@ export function Timeline(props: TimelineProps) {
     )
 }
 
+Timeline.Item = MantineTimeline.Item
+Timeline.extend = MantineTimeline.extend
+
 export default Timeline

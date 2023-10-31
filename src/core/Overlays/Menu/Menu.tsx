@@ -9,3 +9,11 @@ export function Menu(props: MenuProps) {
         <MantineMenu {...props} />
     )
 }
+
+Menu.Divider = MantineMenu.Divider
+Menu.Item = MantineMenu.Item
+Menu.Dropdown = MantineMenu.Dropdown
+Menu.Label = MantineMenu.Label
+Menu.Target = MantineMenu.Target
+
+Menu.extend = MantineMenu.extend

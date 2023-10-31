@@ -9,3 +9,5 @@ export function Group(props: GroupProps) {
         <MantineGroup {...props} />
     )
 }
+
+Group.extend = MantineGroup.extend

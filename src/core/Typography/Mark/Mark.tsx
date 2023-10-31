@@ -9,3 +9,5 @@ export function Mark(props: MarkProps) {
         <MantineMark {...props} />
     )
 }
+
+Mark.extend = MantineMark.extend

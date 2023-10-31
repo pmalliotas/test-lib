@@ -10,4 +10,6 @@ export function Spoiler(props: SpoilerProps) {
     )
 }
 
+Spoiler.extend = MantineSpoiler.extend
+
 export default Spoiler

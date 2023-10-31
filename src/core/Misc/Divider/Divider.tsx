@@ -9,3 +9,5 @@ export function Divider(props: DividerProps) {
         <MantineDivider {...props} />
     )
 }
+
+Divider.extend = MantineDivider.extend

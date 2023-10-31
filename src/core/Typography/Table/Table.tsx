@@ -9,3 +9,14 @@ export function Table(props: TableProps) {
         <MantineTable {...props} />
     )
 }
+
+Table.Caption = MantineTable.Caption
+Table.Tbody = MantineTable.Tbody
+Table.Td = MantineTable.Td
+Table.Tfoot = MantineTable.Tfoot
+Table.Th = MantineTable.Th
+Table.Thead = MantineTable.Thead
+Table.Tr = MantineTable.Tr
+Table.ScrollContainer = MantineTable.ScrollContainer
+
+Table.extend = MantineTable.extend

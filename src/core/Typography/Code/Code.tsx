@@ -9,3 +9,5 @@ export function Code(props: CodeProps) {
         <MantineCode {...props} />
     )
 }
+
+Code.extend = MantineCode.extend

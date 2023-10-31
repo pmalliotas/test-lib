@@ -9,3 +9,5 @@ export function TypographyStylesProvider(props: TypographyStylesProviderProps) {
         <MantineTypographyStylesProvider {...props} />
     )
 }
+
+TypographyStylesProvider.extend = MantineTypographyStylesProvider.extend

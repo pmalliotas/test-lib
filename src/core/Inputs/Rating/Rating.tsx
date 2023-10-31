@@ -8,3 +8,5 @@ export function Rating(props: RatingProps) {
         <MantineRating {...props} />
     )
 }
+
+Rating.extend = MantineRating.extend

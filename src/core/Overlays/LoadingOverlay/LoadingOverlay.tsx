@@ -9,3 +9,5 @@ export function LoadingOverlay(props: LoadingOverlayProps) {
         <MantineLoadingOverlay {...props} />
     )
 }
+
+LoadingOverlay.extend = MantineLoadingOverlay.extend

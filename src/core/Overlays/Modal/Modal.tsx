@@ -9,3 +9,5 @@ export function Modal(props: ModalProps) {
         <MantineModal {...props} />
     )
 }
+
+Modal.extend = MantineModal.extend

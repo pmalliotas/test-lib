@@ -10,4 +10,6 @@ export function Pill(props: MantinePillProps) {
     )
 }
 
+Pill.extend = MantinePill.extend
+
 export default Pill

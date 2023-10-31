@@ -10,4 +10,6 @@ export function TagsInput(props: MantineTagsInputProps) {
     )
 }
 
+TagsInput.extend = MantineTagsInput.extend
+
 export default TagsInput

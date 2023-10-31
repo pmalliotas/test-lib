@@ -10,4 +10,6 @@ export function Kbd(props: KbdProps) {
     )
 }
 
+Kbd.extend = MantineKbd.extend
+
 export default Kbd

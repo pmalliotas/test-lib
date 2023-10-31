@@ -9,3 +9,5 @@ export function YearPicker(props: YearPickerProps) {
         <MantineYearPicker {...props} />
     )
 }
+
+YearPicker.extend = MantineYearPicker.extend

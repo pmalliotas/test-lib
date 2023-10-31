@@ -20,7 +20,7 @@ export const ActionIcon = polymorphicFactory<ActionIconType>(((props, ref) => {
     )
 }))
 
-ActionIcon.extend = MantineActionIcon.extend
 ActionIcon.Group = MantineActionIcon.Group
+ActionIcon.extend = MantineActionIcon.extend
 
 export default ActionIcon

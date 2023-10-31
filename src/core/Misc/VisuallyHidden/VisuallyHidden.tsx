@@ -8,3 +8,5 @@ export function VisuallyHidden(props: VisuallyHiddenProps) {
         <MantineVisuallyHidden {...props} />
     )
 }
+
+VisuallyHidden.extend = MantineVisuallyHidden.extend

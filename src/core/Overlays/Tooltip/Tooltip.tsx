@@ -8,3 +8,8 @@ export function Tooltip(props: TooltipProps) {
         <MantineTooltip {...props} />
     )
 }
+
+Tooltip.Floating = MantineTooltip.Floating
+Tooltip.Group = MantineTooltip.Group
+
+Tooltip.extend = MantineTooltip.extend

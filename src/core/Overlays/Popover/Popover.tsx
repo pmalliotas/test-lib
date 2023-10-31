@@ -9,3 +9,5 @@ export function Popover(props: PopoverProps) {
         <MantinePopover {...props} />
     )
 }
+
+Popover.extend = MantinePopover.extend

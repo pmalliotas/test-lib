@@ -9,3 +9,5 @@ export function MonthPicker(props: MonthPickerProps) {
         <MantineMonthPicker {...props} />
     )
 }
+
+MonthPicker.extend = MantineMonthPicker.extend

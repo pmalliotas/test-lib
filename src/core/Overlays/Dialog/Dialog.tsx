@@ -9,3 +9,5 @@ export function Dialog(props: DialogProps) {
         <MantineDialog {...props} />
     )
 }
+
+Dialog.extend = MantineDialog.extend

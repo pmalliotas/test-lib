@@ -9,3 +9,5 @@ export function Space(props: SpaceProps) {
         <MantineSpace {...props} />
     )
 }
+
+Space.extend = MantineSpace.extend

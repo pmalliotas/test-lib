@@ -9,3 +9,5 @@ export function ScrollArea(props: ScrollAreaProps) {
         <MantineScrollArea {...props} />
     )
 }
+
+ScrollArea.extend = MantineScrollArea.extend

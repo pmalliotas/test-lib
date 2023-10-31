@@ -10,4 +10,6 @@ export function Select(props: MantineSelectProps) {
     )
 }
 
+Select.extend = MantineSelect.extend
+
 export default Select

@@ -9,3 +9,5 @@ export function Burger(props: BurgerProps) {
         <MantineBurger {...props} />
     )
 }
+
+Burger.extend = MantineBurger.extend

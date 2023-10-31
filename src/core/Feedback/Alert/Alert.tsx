@@ -10,4 +10,6 @@ export function Alert(props: AlertProps) {
     )
 }
 
+Alert.extend = MantineAlert.extend
+
 export default Alert

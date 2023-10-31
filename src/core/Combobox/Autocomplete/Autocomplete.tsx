@@ -10,5 +10,6 @@ export function Autocomplete(props: MantineAutocompleteProps) {
     )
 }
 
+Autocomplete.extend = MantineAutocomplete.extend
 
 export default Autocomplete

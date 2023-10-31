@@ -9,3 +9,5 @@ export function Drawer(props: DrawerProps) {
         <MantineDrawer {...props} />
     )
 }
+
+Drawer.extend = MantineDrawer.extend

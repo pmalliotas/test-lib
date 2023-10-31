@@ -8,3 +8,5 @@ export function Container(props: ContainerProps) {
         <MantineContainer {...props} />
     )
 }
+
+Container.extend = MantineContainer.extend

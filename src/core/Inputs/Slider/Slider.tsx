@@ -9,3 +9,5 @@ export function Slider(props: SliderProps) {
         <MantineSlider {...props} />
     )
 }
+
+Slider.extend = MantineSlider.extend

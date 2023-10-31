@@ -10,4 +10,6 @@ export function CloseButton(props: CloseButtonProps) {
     )
 }
 
+CloseButton.extend = MantineCloseButton.extend
+
 export default CloseButton

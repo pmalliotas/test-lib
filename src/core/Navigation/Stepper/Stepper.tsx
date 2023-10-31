@@ -9,3 +9,8 @@ export function Stepper(props: StepperProps) {
         <MantineStepper {...props} />
     )
 }
+
+Stepper.Step = MantineStepper.Step
+Stepper.Completed = MantineStepper.Completed
+
+Stepper.extend = MantineStepper.extend

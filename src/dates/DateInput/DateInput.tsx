@@ -9,3 +9,5 @@ export function DateInput(props: DateInputProps) {
         <MantineDateInput {...props} />
     )
 }
+
+DateInput.extend = MantineDateInput.extend

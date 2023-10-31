@@ -9,3 +9,5 @@ export function Calendar(props: CalendarProps) {
         <MantineCalendar {...props} />
     )
 }
+
+Calendar.extend = MantineCalendar.extend

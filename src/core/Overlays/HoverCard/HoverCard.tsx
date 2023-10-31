@@ -9,3 +9,5 @@ export function HoverCard(props: HoverCardProps) {
         <MantineHoverCard {...props} />
     )
 }
+
+HoverCard.extend = MantineHoverCard.extend

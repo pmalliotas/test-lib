@@ -9,3 +9,5 @@ export function Breadcrumbs(props: BreadcrumbsProps) {
         <MantineBreadcrumbs {...props} />
     )
 }
+
+Breadcrumbs.extend = MantineBreadcrumbs.extend

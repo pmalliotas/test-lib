@@ -9,3 +9,5 @@ export function Blockquote(props: BlockquoteProps) {
         <MantineBlockquote {...props} />
     )
 }
+
+Blockquote.extend = MantineBlockquote.extend

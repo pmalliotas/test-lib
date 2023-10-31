@@ -10,4 +10,6 @@ export function RingProgress(props: RingProgressProps) {
     )
 }
 
+RingProgress.extend = MantineRingProgress.extend
+
 export default RingProgress

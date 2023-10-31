@@ -17,3 +17,6 @@ export function ChipGroup(props: ChipGroupProps<boolean>) {
         <MantineChipGroup {...props} />
     )
 }
+
+Chip.Group = MantineChip.Group
+Chip.extend = MantineChip.extend

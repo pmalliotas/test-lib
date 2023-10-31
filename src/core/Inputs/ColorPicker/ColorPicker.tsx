@@ -9,3 +9,5 @@ export function ColorPicker(props: ColorPickerProps) {
         <MantineColorPicker {...props} />
     )
 }
+
+ColorPicker.extend = MantineColorPicker.extend

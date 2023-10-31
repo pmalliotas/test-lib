@@ -9,3 +9,5 @@ export function Highlight(props: HighlightProps) {
         <MantineHighlight {...props} />
     )
 }
+
+Highlight.extend = MantineHighlight.extend

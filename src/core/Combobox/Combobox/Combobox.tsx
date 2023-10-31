@@ -10,4 +10,6 @@ export function Combobox(props: MantineComboboxProps) {
     )
 }
 
+Combobox.extend = MantineCombobox.extend
+
 export default Combobox

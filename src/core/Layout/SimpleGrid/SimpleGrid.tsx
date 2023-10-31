@@ -9,3 +9,5 @@ export function SimpleGrid(props: SimpleGridProps) {
         <MantineSimpleGrid {...props} />
     )
 }
+
+SimpleGrid.extend = MantineSimpleGrid.extend

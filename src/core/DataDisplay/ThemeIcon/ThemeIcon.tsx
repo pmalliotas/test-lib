@@ -10,4 +10,6 @@ export function ThemeIcon(props: ThemeIconProps) {
     )
 }
 
+ThemeIcon.extend = MantineThemeIcon.extend
+
 export default ThemeIcon

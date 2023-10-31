@@ -9,4 +9,6 @@ export function Skeleton(props: SkeletonProps) {
     )
 }
 
+Skeleton.extend = MantineSkeleton.extend
+
 export default Skeleton

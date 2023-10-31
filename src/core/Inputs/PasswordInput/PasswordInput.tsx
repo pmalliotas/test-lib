@@ -9,3 +9,5 @@ export function PasswordInput(props: PasswordInputProps) {
         <MantinePasswordInput {...props} />
     )
 }
+
+PasswordInput.extend = MantinePasswordInput.extend

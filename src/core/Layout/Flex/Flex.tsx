@@ -9,3 +9,5 @@ export function Flex(props: FlexProps) {
         <MantineFlex {...props} />
     )
 }
+
+Flex.extend = MantineFlex.extend

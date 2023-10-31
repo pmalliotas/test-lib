@@ -11,9 +11,14 @@ export function Radio(props: RadioProps) {
     )
 }
 
+Radio.Group = MantineRadio.Group
+Radio.extend = MantineRadio.extend
+
 export function RadioGroup(props: RadioGroupProps) {
 
     return (
         <MantineRadioGroup {...props} />
     )
 }
+
+RadioGroup.extend = MantineRadioGroup.extend

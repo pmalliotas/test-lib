@@ -14,6 +14,5 @@ export const Badge = polymorphicFactory<BadgeType>(((props, ref) => {
 }))
 
 Badge.extend = MantineBadge.extend
-Badge.Group = MantineBadge.Group
 
 export default Badge

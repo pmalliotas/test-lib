@@ -9,3 +9,5 @@ export function Textarea(props: TextareaProps) {
         <MantineTextarea {...props} />
     )
 }
+
+Textarea.extend = MantineTextarea.extend

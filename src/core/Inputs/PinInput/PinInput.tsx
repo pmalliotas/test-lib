@@ -9,3 +9,5 @@ export function PinInput(props: PinInputProps) {
         <MantinePinInput {...props} />
     )
 }
+
+PinInput.extend = MantinePinInput.extend

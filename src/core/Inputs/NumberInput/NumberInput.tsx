@@ -9,3 +9,5 @@ export function NumberInput(props: NumberInputProps) {
         <MantineNumberInput {...props} />
     )
 }
+
+NumberInput.extend = MantineNumberInput.extend

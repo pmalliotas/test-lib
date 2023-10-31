@@ -9,6 +9,7 @@ import { MantineProvider, useMantineColorScheme } from '@mantine/core';
 
 // theme.ts file from previous step
 import { theme } from '../src/config/theme/theme';
+import { PinInput } from "../src/core";
 
 const channel = addons.getChannel();
 

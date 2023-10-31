@@ -11,9 +11,14 @@ export function Switch(props: SwitchProps) {
     )
 }
 
+Switch.Group = MantineSwitch.Group
+Switch.extend = MantineSwitch.extend
+
 export function SwitchGroup(props: SwitchGroupProps) {
 
     return (
         <MantineSwitchGroup {...props} />
     )
 }
+
+SwitchGroup.extend = MantineSwitchGroup.extend

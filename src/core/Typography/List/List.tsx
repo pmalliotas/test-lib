@@ -9,3 +9,7 @@ export function List(props: ListProps) {
         <MantineList {...props} />
     )
 }
+
+List.Item = MantineList.Item
+
+List.extend = MantineList.extend

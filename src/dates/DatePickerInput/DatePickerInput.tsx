@@ -9,3 +9,5 @@ export function DatePickerInput(props: DatePickerInputProps) {
         <MantineDatePickerInput {...props} />
     )
 }
+
+DatePickerInput.extend = MantineDatePickerInput.extend

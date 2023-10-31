@@ -9,3 +9,5 @@ export function ColorInput(props: ColorInputProps) {
         <MantineColorInput {...props} />
     )
 }
+
+ColorInput.extend = MantineColorInput.extend

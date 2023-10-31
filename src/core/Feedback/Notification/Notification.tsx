@@ -10,4 +10,6 @@ export function Notification(props: NotificationProps) {
     )
 }
 
+Notification.extend = MantineNotification.extend
+
 export default Notification

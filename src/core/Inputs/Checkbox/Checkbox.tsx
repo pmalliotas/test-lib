@@ -12,10 +12,16 @@ export function Checkbox(props: MantineCheckboxProps) {
     )
 }
 
+Checkbox.Group = MantineCheckbox.Group
+Checkbox.extend = MantineCheckbox.extend
+
 export function CheckboxGroup(props: MantineCheckboxGroupProps) {
     return (
         <MantineCheckboxGroup {...props} />
     )
 }
+
+CheckboxGroup.extend = MantineCheckboxGroup.extend
+
 
 export default Checkbox

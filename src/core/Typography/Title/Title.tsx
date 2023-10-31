@@ -9,3 +9,5 @@ export function Title(props: TitleProps) {
         <MantineTitle {...props} />
     )
 }
+
+Title.extend = MantineTitle.extend

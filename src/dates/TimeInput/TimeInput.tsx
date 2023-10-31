@@ -9,3 +9,5 @@ export function TimeInput(props: TimeInputProps) {
         <MantineTimeInput {...props} />
     )
 }
+
+TimeInput.extend = MantineTimeInput.extend

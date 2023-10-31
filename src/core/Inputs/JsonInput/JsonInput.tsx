@@ -9,3 +9,5 @@ export function JsonInput(props: JsonInputProps) {
         <MantineJsonInput {...props} />
     )
 }
+
+JsonInput.extend = MantineJsonInput.extend

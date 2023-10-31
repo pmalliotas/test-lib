@@ -10,4 +10,6 @@ export function Indicator(props: IndicatorProps) {
     )
 }
 
+Indicator.extend = MantineIndicator.extend
+
 export default Indicator

@@ -9,3 +9,5 @@ export function SegmentedControl(props: SegmentedControlProps) {
         <MantineSegmentedControl {...props} />
     )
 }
+
+SegmentedControl.extend = MantineSegmentedControl.extend

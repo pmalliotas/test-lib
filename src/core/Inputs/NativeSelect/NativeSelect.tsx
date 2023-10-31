@@ -9,3 +9,5 @@ export function NativeSelect(props: NativeSelectProps) {
         <MantineNativeSelect {...props} />
     )
 }
+
+NativeSelect.extend = MantineNativeSelect.extend

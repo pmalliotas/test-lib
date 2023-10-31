@@ -9,3 +9,5 @@ export function Affix(props: AffixProps) {
         <MantineAffix {...props} />
     )
 }
+
+Affix.extend = MantineAffix.extend
