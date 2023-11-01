@@ -2,7 +2,9 @@ import { createTheme, rem, type MantineThemeOverride } from "@mantine/core"
 import { generateColors } from "@mantine/colors-generator"
 
 import styles from "./styles.module.css"
-import { Select, Button } from "../../core"
+import { Button } from "../../core"
+
+const DEFAULT_FONT_FAMILY = "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"
 
 export const theme: MantineThemeOverride = createTheme({
     activeClassName: styles.active,
@@ -17,7 +19,7 @@ export const theme: MantineThemeOverride = createTheme({
     primaryColor: "my-color",
     colors: {
         "ocean-blue": ["#7AD1DD", "#5FCCDB", "#44CADC", "#2AC9DE", "#1AC2D9", "#11B7CD", "#09ADC3", "#0E99AC", "#128797", "#147885"],
-        "my-color": generateColors("#a9ca31")
+        "my-color": generateColors("#a93a31")
     },
     fontFamily: "Verdana, sans-serif",
     fontFamilyMonospace: "Monaco, Courier, monospace",
@@ -36,17 +38,37 @@ export const theme: MantineThemeOverride = createTheme({
         xl: "1.65",
     },
     headings: {
-        // properties for all headings
-        fontWeight: "400",
-        fontFamily: "Roboto",
-
-        // properties for individual headings, all of them are optional
+        fontFamily: DEFAULT_FONT_FAMILY,
+        fontWeight: "700",
         sizes: {
-            h1: { fontWeight: "100", fontSize: rem(36), lineHeight: "1.4" },
-            h2: { fontSize: rem(30), lineHeight: "1.5" },
-            // ...up to h6
-            h6: { fontWeight: "900" },
+            h1: { fontSize: rem(34), lineHeight: "1.3" },
+            h2: { fontSize: rem(26), lineHeight: "1.35" },
+            h3: { fontSize: rem(22), lineHeight: "1.4" },
+            h4: { fontSize: rem(18), lineHeight: "1.45" },
+            h5: { fontSize: rem(16), lineHeight: "1.5" },
+            h6: { fontSize: rem(14), lineHeight: "1.5" },
         },
+    },
+    radius: {
+        xs: rem(2),
+        sm: rem(4),
+        md: rem(8),
+        lg: rem(16),
+        xl: rem(32),
+    },
+    spacing: {
+        xs: rem(10),
+        sm: rem(12),
+        md: rem(16),
+        lg: rem(20),
+        xl: rem(32),
+    },
+    shadows: {
+        xs: `0 ${rem(1)} ${rem(3)} rgba(0, 0, 0, 0.05), 0 ${rem(1)} ${rem(2)} rgba(0, 0, 0, 0.1)`,
+        sm: `0 ${rem(1)} ${rem(3)} rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05) 0 ${rem(10)} ${rem(15)} ${rem(-5)}, rgba(0, 0, 0, 0.04) 0 ${rem(7)} ${rem(7)} ${rem(-5)}`,
+        md: `0 ${rem(1)} ${rem(3)} rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05) 0 ${rem(20)} ${rem(25)} ${rem(-5)}, rgba(0, 0, 0, 0.04) 0 ${rem(10)} ${rem(10)} ${rem(-5)}`,
+        lg: `0 ${rem(1)} ${rem(3)} rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05) 0 ${rem(28)} ${rem(23)} ${rem(-7)}, rgba(0, 0, 0, 0.04) 0 ${rem(12)} ${rem(12)} ${rem(-7)}`,
+        xl: `0 ${rem(1)} ${rem(3)} rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05) 0 ${rem(36)} ${rem(28)} ${rem(-7)}, rgba(0, 0, 0, 0.04) 0 ${rem(17)} ${rem(17)} ${rem(-7)}`,
     },
     components: {
         Button: Button.extend({
