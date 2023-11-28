@@ -15,7 +15,8 @@
     "build-storybook": "storybook build",
     "clean": "rm -rf dist",
     "build-css": "node ./src/styles/utils/cssGenerator.mjs",
-    "watch-css": "node ./src/styles/utils/cssGenerator.mjs"
+    "watch-css": "node ./src/styles/utils/cssGenerator.mjs",
+    "publish": "yarn build && npm publish ./dist"
   },
   "sideEffects": false,
   "devDependencies": {

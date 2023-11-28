@@ -80,6 +80,7 @@ function subpath(commonPlugins, folder) {
         baseContents: {
           name: `${packageJson.name}/${folder}`,
           private: true,
+          sideEffects: false,
           main: "./index.cjs.js",
           module: "./index.esm.js",
           types: "./index.d.ts",
