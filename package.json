@@ -6,7 +6,7 @@
   "description": "coreui",
   "main": "dist/cjs/index.js",
   "module": "dist/index.js",
-  "typings": "dist/types/index.d.ts",
+  "typings": "dist/index.d.ts",
   "type": "module",
   "scripts": {
     "build": "yarn clean && yarn build-css && rollup -c && yarn post:build",
