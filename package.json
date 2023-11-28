@@ -4,8 +4,8 @@
   "packageManager": "yarn@3.6.4",
   "license": "MIT",
   "description": "coreui",
-  "main": "dist/cjs/index.js",
-  "module": "dist/index.js",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
   "typings": "dist/index.d.ts",
   "type": "module",
   "scripts": {
@@ -18,9 +18,6 @@
     "build-css": "ts-node --esm ./src/styles/utils/cssGenerator.ts",
     "watch-css": "ts-node --esm ./src/styles/utils/cssGenerator.ts"
   },
-  "files": [
-    "dist"
-  ],
   "sideEffects": false,
   "devDependencies": {
     "@babel/core": "^7.23.3",
