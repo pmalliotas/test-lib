@@ -18,9 +18,6 @@
     "build-css": "ts-node --esm ./src/styles/utils/cssGenerator.ts",
     "watch-css": "ts-node --esm ./src/styles/utils/cssGenerator.ts"
   },
-  "files": [
-    "dist"
-  ],
   "sideEffects": false,
   "devDependencies": {
     "@babel/core": "^7.23.3",
