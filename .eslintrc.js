@@ -11,7 +11,7 @@ module.exports = {
 		"plugin:storybook/recommended",
 		// "plugin:perfectionist/recommended-alphabetical"
 	],
-	ignorePatterns: ["dist", ".eslintrc.cjs"],
+	ignorePatterns: ["dist", ".eslintrc.js"],
 	overrides: [
 		{
 			env: {

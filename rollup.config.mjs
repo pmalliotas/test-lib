@@ -10,7 +10,7 @@ import autoprefixer from "autoprefixer"
 import svgr from "@svgr/rollup"
 import generatePackageJson from "rollup-plugin-generate-package-json"
 import replace from "@rollup/plugin-replace"
-import { getSubpathFolders } from "./scripts/buildUtils.js"
+import { getSubpathFolders } from "./scripts/buildUtils.mjs"
 
 const external = [
   ...Object.keys(packageJson.dependencies || {}),
@@ -34,7 +34,7 @@ const commonPlugins = [
       autoprefixer(),
     ],
     config: {
-      path: "./postcss.config.cjs"
+      path: "./postcss.config.js"
     },
     inject: {
       insertAt: "top",
@@ -50,7 +50,7 @@ const commonPlugins = [
     typescript: true,
     prettier: true
   }),
-  // terser(),
+  terser(),
   copy({
     targets: [
       { src: "src/styles/styles.css", dest: "dist/styles" },

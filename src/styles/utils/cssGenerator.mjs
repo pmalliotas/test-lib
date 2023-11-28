@@ -1,11 +1,11 @@
-import * as fs from "fs"
+import fs from "fs"
 import colors from "../variables/colors.mjs"
 
 const getVariables = () => {
-    const classes: Record<string, string> = {}
+    const classes = {}
 
     Object.keys(colors).map((colorName) => {
-        colors[colorName as keyof typeof colors].forEach((color, i) => {
+        colors[colorName].forEach((color, i) => {
             classes[`--mantine-color-${colorName}-${i}`] = color
         })
     })

@@ -7,16 +7,15 @@
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "typings": "dist/index.d.ts",
-  "type": "module",
   "scripts": {
     "build": "yarn clean && yarn build-css && rollup -c && yarn post:build",
-    "post:build": "node ./scripts/frankBuild.js",
+    "post:build": "node ./scripts/frankBuild.mjs",
     "start": "rollup -c --watch",
     "storybook": "yarn watch-css && storybook dev -p 6006",
     "build-storybook": "storybook build",
     "clean": "rm -rf dist",
-    "build-css": "ts-node --esm ./src/styles/utils/cssGenerator.ts",
-    "watch-css": "ts-node --esm ./src/styles/utils/cssGenerator.ts"
+    "build-css": "node ./src/styles/utils/cssGenerator.mjs",
+    "watch-css": "node ./src/styles/utils/cssGenerator.mjs"
   },
   "sideEffects": false,
   "devDependencies": {
