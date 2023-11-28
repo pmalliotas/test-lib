@@ -2,3 +2,4 @@ src/**/*
 !src/**/*.d.ts
 tsconfig.*
 dist/stats.html
+.yarn
