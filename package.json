@@ -1,6 +1,6 @@
 {
   "name": "test-lib-panos-coreui",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "packageManager": "yarn@3.6.4",
   "license": "MIT",
   "description": "coreui",
