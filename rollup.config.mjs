@@ -65,12 +65,12 @@ function subpath(commonPlugins, folder) {
     output: [
       {
         file: `dist/${folder}/index.esm.js`,
-        exports: "named",
+        // exports: "named",
         format: "esm",
       },
       {
         file: `dist/${folder}/index.cjs.js`,
-        exports: "named",
+        // exports: "named",
         format: "cjs",
       }
     ],
@@ -107,12 +107,12 @@ export default [
     output: [
       {
         file: "dist/index.esm.js",
-        exports: "named",
+        // exports: "named",
         format: "esm",
       },
       {
         file: "dist/index.cjs.js",
-        exports: "named",
+        // exports: "named",
         format: "cjs",
       }
     ],
