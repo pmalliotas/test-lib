@@ -6,6 +6,8 @@ export type MonthPickerInputProps<T extends DatePickerType = "default"> = Mantin
 export function MonthPickerInput(props: MonthPickerInputProps) {
 
     return (
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-expect-error
         <MantineMonthPickerInput {...props} />
     )
 }

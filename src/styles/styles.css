@@ -1,3 +1,5 @@
-@import url("@mantine/core/styles.css");
-@import url("@mantine/dates/styles.css");
-/* @import url("@mantine/notifications/styles.css"); */
+@import "@mantine/core/styles.css";
+@import "@mantine/dates/styles.css";
+@import "@mantine/notifications/styles.css";
+
+@import "./generated/styles.css"

@@ -1,70 +1,135 @@
-import typescript from '@rollup/plugin-typescript';
-import { nodeResolve } from '@rollup/plugin-node-resolve';
-import commonjs from '@rollup/plugin-commonjs';
-import { terser } from 'rollup-plugin-terser';
-import pkg from './package.json' assert { type: "json"}
-import postcss from 'rollup-plugin-postcss';
-import copy from 'rollup-plugin-copy'
-import autoprefixer from "autoprefixer";
+import process from "node:process"
+import typescript from "rollup-plugin-typescript2"
+import { nodeResolve } from "@rollup/plugin-node-resolve"
+import commonjs from "@rollup/plugin-commonjs"
+import { terser } from "rollup-plugin-terser"
+import packageJson from "./package.json" assert { type: "json" }
+import postcss from "rollup-plugin-postcss"
+import copy from "rollup-plugin-copy"
+import autoprefixer from "autoprefixer"
+import svgr from "@svgr/rollup"
+import generatePackageJson from "rollup-plugin-generate-package-json"
+import replace from "@rollup/plugin-replace"
+import { getSubpathFolders } from "./scripts/buildUtils.js"
 
 const external = [
-  ...Object.keys(pkg.dependencies || {}),
-  ...Object.keys(pkg.peerDependencies || {}),
-];
+  ...Object.keys(packageJson.dependencies || {}),
+  ...Object.keys(packageJson.peerDependencies || {}),
+  /node_modules/, /\.\.\/utils/
+]
 
-const rollupConfig = {
-  input: 'src/index.ts',
-  output: {
-    dir: "dist",
-    format: 'es',
-    sourcemap: true,
+const commonPlugins = [
+  typescript({
+    tsconfig: "./tsconfig.build.json",
+    declaration: true,
+    declarationDir: "dist/types/",
+    outDir: "dist",
+    useTsconfigDeclarationDir: true,
+  }),
+
+  nodeResolve({
+    extensions: [".js", ".jsx", ".ts", ".tsx"],
+    modulesOnly: true,
+  }),
+  commonjs(),
+  postcss({
+    extract: true,
+    modules: true,
+    minimize: true,
+    importLoaders: 1,
+    plugins: [
+      autoprefixer(),
+    ],
+    config: {
+      path: "./postcss.config.cjs"
+    },
+    inject: {
+      insertAt: "top",
+    },
+    extensions: [".css"]
+  }),
+  replace({
+    __IS_DEV__: process.env.NODE_ENV === "development",
+    preventAssignment: true
+  }),
+  svgr({
+    icon: true,
+    typescript: true,
+    prettier: true
+  }),
+  terser(),
+  copy({
+    targets: [
+      { src: "src/styles/styles.css", dest: "dist/styles" },
+    ]
+  })
+]
+
+// Returns rollup configuration for a given subpath
+function subpath(commonPlugins, folder) {
+  return {
+    input: `src/${folder}/index.ts`,
+    output: [
+      {
+        file: `dist/${folder}/index.esm.js`,
+        exports: "named",
+        format: "esm",
+      },
+      {
+        file: `dist/${folder}/index.cjs.js`,
+        exports: "named",
+        format: "cjs",
+      }
+    ],
+    plugins: [
+      ...commonPlugins,
+      generatePackageJson({
+        baseContents: {
+          name: `${packageJson.name}/${folder}`,
+          private: true,
+          main: "./index.cjs.js",
+          module: "./index.esm.js",
+          types: "./index.d.ts",
+          peerDependencies: packageJson.peerDependencies,
+        },
+        outputFolder: `dist/${folder}/`
+      }),
+    ],
+    // Don't bundle node_modules and ../utils
+    //
+    // We should also exclude relative imports of other components, but a trivial exclude of /\.\./ does not work
+    // It may require changes to the way the components are exported
+    external,
+  }
+}
+
+
+export default [
+  // Build all components in ./src/*
+  ...getSubpathFolders("./src").map((folder) => subpath(commonPlugins, folder)),
+
+  // Build the main file that includes all components and utils
+  {
+    input: "src/index.ts",
+    output: [
+      {
+        file: "dist/index.esm.js",
+        exports: "named",
+        format: "esm",
+      },
+      {
+        file: "dist/index.cjs.js",
+        exports: "named",
+        format: "cjs",
+      }
+    ],
+    plugins: commonPlugins,
+    external,
+    onwarn: function (warning, warn) {
+      if (warning.code === "THIS_IS_UNDEFINED") {
+        return
+      }
+      warn(warning)
+    },
   },
-  external,
-  plugins: [
-    typescript({
-      tsconfig: './tsconfig.json',
-      declaration: true,
-      declarationDir: 'dist/types/',
-      outDir: 'dist',
-    }),
-
-    nodeResolve({
-      extensions: ['.js', '.jsx', '.ts', '.tsx'],
-      modulesOnly: true,
-    }),
-    commonjs(),
-
-    // babel({
-    //   exclude: 'node_modules/**',
-    //   presets: ['@babel/preset-env'],
-    //   babelHelpers: 'bundled',
-    // }),
-    postcss({
-      // Extract CSS to the same location where the JS file is generated
-      extract: true,
-      // Use CSS modules
-      modules: true,
-      // Minimize CSS - you might want to use a dedicated plugin for this
-      minimize: true,
-      // Allow importing from node_modules directory
-      importLoaders: 1,
-      plugins: [
-        autoprefixer(),
-      ]
-    }),
-    terser(),
-    copy({
-      targets: [
-        { src: 'src/styles/styles.css', dest: 'dist/styles' },
-      ]
-    })
-  ],
-  onwarn: function (warning, warn) {
-    if (warning.code === 'THIS_IS_UNDEFINED') {
-      return;
-    }
-    warn(warning);
-  },
-};
-
-export default rollupConfig;
+]

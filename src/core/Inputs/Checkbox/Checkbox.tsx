@@ -23,5 +23,4 @@ export function CheckboxGroup(props: MantineCheckboxGroupProps) {
 
 CheckboxGroup.extend = MantineCheckboxGroup.extend
 
-
 export default Checkbox

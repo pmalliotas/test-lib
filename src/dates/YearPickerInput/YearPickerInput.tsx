@@ -6,6 +6,8 @@ export type YearPickerInputProps = MantineYearPickerInputProps & {}
 export function YearPickerInput(props: YearPickerInputProps) {
 
     return (
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-expect-error
         <MantineYearPickerInput {...props} />
     )
 }

@@ -9,4 +9,4 @@ export * from "./Navigation"
 export * from "./Overlays"
 export * from "./Typography"
 
-export { em, MantineProvider, px, rem } from "@mantine/core"
+export { em, MantineProvider, px, rem, useMantineColorScheme } from "@mantine/core"

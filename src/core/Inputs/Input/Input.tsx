@@ -9,10 +9,11 @@ type InputType = InputFactory & {
 
 export const Input = polymorphicFactory<InputType>(((props, ref) => {
     return (
-        <MantineInput {...props} ref={ref} />
+        <MantineInput
+            {...props}
+            ref={ref}
+        />
     )
 }))
 
 Input.extend = MantineInput.extend
-
-

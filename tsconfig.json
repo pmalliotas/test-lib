@@ -27,15 +27,6 @@
     "noImplicitReturns": true,
     "declaration": true,
     "outDir": "./dist",
-    // "types": [
-    //   "node",
-    // ],
-    // "baseUrl": ".",
-    // "paths": {
-    //   "@mantine/core": [
-    //     "node_modules/@mantine/core/lib/core"
-    //   ]
-    // }
   },
   "include": [
     "src",
@@ -43,12 +34,9 @@
     "src/dates",
     "src/forms",
     "src/hooks",
+    "src/styles/config",
     "declarations.d.ts",
     "src/index.ts",
-  ],
-  "exclude": [
-    "**/*.stories.ts",
-    "**/*.stories.tsx"
   ],
   "references": [
     {
