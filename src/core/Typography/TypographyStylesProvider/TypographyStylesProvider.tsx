@@ -1,3 +1,5 @@
+import * as React from "react"
+
 import { TypographyStylesProvider as MantineTypographyStylesProvider } from "@mantine/core"
 import { type TypographyStylesProviderProps as MantineTypographyStylesProviderProps } from "@mantine/core"
 
