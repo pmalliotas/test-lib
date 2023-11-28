@@ -15,22 +15,15 @@ import { getSubpathFolders } from "./scripts/buildUtils.js"
 const external = [
   ...Object.keys(packageJson.dependencies || {}),
   ...Object.keys(packageJson.peerDependencies || {}),
-  /node_modules/, /\.\.\/utils/
 ]
 
 const commonPlugins = [
   typescript({
     tsconfig: "./tsconfig.build.json",
-    declaration: true,
-    declarationDir: "dist/types/",
-    outDir: "dist",
     useTsconfigDeclarationDir: true,
   }),
 
-  nodeResolve({
-    extensions: [".js", ".jsx", ".ts", ".tsx"],
-    modulesOnly: true,
-  }),
+  nodeResolve(),
   commonjs(),
   postcss({
     extract: true,
