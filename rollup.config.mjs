@@ -57,7 +57,7 @@ const commonPlugins = [
     typescript: true,
     prettier: true
   }),
-  terser(),
+  // terser(),
   copy({
     targets: [
       { src: "src/styles/styles.css", dest: "dist/styles" },
