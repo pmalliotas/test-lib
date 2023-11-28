@@ -1,9 +1,9 @@
 {
-  "name": "lib-coreui",
+  "name": "test-lib-panos-coreui",
   "version": "0.0.1",
   "packageManager": "yarn@3.6.4",
   "license": "MIT",
-  "description": "Datawise Core UI",
+  "description": "coreui",
   "main": "dist/cjs/index.js",
   "module": "dist/index.js",
   "typings": "dist/types/index.d.ts",
