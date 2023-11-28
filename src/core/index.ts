@@ -1,4 +1,5 @@
-export * from "./Buttons"
+export { ActionIcon, Button, CloseButton, CopyButton, FileButton, UnstyledButton } from "./Buttons"
+export type { ActionIconProps, ButtonProps, CloseButtonProps, CopyButtonProps, FileButtonProps, UnstyledButtonProps } from "./Buttons"
 export * from "./Combobox"
 export * from "./DataDisplay"
 export * from "./Feedback"
