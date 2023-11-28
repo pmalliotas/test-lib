@@ -1,3 +1,5 @@
+import * as React from "react"
+
 import { NavLink as MantineNavLink, NavLinkFactory, polymorphicFactory } from "@mantine/core"
 import { type NavLinkProps as MantineNavLinkProps } from "@mantine/core"
 

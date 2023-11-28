@@ -1,3 +1,5 @@
+import * as React from "react"
+
 import { FocusTrap as MantineFocusTrap } from "@mantine/core"
 import { type FocusTrapProps as MantineFocusTrapProps } from "@mantine/core"
 

@@ -1,3 +1,5 @@
+import * as React from "react"
+
 import { Mark as MantineMark } from "@mantine/core"
 import { type MarkProps as MantineMarkProps } from "@mantine/core"
 

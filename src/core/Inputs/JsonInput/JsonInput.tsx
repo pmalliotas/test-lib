@@ -1,3 +1,5 @@
+import * as React from "react"
+
 import { JsonInput as MantineJsonInput } from "@mantine/core"
 import { type JsonInputProps as MantineJsonInputProps } from "@mantine/core"
 

@@ -1,3 +1,5 @@
+import * as React from "react"
+
 import { SimpleGrid as MantineSimpleGrid } from "@mantine/core"
 import { type SimpleGridProps as MantineSimpleGridProps } from "@mantine/core"
 

@@ -1,3 +1,5 @@
+import * as React from "react"
+
 import { Collapse as MantineCollapse } from "@mantine/core"
 import { type CollapseProps as MantineCollapseProps } from "@mantine/core"
 

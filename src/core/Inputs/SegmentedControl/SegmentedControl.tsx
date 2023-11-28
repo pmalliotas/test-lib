@@ -1,3 +1,5 @@
+import * as React from "react"
+
 import { SegmentedControl as MantineSegmentedControl } from "@mantine/core"
 import { type SegmentedControlProps as MantineSegmentedControlProps } from "@mantine/core"
 

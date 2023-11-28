@@ -1,3 +1,5 @@
+import * as React from "react"
+
 import { Paper as MantinePaper, PaperFactory, polymorphicFactory } from "@mantine/core"
 import { type PaperProps as MantinePaperProps } from "@mantine/core"
 

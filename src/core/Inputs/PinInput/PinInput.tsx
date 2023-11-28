@@ -1,3 +1,5 @@
+import * as React from "react"
+
 import { PinInput as MantinePinInput } from "@mantine/core"
 import { type PinInputProps as MantinePinInputProps } from "@mantine/core"
 

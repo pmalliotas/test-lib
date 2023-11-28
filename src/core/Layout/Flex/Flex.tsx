@@ -1,3 +1,5 @@
+import * as React from "react"
+
 import { FlexFactory, Flex as MantineFlex, polymorphicFactory } from "@mantine/core"
 import { type FlexProps as MantineFlexProps } from "@mantine/core"
 

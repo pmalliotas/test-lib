@@ -1,3 +1,5 @@
+import * as React from "react"
+
 import { TagsInput as MantineTagsInput } from "@mantine/core"
 import { type TagsInputProps as MantineTagsInputProps } from "@mantine/core"
 

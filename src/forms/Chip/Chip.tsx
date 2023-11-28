@@ -1,3 +1,5 @@
+import * as React from "react"
+
 import { type UseControllerProps, useController, type FieldValues } from "react-hook-form"
 import { Chip as $Chip } from "../../core"
 import { type ChipProps as $ChipProps } from "../../core"

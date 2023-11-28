@@ -1,3 +1,5 @@
+import * as React from "react"
+
 import { Overlay as MantineOverlay, OverlayFactory, polymorphicFactory } from "@mantine/core"
 import { type OverlayProps as MantineOverlayProps } from "@mantine/core"
 

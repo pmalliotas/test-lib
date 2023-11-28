@@ -1,3 +1,5 @@
+import * as React from "react"
+
 import { Accordion as MantineAccordion } from "@mantine/core"
 import { type AccordionProps as MantineAccordionProps } from "@mantine/core"
 

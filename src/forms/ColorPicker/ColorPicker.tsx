@@ -1,3 +1,5 @@
+import * as React from "react"
+
 import { type UseControllerProps, useController, type FieldValues } from "react-hook-form"
 import { ColorPicker as $ColorPicker } from "../../core"
 import { type ColorPickerProps as $ColorPickerProps } from "../../core"

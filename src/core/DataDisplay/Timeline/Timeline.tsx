@@ -1,3 +1,5 @@
+import * as React from "react"
+
 import { Timeline as MantineTimeline } from "@mantine/core"
 import { type TimelineProps as MantineTimelineProps } from "@mantine/core"
 

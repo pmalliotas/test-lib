@@ -1,3 +1,5 @@
+import * as React from "react"
+
 import { Title as MantineTitle } from "@mantine/core"
 import { type TitleProps as MantineTitleProps } from "@mantine/core"
 

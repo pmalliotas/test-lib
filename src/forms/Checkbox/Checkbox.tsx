@@ -1,3 +1,5 @@
+import * as React from "react"
+
 import { type FieldValues, useController, type UseControllerProps } from "react-hook-form"
 import { Checkbox as $Checkbox } from "../../core"
 import { type CheckboxProps as $CheckboxProps } from "../../core"

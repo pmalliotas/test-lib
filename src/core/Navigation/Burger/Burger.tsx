@@ -1,3 +1,5 @@
+import * as React from "react"
+
 import { Burger as MantineBurger } from "@mantine/core"
 import { type BurgerProps as MantineBurgerProps } from "@mantine/core"
 

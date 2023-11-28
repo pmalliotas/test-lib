@@ -1,3 +1,5 @@
+import * as React from "react"
+
 import { Chip as MantineChip, ChipGroup as MantineChipGroup } from "@mantine/core"
 import { type ChipProps as MantineChipProps, type ChipGroupProps as MantineChipGroupProps } from "@mantine/core"
 

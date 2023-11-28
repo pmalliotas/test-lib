@@ -1,3 +1,5 @@
+import * as React from "react"
+
 import { Pagination as MantinePagination } from "@mantine/core"
 import { type PaginationProps as MantinePaginationProps } from "@mantine/core"
 

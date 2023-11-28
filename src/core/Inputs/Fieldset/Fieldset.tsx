@@ -1,3 +1,5 @@
+import * as React from "react"
+
 import { Fieldset as MantineFieldset } from "@mantine/core"
 import { type FieldsetProps as MantineFieldsetProps } from "@mantine/core"
 

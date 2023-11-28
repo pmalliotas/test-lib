@@ -1,3 +1,5 @@
+import * as React from "react"
+
 import { Menu as MantineMenu } from "@mantine/core"
 import { type MenuProps as MantineMenuProps } from "@mantine/core"
 

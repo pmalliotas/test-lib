@@ -1,3 +1,5 @@
+import * as React from "react"
+
 import { InputFactory, Input as MantineInput, polymorphicFactory } from "@mantine/core"
 import { type InputProps as MantineInputProps } from "@mantine/core"
 

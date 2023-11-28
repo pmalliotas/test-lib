@@ -1,3 +1,5 @@
+import * as React from "react"
+
 import { Calendar as MantineCalendar } from "@mantine/dates"
 import { type CalendarProps as MantineCalendarProps } from "@mantine/dates"
 

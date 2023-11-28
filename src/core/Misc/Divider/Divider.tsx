@@ -1,3 +1,5 @@
+import * as React from "react"
+
 import { Divider as MantineDivider } from "@mantine/core"
 import { type DividerProps as MantineDividerProps } from "@mantine/core"
 

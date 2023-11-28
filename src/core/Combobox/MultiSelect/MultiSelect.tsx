@@ -1,3 +1,5 @@
+import * as React from "react"
+
 import { MultiSelect as MantineMultiSelect } from "@mantine/core"
 import { type MultiSelectProps as MantineMultiSelectProps } from "@mantine/core"
 

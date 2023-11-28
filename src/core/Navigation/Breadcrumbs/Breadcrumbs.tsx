@@ -1,3 +1,5 @@
+import * as React from "react"
+
 import { Breadcrumbs as MantineBreadcrumbs } from "@mantine/core"
 import { type BreadcrumbsProps as MantineBreadcrumbsProps } from "@mantine/core"
 

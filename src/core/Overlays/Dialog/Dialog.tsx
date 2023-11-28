@@ -1,3 +1,5 @@
+import * as React from "react"
+
 import { Dialog as MantineDialog } from "@mantine/core"
 import { type DialogProps as MantineDialogProps } from "@mantine/core"
 

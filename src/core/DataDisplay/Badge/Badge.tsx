@@ -1,3 +1,5 @@
+import * as React from "react"
+
 import { BadgeFactory, Badge as MantineBadge, polymorphicFactory } from "@mantine/core"
 import { type BadgeProps as MantineBadgeProps } from "@mantine/core"
 

@@ -1,3 +1,5 @@
+import * as React from "react"
+
 import { type UseControllerProps, useController, type FieldValues } from "react-hook-form"
 import { Radio as $Radio, type RadioProps as $RadioProps } from "../../core"
 import { RadioGroupForm } from "./RadioGroup/RadioGroup"

@@ -1,3 +1,5 @@
+import * as React from "react"
+
 import { Kbd as MantineKbd } from "@mantine/core"
 import { type KbdProps as MantineKbdProps } from "@mantine/core"
 

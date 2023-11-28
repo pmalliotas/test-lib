@@ -1,3 +1,5 @@
+import * as React from "react"
+
 import { NativeSelect as MantineNativeSelect } from "@mantine/core"
 import { type NativeSelectProps as MantineNativeSelectProps } from "@mantine/core"
 

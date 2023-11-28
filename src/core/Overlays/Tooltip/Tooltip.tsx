@@ -1,3 +1,5 @@
+import * as React from "react"
+
 import { Tooltip as MantineTooltip } from "@mantine/core"
 import { type TooltipProps as MantineTooltipProps } from "@mantine/core"
 

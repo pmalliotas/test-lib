@@ -1,3 +1,5 @@
+import * as React from "react"
+
 import { Stepper as MantineStepper } from "@mantine/core"
 import { type StepperProps as MantineStepperProps } from "@mantine/core"
 

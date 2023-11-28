@@ -1,3 +1,5 @@
+import * as React from "react"
+
 import { TextInput as MantineTextInput } from "@mantine/core"
 import { type TextInputProps as MantineTextInputProps } from "@mantine/core"
 

@@ -1,3 +1,5 @@
+import * as React from "react"
+
 import { BackgroundImageFactory, BackgroundImage as MantineBackgroundImage, polymorphicFactory } from "@mantine/core"
 import { type BackgroundImageProps as MantineBackgroundImageProps } from "@mantine/core"
 

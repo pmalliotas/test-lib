@@ -1,3 +1,5 @@
+import * as React from "react"
+
 import type { FieldValues, UseControllerProps } from "react-hook-form"
 import { useController } from "react-hook-form"
 import { Autocomplete as $Autocomplete } from "../../core"

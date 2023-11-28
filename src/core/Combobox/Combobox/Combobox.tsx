@@ -1,3 +1,5 @@
+import * as React from "react"
+
 import { Combobox as MantineCombobox } from "@mantine/core"
 import { type ComboboxProps as MantineComboboxProps } from "@mantine/core"
 

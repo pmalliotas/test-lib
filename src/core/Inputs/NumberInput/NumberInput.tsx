@@ -1,3 +1,5 @@
+import * as React from "react"
+
 import { NumberInput as MantineNumberInput } from "@mantine/core"
 import { type NumberInputProps as MantineNumberInputProps } from "@mantine/core"
 

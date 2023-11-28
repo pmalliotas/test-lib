@@ -1,3 +1,5 @@
+import * as React from "react"
+
 import { Spoiler as MantineSpoiler } from "@mantine/core"
 import { type SpoilerProps as MantineSpoilerProps } from "@mantine/core"
 

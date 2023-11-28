@@ -1,3 +1,5 @@
+import * as React from "react"
+
 import { CloseButton as MantineCloseButton } from "@mantine/core"
 import { type CloseButtonProps as MantineCloseButtonProps } from "@mantine/core"
 

@@ -1,3 +1,5 @@
+import * as React from "react"
+
 import { AspectRatio as MantineAspectRatio } from "@mantine/core"
 import { type AspectRatioProps as MantineAspectRatioProps } from "@mantine/core"
 

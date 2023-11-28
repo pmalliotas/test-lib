@@ -1,3 +1,5 @@
+import * as React from "react"
+
 import { HoverCard as MantineHoverCard } from "@mantine/core"
 import { type HoverCardProps as MantineHoverCardProps } from "@mantine/core"
 

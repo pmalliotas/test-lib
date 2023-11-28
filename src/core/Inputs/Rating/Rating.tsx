@@ -1,3 +1,5 @@
+import * as React from "react"
+
 import { Rating as MantineRating } from "@mantine/core"
 import { type RatingProps as MantineRatingProps } from "@mantine/core"
 

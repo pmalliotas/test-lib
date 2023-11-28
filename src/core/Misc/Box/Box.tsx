@@ -1,3 +1,5 @@
+import * as React from "react"
+
 import { Box as MantineBox } from "@mantine/core"
 import { type BoxProps as MantineBoxProps } from "@mantine/core"
 import { forwardRef } from "react"

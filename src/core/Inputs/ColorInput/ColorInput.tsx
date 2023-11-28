@@ -1,3 +1,5 @@
+import * as React from "react"
+
 import { ColorInput as MantineColorInput } from "@mantine/core"
 import { type ColorInputProps as MantineColorInputProps } from "@mantine/core"
 

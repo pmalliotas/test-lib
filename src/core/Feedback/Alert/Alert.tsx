@@ -1,3 +1,5 @@
+import * as React from "react"
+
 import { Alert as MantineAlert } from "@mantine/core"
 import { type AlertProps as MantineAlertProps } from "@mantine/core"
 

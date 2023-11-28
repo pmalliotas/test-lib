@@ -1,3 +1,5 @@
+import * as React from "react"
+
 import { type CheckboxGroupProps as $CheckboxGroupProps } from "../../../core"
 import { CheckboxGroup as $CheckboxGroup } from "../../../core"
 

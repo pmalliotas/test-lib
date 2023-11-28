@@ -1,3 +1,5 @@
+import * as React from "react"
+
 import { Skeleton as MantineSkeleton } from "@mantine/core"
 import { type SkeletonProps as MantineSkeletonProps } from "@mantine/core"
 

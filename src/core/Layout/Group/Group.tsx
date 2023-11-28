@@ -1,3 +1,5 @@
+import * as React from "react"
+
 import { Group as MantineGroup } from "@mantine/core"
 import { type GroupProps as MantineGroupProps } from "@mantine/core"
 

@@ -1,3 +1,5 @@
+import * as React from "react"
+
 import { ColorSwatchFactory, ColorSwatch as MantineColorSwatch, polymorphicFactory } from "@mantine/core"
 import { type ColorSwatchProps as MantineColorSwatchProps } from "@mantine/core"
 

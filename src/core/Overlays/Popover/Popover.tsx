@@ -1,3 +1,5 @@
+import * as React from "react"
+
 import { Popover as MantinePopover } from "@mantine/core"
 import { type PopoverProps as MantinePopoverProps } from "@mantine/core"
 

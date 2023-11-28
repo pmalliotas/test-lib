@@ -1,3 +1,5 @@
+import * as React from "react"
+
 import { LoadingOverlay as MantineLoadingOverlay } from "@mantine/core"
 import { type LoadingOverlayProps as MantineLoadingOverlayProps } from "@mantine/core"
 

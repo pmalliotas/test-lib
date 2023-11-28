@@ -1,3 +1,5 @@
+import * as React from "react"
+
 import { Switch as MantineSwitch, SwitchGroup as MantineSwitchGroup } from "@mantine/core"
 import { type SwitchProps as MantineSwitchProps, type SwitchGroupProps as MantineSwitchGroupProps } from "@mantine/core"
 

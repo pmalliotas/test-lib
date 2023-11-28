@@ -1,3 +1,5 @@
+import * as React from "react"
+
 import { ThemeIcon as MantineThemeIcon } from "@mantine/core"
 import { type ThemeIconProps as MantineThemeIconProps } from "@mantine/core"
 

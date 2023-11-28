@@ -1,3 +1,5 @@
+import * as React from "react"
+
 import { Blockquote as MantineBlockquote } from "@mantine/core"
 import { type BlockquoteProps as MantineBlockquoteProps } from "@mantine/core"
 

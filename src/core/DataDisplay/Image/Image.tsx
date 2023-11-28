@@ -1,3 +1,5 @@
+import * as React from "react"
+
 import { ImageFactory, Image as MantineImage, polymorphicFactory } from "@mantine/core"
 import { type ImageProps as MantineImageProps } from "@mantine/core"
 

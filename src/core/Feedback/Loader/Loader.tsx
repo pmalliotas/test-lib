@@ -1,3 +1,5 @@
+import * as React from "react"
+
 import { Loader as MantineLoader } from "@mantine/core"
 import { type LoaderProps as MantineLoaderProps } from "@mantine/core"
 

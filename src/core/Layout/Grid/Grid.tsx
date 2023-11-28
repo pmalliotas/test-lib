@@ -1,3 +1,5 @@
+import * as React from "react"
+
 import { Grid as MantineGrid } from "@mantine/core"
 import { type GridProps as MantineGridProps } from "@mantine/core"
 

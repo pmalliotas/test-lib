@@ -1,3 +1,5 @@
+import * as React from "react"
+
 import { Notification as MantineNotification } from "@mantine/core"
 import { type NotificationProps as MantineNotificationProps } from "@mantine/core"
 

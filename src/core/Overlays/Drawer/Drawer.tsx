@@ -1,3 +1,5 @@
+import * as React from "react"
+
 import { Drawer as MantineDrawer } from "@mantine/core"
 import { type DrawerProps as MantineDrawerProps } from "@mantine/core"
 

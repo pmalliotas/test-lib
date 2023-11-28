@@ -1,3 +1,5 @@
+import * as React from "react"
+
 import { AvatarFactory, Avatar as MantineAvatar, polymorphicFactory } from "@mantine/core"
 import { type AvatarProps as MantineAvatarProps } from "@mantine/core"
 

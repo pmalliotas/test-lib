@@ -1,3 +1,5 @@
+import * as React from "react"
+
 import { Table as MantineTable } from "@mantine/core"
 import { type TableProps as MantineTableProps } from "@mantine/core"
 

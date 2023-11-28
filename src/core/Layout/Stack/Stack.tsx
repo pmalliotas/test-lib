@@ -1,3 +1,5 @@
+import * as React from "react"
+
 import { Stack as MantineStack } from "@mantine/core"
 import { type StackProps as MantineStackProps } from "@mantine/core"
 

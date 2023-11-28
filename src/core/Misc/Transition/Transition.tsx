@@ -1,3 +1,5 @@
+import * as React from "react"
+
 import { Transition as MantineTransition } from "@mantine/core"
 import { type TransitionProps as MantineTransitionProps } from "@mantine/core"
 

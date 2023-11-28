@@ -1,3 +1,5 @@
+import * as React from "react"
+
 import { AnchorFactory, Anchor as MantineAnchor, polymorphicFactory } from "@mantine/core"
 import { type AnchorProps as MantineAnchorProps } from "@mantine/core"
 

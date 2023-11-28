@@ -1,3 +1,5 @@
+import * as React from "react"
+
 import { Textarea as MantineTextarea } from "@mantine/core"
 import { type TextareaProps as MantineTextareaProps } from "@mantine/core"
 

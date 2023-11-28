@@ -1,3 +1,5 @@
+import * as React from "react"
+
 import { VisuallyHidden as MantineVisuallyHidden } from "@mantine/core"
 import { type VisuallyHiddenProps as MantineVisuallyHiddenProps } from "@mantine/core"
 

@@ -1,3 +1,5 @@
+import * as React from "react"
+
 import { Portal as MantinePortal } from "@mantine/core"
 import { type PortalProps as MantinePortalProps } from "@mantine/core"
 

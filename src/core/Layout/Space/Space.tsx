@@ -1,3 +1,5 @@
+import * as React from "react"
+
 import { Space as MantineSpace } from "@mantine/core"
 import { type SpaceProps as MantineSpaceProps } from "@mantine/core"
 
