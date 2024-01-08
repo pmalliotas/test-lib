@@ -16,6 +16,18 @@ async function createPackageFile() {
         typings: "./index.d.ts",
         main: "./index.cjs.js",
         module: "./index.esm.js",
+        "exports": {
+            ".": {
+                "import": {
+                    "types": "./index.d.ts",
+                    "default": "./index.esm.js"
+                },
+                "require": {
+                    "types": "./index.d.ts",
+                    "default": "./index.cjs.js"
+                },
+            },
+        }
     }
 
     const targetPath = resolve(distPath, "./package.json")
