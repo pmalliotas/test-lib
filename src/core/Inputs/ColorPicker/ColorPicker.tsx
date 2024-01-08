@@ -13,3 +13,5 @@ export function ColorPicker(props: ColorPickerProps) {
 }
 
 ColorPicker.extend = MantineColorPicker.extend
+
+export { HueSlider, AlphaSlider } from "@mantine/core"
