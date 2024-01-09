@@ -20,3 +20,4 @@ Accordion.Chevron = MantineAccordion.Chevron
 Accordion.extend = MantineAccordion.extend
 
 export default Accordion
+export { AccordionItem, AccordionPanel, AccordionControl, AccordionChevron } from "@mantine/core"

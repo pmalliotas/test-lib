@@ -1,7 +1,7 @@
 import { MantineColorsTuple } from "@mantine/core"
-import colors from "../variables/colors.mjs"
+import COLORS from "../variables/colors.mjs"
 
-type CustomColors = keyof typeof colors;
+type CustomColors = keyof typeof COLORS;
 
 declare module "@mantine/core" {
     export interface MantineThemeColorsOverride {

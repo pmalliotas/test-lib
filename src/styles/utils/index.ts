@@ -1,5 +1,314 @@
-import { generateColors } from "@mantine/colors-generator"
+
 import { CSSVariablesResolver } from "@mantine/core"
+import { MantineColorsTuple } from "@mantine/core"
+// import COLORS from "../variables/colors.mjs"
+
+export const PRIMARY_COLORS = {
+    "eerie-black": [
+        "#30303C",
+        "#2B2A38",
+        "#252535",
+        "#201F32",
+        "#1B1A2F",
+        "#17162D",
+        "#12112C",
+        "#121225",
+        "#121220",
+        "#12111B",
+        "#111018",
+        "#100F15",
+    ],
+    "deep-koamaru": [
+        "#636279",
+        "#585770",
+        "#4D4C69",
+        "#434263",
+        "#39385D",
+        "#302F59",
+        "#2F2E4C",
+        "#2D2C42",
+        "#2A2A39",
+        "#272732",
+        "#24242C",
+    ],
+    "majorelle-blue": [
+        "#CDC6E1",
+        "#B5A8D9",
+        "#9C88D6",
+        "#8365D9",
+        "#683DE4",
+        "#5D37CE",
+        "#5A3CAE",
+        "#564192",
+        "#51417C",
+        "#4B406A",
+    ],
+    "mexican-pink": [
+        "#D1A8BE",
+        "#CC8BAE",
+        "#CC6CA0",
+        "#D24994",
+        "#E02289",
+        "#E3077F",
+        "#B91A71",
+        "#982664",
+        "#7E2C59",
+        "#6A2F4F",
+        "#5A3047",
+    ],
+    "cetacean-blue": [
+        "#2B344B",
+        "#232D48",
+        "#1C2745",
+        "#152244",
+        "#0D1C43",
+        "#061743",
+        "#0B1737",
+        "#0E172D",
+        "#0F1626",
+        "#101420",
+    ]
+} satisfies Record<string, MantineColorsTuple>
+
+export const SECONDARY_COLORS = {
+    "persian-pink": [
+        "#D9C0CE",
+        "#D8B5C8",
+        "#D9A8C3",
+        "#DD9ABE",
+        "#E389BA",
+        "#ED74B6",
+        "#DF78B0",
+        "#D27AAA",
+        "#C67CA4",
+        "#BB7D9F",
+    ],
+    "lavender-pink": [
+        "#FDFBFC",
+        "#F7F2F5",
+        "#F3E8EE",
+        "#F1DDE7",
+        "#F0D0E1",
+        "#F1C1DB",
+        "#F6B0D6",
+        "#EDADCF",
+        "#E3AAC9",
+        "#DAA7C3",
+        "#D1A5BD",
+    ],
+    "pale-violet": [
+        "#F5F4F9",
+        "#ECE9F6",
+        "#E3DDF4",
+        "#D8CFF4",
+        "#CDBEF8",
+        "#C0AAFF",
+        "#BBA7F5",
+        "#B7A5EB",
+        "#B3A3E1",
+        "#AFA1D8",
+    ],
+    "soap": [
+        "#FEFEFF",
+        "#F6F5F9",
+        "#EDEAF6",
+        "#E4DEF3",
+        "#DAD1F3",
+        "#CFC1F6",
+        "#C9BCEE",
+        "#C4B7E6",
+        "#BEB3DD",
+        "#BAB0D5",
+        "#B5ACCD",
+    ],
+    "fresh-sky-blue": [
+        "#F4F6FA",
+        "#E3E8F3",
+        "#D0D9F0",
+        "#BBC9F0",
+        "#A2B9F5",
+        "#84A6FF",
+        "#7F9EF1",
+        "#7B98E2",
+        "#7892D4",
+        "#768CC5",
+    ],
+    "medium-aquamarine": [
+        "#EDF4F1",
+        "#D5E8E1",
+        "#BCE0D3",
+        "#A1DCC7",
+        "#84DDBD",
+        "#62E5B6",
+        "#5BD2A7",
+        "#55C099",
+        "#51AE8C",
+        "#53977F",
+    ],
+    "harlequin-green": [
+        "#B7D3B3",
+        "#9ECB97",
+        "#85C87A",
+        "#6ACB5A",
+        "#4CD436",
+        "#32DB17",
+        "#3AB326",
+        "#3D952F",
+        "#3E7D34",
+        "#3C6A35",
+        "#3A5A34",
+    ],
+    "crayola": [
+        "#FBFAF7",
+        "#F1EEE0",
+        "#ECE4C7",
+        "#EBDDAB",
+        "#F0DA8C",
+        "#FCDB67",
+        "#EACC60",
+        "#D8BC5B",
+        "#C6AE58",
+        "#B5A055",
+    ],
+    "coral-red": [
+        "#F9F4F4",
+        "#EBD5D5",
+        "#E3B4B4",
+        "#E19191",
+        "#E66A6A",
+        "#F43E3E",
+        "#DD3636",
+        "#C33535",
+        "#A23D3D",
+        "#894040",
+        "#754040",
+    ],
+} satisfies Record<string, MantineColorsTuple>
+
+export const GRAY_COLORS = {
+    "cool-grey": [
+        "#F2F2F3",
+        "#DBDBDE",
+        "#C5C5CB",
+        "#B1B1BB",
+        "#9E9EAD",
+        "#8B8BA2",
+        "#7D7D92",
+        "#717182",
+        "#686874",
+        "#5E5E67",
+        "#56565C",
+    ],
+    "silver-sand": [
+        "#F9F9F9",
+        "#ECECEE",
+        "#E0E0E3",
+        "#D4D4DA",
+        "#C9C8D1",
+        "#BDBCCA",
+        "#B4B3C0",
+        "#ABAAB6",
+        "#A3A2AC",
+        "#9B9AA3",
+        "#93939B",
+    ],
+    "gainsboro": [
+        "#F8F8F9",
+        "#F3F3F4",
+        "#EEEEF0",
+        "#E9E9EB",
+        "#E3E3E8",
+        "#DEDEE4",
+        "#DADADF",
+        "#D6D6DB",
+        "#D2D2D6",
+        "#CECED1",
+        "#CACACD",
+    ],
+    "bright-gray": [
+        "#FCFCFC",
+        "#F9F9FA",
+        "#F7F7F8",
+        "#F4F4F6",
+        "#F1F1F4",
+        "#EEEEF2",
+        "#ECECEF",
+        "#EAEAED",
+        "#E7E7EA",
+        "#E5E5E8",
+        "#E3E3E5",
+    ],
+    "ghost-white": [
+        "#FEFEFE",
+        "#FEFEFE",
+        "#FEFEFE",
+        "#FEFEFE",
+        "#FEFEFE",
+        "#FAFAFD",
+        "#F7F7FB",
+        "#F4F4F9",
+        "#F2F2F6",
+        "#EFEFF4",
+    ]
+} satisfies Record<string, MantineColorsTuple>
+
+export const ALERT_COLORS = {
+    "info": [
+        "#D5D9E1",
+        "#BCC3D2",
+        "#A3AFC7",
+        "#899BC0",
+        "#6D88BE",
+        "#4F75C1",
+        "#4B6BA9",
+        "#4C6390",
+        "#4B5B7B",
+        "#48536B",
+    ],
+    "success": [
+        "#72AA82",
+        "#5AA870",
+        "#48A262",
+        "#379E55",
+        "#279B48",
+        "#169A3C",
+        "#207F3B",
+        "#256939",
+        "#285936",
+        "#284B32",
+    ],
+    "warning": [
+        "#F0EDE0",
+        "#F0EDE0",
+        "#E7DEBF",
+        "#E4D49C",
+        "#E8CE75",
+        "#F4CE49",
+        "#DEBB3F",
+        "#C8A839",
+        "#A8913F",
+        "#8E7D42",
+    ],
+    "error": [
+        "#E5D6D7",
+        "#D9BABC",
+        "#D19DA0",
+        "#CE7F83",
+        "#D15E63",
+        "#DB3840",
+        "#C0373E",
+        "#A13E43",
+        "#884144",
+        "#744143",
+    ]
+} satisfies Record<string, MantineColorsTuple>
+
+export const COLORS = {
+    ...PRIMARY_COLORS,
+    ...SECONDARY_COLORS,
+    ...GRAY_COLORS,
+    ...ALERT_COLORS
+}
 
 export enum SIZE_VARIANTS {
     "xs" = "xs",
@@ -17,38 +326,16 @@ export enum SIZE_VARIANTS {
 export const resolver: CSSVariablesResolver = (theme) => ({
     light: {},
     dark: {},
+    // @ts-expect-error - It is what it is
     variables: generateClasses(theme.colors)
 })
 
-const colors = {
-    "deep-koamaru": generateColors("#302F59"),
-    "mexican-pink": generateColors("#E3077F"),
-    "majorelle-blue": generateColors("#683DE4"),
-    "eerie-black": generateColors("#12112C"),
-    "cool-grey": generateColors("#8B8BA2"),
-    "silver-sand": generateColors("#BDBCCA"),
-    "bright-gray": generateColors("#EEEEF2"),
-    "ghost-white": generateColors("#FAFAFD"),
-    "auqamarine": generateColors("#62E5B6"),
-    "crayola-light": generateColors("#FCDB67"),
-    "persian-pink": generateColors("#ED74B6"),
-    "pale-violet": generateColors("#C0AAFF"),
-    "skye-blue": generateColors("#84A6FF"),
-    "gainsboro": generateColors("#DEDEE4"),
-    "harlequin-green": generateColors("#32DB17"),
-    "coral-red": generateColors("#F43E3E"),
-    "amazon": generateColors("#418454"),
-    "crayola-dark": generateColors("#F4CE49"),
-    "jasper": generateColors("#DB3840"),
-    "cyan-blue-azure": generateColors("#4F75C1")
-}
 
-
-const generateClasses = (c: typeof colors) => {
+const generateClasses = (c: typeof COLORS) => {
     const classes: Record<string, string> = {}
 
     Object.keys(c).map((colorName) => {
-        c[colorName as keyof typeof colors].forEach((color, i) => {
+        c[colorName as keyof typeof COLORS].forEach((color, i) => {
             classes[`--mantine-color-${colorName}-${i}`] = color
         })
     })

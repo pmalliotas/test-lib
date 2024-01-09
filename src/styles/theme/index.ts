@@ -1,12 +1,12 @@
 import { createTheme, rem, type MantineThemeOverride } from "@mantine/core"
 
 import styles from "./styles.module.css"
-import { Button } from "../../core"
+import { Avatar, Button } from "../../core"
 
 const DEFAULT_FONT_FAMILY = "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"
-
-import colors from "../variables/colors.mjs"
 import { ButtonConfig } from "../../core/Buttons/Button/Button.config"
+import { COLORS, GRAY_COLORS, SECONDARY_COLORS } from "../utils"
+import { AvatarConfig } from "../../core/DataDisplay/Avatar/Avatar.config"
 
 export const theme: MantineThemeOverride = createTheme({
     activeClassName: styles.active,
@@ -19,7 +19,7 @@ export const theme: MantineThemeOverride = createTheme({
         xl: "90em",
     },
     primaryColor: "deep-koamaru",
-    colors,
+    colors: COLORS,
     fontFamily: "Verdana, sans-serif",
     fontFamilyMonospace: "Monaco, Courier, monospace",
     fontSizes: {
@@ -88,9 +88,11 @@ export const theme: MantineThemeOverride = createTheme({
         xl: `0 ${rem(1)} ${rem(3)} rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05) 0 ${rem(36)} ${rem(28)} ${rem(-7)}, rgba(0, 0, 0, 0.04) 0 ${rem(17)} ${rem(17)} ${rem(-7)}`,
     },
     components: {
-        Button: Button.extend(ButtonConfig)
+        Avatar: Avatar.extend(AvatarConfig),
+        Button: Button.extend(ButtonConfig),
     },
     other: {
-
+        ...GRAY_COLORS,
+        ...SECONDARY_COLORS
     }
 })
