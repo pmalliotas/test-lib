@@ -88,6 +88,7 @@ export function Sizes() {
     </>
   )
 }
+
 export function GradientVariant() {
   return (
     <div style={{ padding: 40, display: "flex", gap: 40 }}>

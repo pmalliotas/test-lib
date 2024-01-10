@@ -1,0 +1,7 @@
+.root {
+  border: 1px solid var(--mantine-color-bright-gray-5);
+
+  &:hover {
+    border: 1px solid var(--mantine-color-gainsboro-5);
+  }
+}

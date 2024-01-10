@@ -2910,6 +2910,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@mantine/dropzone@npm:^7.4.1":
+  version: 7.4.1
+  resolution: "@mantine/dropzone@npm:7.4.1"
+  dependencies:
+    react-dropzone-esm: 15.0.1
+  peerDependencies:
+    "@mantine/core": 7.4.1
+    "@mantine/hooks": 7.4.1
+    react: ^18.2.0
+    react-dom: ^18.2.0
+  checksum: c4ff3343954202b236130455a6afc4bbb07bae8a88961b1bf372011031bc0ae76a4eb093c07f2c03392cf7eaeec01b2e76f5323c681e062bb8715f805d5099c1
+  languageName: node
+  linkType: hard
+
 "@mantine/hooks@npm:^7.4.1":
   version: 7.4.1
   resolution: "@mantine/hooks@npm:7.4.1"
@@ -12490,6 +12504,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-dropzone-esm@npm:15.0.1":
+  version: 15.0.1
+  resolution: "react-dropzone-esm@npm:15.0.1"
+  dependencies:
+    prop-types: ^15.8.1
+  peerDependencies:
+    react: ">= 16.8 || 18.0.0"
+  checksum: 62402c213c4e151802208e31653828664674dec0b7464180e8c296128f455c42d4c9792b1e11adee7e5e311d38edc278315959a3e8f2bb727cef2591291191b8
+  languageName: node
+  linkType: hard
+
 "react-element-to-jsx-string@npm:^15.0.0":
   version: 15.0.0
   resolution: "react-element-to-jsx-string@npm:15.0.0"
@@ -14155,6 +14180,7 @@ __metadata:
     "@mantine/colors-generator": ^7.4.1
     "@mantine/core": ^7.4.1
     "@mantine/dates": ^7.4.1
+    "@mantine/dropzone": ^7.4.1
     "@mantine/hooks": ^7.4.1
     "@mantine/notifications": ^7.4.1
     "@rollup/plugin-babel": ^6.0.4
