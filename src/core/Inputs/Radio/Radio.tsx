@@ -1,26 +1,28 @@
 import * as React from "react"
+import classes from "./Radio.module.css"
 
-import { Radio as MantineRadio, RadioGroup as MantineRadioGroup } from "@mantine/core"
-import { type RadioProps as MantineRadioProps, type RadioGroupProps as MantineRadioGroupProps } from "@mantine/core"
+import { Radio as MantineRadio } from "@mantine/core"
+import { type RadioProps as MantineRadioProps } from "@mantine/core"
 
 export type RadioProps = MantineRadioProps & {}
-export type RadioGroupProps = MantineRadioGroupProps & {}
 
 export function Radio(props: RadioProps) {
 
     return (
-        <MantineRadio {...props} />
+        <MantineRadio
+            classNames={{
+                radio: classes.radio,
+                icon: classes.icon,
+                root: classes.root,
+                body: classes.body,
+            }}
+            variant="outline"
+            {...props}
+        />
     )
 }
 
 Radio.Group = MantineRadio.Group
 Radio.extend = MantineRadio.extend
 
-export function RadioGroup(props: RadioGroupProps) {
-
-    return (
-        <MantineRadioGroup {...props} />
-    )
-}
-
-RadioGroup.extend = MantineRadioGroup.extend
+export { RadioGroup } from "@mantine/core"

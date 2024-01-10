@@ -2,11 +2,17 @@
   border: 1px solid var(--mantine-color-majorelle-blue-5);
 }
 
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .input {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.5rem 1rem;
+  padding: 0.5em 1em;
 }
 
 .calendarHeaderLevel {

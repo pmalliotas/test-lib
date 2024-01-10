@@ -1,0 +1,30 @@
+.thumb {
+  transform: scale(1.2);
+}
+
+.track {
+  background-color: var(--mantine-color-silver-sand-5);
+  border-color: var(--mantine-color-silver-sand-5);
+}
+
+.input {
+  /* &:checked:not([disabled]) + label > span[data-reduce-motion] {
+    background-color: var(--mantine-color-soap-5);
+    border-color: var(--mantine-color-soap-5);
+  } */
+
+  &:not(:checked) + label {
+    background-color: var(--mantine-color-silver-sand-5);
+    border-color: var(--mantine-color-silver-sand-5);
+  }
+
+  &:not(:checked)[disabled] + label {
+    background-color: var(--mantine-color-bright-gray-5);
+    border-color: var(--mantine-color-bright-gray-5);
+  }
+
+  &:checked[disabled] + label > span[data-reduce-motion] {
+    background-color: var(--mantine-eerie-black-5);
+    border-color: var(--mantine-eerie-black-5);
+  }
+}

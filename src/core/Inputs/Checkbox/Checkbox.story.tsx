@@ -9,7 +9,7 @@ export function Usage() {
   return (
     <div style={{ padding: 40 }}>
       <Checkbox label="Default" value="hello" />
-      <Checkbox label="Disabled" checked disabled mt="xl" />
+      <Checkbox label="Disabled"  disabled mt="xl" />
       <Checkbox label="Indeterminate" indeterminate mt="xl" />
     </div>
   )

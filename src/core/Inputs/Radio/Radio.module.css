@@ -1,0 +1,28 @@
+.radio {
+  &:not([disabled]):hover {
+    cursor: pointer;
+    border: rem(2) solid var(--mantine-color-majorelle-blue-5);
+  }
+
+  &:not(:checked) {
+    border: rem(2) solid var(--mantine-color-eerie-black-5);
+  }
+
+  &[disabled] {
+    border: rem(2) solid var(--mantine-color-silver-sand-3);
+    background-color: transparent;
+  }
+
+  &:checked {
+    border: rem(2) solid var(--mantine-color-majorelle-blue-5);
+  }
+}
+
+.body {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  scale: 1.5;
+}

@@ -18,7 +18,6 @@ import { DatePickerInput } from "@mantine/dates"
 import { DatePickerInputConfig } from "../../dates/DatePickerInput/DatePickerInput.config"
 import { TextInputConfig } from "../../core/Inputs/TextInput/TextInput.config"
 import { TextareaConfig } from "../../core/Inputs/Textarea/TextArea.config"
-import { FileInputConfig } from "../../core/Inputs/FileInput/FileInput.config"
 
 export const theme: MantineThemeOverride = createTheme({
     activeClassName: styles.active,
@@ -30,7 +29,6 @@ export const theme: MantineThemeOverride = createTheme({
         lg: "74em",
         xl: "90em",
     },
-
     primaryColor: "majorelle-blue",
     colors: COLORS,
     fontFamily: "Verdana, sans-serif",
