@@ -1,0 +1,104 @@
+.rootInfo {
+  background-color: var(--mantine-color-info-5);
+}
+
+.titleInfo {
+  color: #fff;
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+.descriptionInfo {
+  color: #fff;
+}
+
+.closeButtonInfo {
+  &:hover {
+    background-color: transparent;
+  }
+  color: #fff;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.iconInfo {
+}
+
+.rootSuccess {
+  background-color: var(--mantine-color-success-5);
+}
+
+.titleSuccess {
+  color: #fff;
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+.descriptionSuccess {
+  color: #fff;
+}
+
+.closeButtonSuccess {
+  &:hover {
+    background-color: transparent;
+  }
+  color: #fff;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.iconSuccess {
+}
+
+.rootWarning {
+  background-color: var(--mantine-color-warning-5);
+}
+
+.titleWarning {
+  color: var(--mantine-color-eerie-black-5);
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+.descriptionWarning {
+  color: var(--mantine-color-eerie-black-5);
+}
+
+.closeButtonWarning {
+  &:hover {
+    background-color: transparent;
+  }
+  color: var(--mantine-color-eerie-black-5);
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.iconWarning {
+  color: var(--mantine-color-eerie-black-5);
+}
+
+.rootError {
+  background-color: var(--mantine-color-error-5);
+}
+
+.titleError {
+  color: #fff;
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+.descriptionError {
+  color: #fff;
+}
+
+.closeButtonError {
+  &:hover {
+    background-color: transparent;
+  }
+  color: #fff;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.iconError {
+}

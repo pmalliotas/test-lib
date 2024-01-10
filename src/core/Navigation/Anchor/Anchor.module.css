@@ -1,0 +1,12 @@
+.root {
+  color: var(--mantine-color-eerie-black-5);
+
+  &:hover {
+    color: var(--mantine-color-majorelle-blue-6);
+  }
+
+  &[disabled] {
+    color: var(--mantine-color-silver-sand-5);
+    text-decoration: none;
+  }
+}

@@ -7,7 +7,6 @@ import { AccordionCssVariables } from "@mantine/core/lib/components/Accordion"
 
 export const AccordionConfig = {
     defaultProps: {
-        color: "majorelle-blue",
     },
     classNames: {
         // root: classes.root,

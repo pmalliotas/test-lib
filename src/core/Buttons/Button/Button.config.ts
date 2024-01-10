@@ -7,7 +7,7 @@ import { ButtonCssVariables } from "@mantine/core/lib/components/Button"
 
 export const ButtonConfig: ExtendsRootComponent<ButtonType> = {
     defaultProps: {
-        color: "majorelle-blue",
+        
     },
     vars: (_, props) => {
         const style: PartialTransformVars<ButtonCssVariables> = { root: {} }

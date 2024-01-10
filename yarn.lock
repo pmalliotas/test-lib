@@ -984,6 +984,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/plugin-transform-classes@npm:^7.23.8":
+  version: 7.23.8
+  resolution: "@babel/plugin-transform-classes@npm:7.23.8"
+  dependencies:
+    "@babel/helper-annotate-as-pure": ^7.22.5
+    "@babel/helper-compilation-targets": ^7.23.6
+    "@babel/helper-environment-visitor": ^7.22.20
+    "@babel/helper-function-name": ^7.23.0
+    "@babel/helper-plugin-utils": ^7.22.5
+    "@babel/helper-replace-supers": ^7.22.20
+    "@babel/helper-split-export-declaration": ^7.22.6
+    globals: ^11.1.0
+  peerDependencies:
+    "@babel/core": ^7.0.0-0
+  checksum: 7dee6cebe52131d2d16944f36e1fdb9d4b24f44d0e7e450f93a44435d001f17cc0789a4cb6b15ec67c8e484581b8a730b5c3ec374470f29ff0133086955b8c58
+  languageName: node
+  linkType: hard
+
 "@babel/plugin-transform-computed-properties@npm:^7.23.3":
   version: 7.23.3
   resolution: "@babel/plugin-transform-computed-properties@npm:7.23.3"
@@ -1886,9 +1904,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/preset-env@npm:^7.23.7":
-  version: 7.23.7
-  resolution: "@babel/preset-env@npm:7.23.7"
+"@babel/preset-env@npm:^7.23.8":
+  version: 7.23.8
+  resolution: "@babel/preset-env@npm:7.23.8"
   dependencies:
     "@babel/compat-data": ^7.23.5
     "@babel/helper-compilation-targets": ^7.23.6
@@ -1923,7 +1941,7 @@ __metadata:
     "@babel/plugin-transform-block-scoping": ^7.23.4
     "@babel/plugin-transform-class-properties": ^7.23.3
     "@babel/plugin-transform-class-static-block": ^7.23.4
-    "@babel/plugin-transform-classes": ^7.23.5
+    "@babel/plugin-transform-classes": ^7.23.8
     "@babel/plugin-transform-computed-properties": ^7.23.3
     "@babel/plugin-transform-destructuring": ^7.23.3
     "@babel/plugin-transform-dotall-regex": ^7.23.3
@@ -1972,7 +1990,7 @@ __metadata:
     semver: ^6.3.1
   peerDependencies:
     "@babel/core": ^7.0.0-0
-  checksum: 4b5eb466d9d4beca56c6fdaac92e99d440dc5650fdfd6ebf0d2a07380ebb43b4dc9aedf93bb30d1d1cd56d9e264d3728df348159e18dd138729b249261be11bf
+  checksum: b850f99fc4aed4ba22c7d9207bd2bbc7a729b49ea6f2c2c36e819fe209e309b96fba336096e555b46f791b39f7cdd5ac41246b556283d435a99106eb825a209f
   languageName: node
   linkType: hard
 
@@ -2850,18 +2868,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mantine/colors-generator@npm:^7.4.0":
-  version: 7.4.0
-  resolution: "@mantine/colors-generator@npm:7.4.0"
+"@mantine/colors-generator@npm:^7.4.1":
+  version: 7.4.1
+  resolution: "@mantine/colors-generator@npm:7.4.1"
   peerDependencies:
     chroma-js: ^2.4.2
-  checksum: 5b3ef39f6e20b0c8e033af2e3277f25e92cad4e2e911d45d32ee0fbf00294a9956c250ddd7516ddabe8de0fb94c3e9729f9267dcf3637135763eee0ad99255db
+  checksum: 908b92318fef88763c3b507548fa4621f43c141b302d0c2f8f0373fdd0dd5207ab586ff0c7356eafea597a9dfbc97dc1b9734356c8d71adc15951ac5b7d53b21
   languageName: node
   linkType: hard
 
-"@mantine/core@npm:^7.4.0":
-  version: 7.4.0
-  resolution: "@mantine/core@npm:7.4.0"
+"@mantine/core@npm:^7.4.1":
+  version: 7.4.1
+  resolution: "@mantine/core@npm:7.4.1"
   dependencies:
     "@floating-ui/react": ^0.24.8
     clsx: 2.0.0
@@ -2870,58 +2888,58 @@ __metadata:
     react-textarea-autosize: 8.5.3
     type-fest: ^3.13.1
   peerDependencies:
-    "@mantine/hooks": 7.4.0
+    "@mantine/hooks": 7.4.1
     react: ^18.2.0
     react-dom: ^18.2.0
-  checksum: 841d25b70c8928f6ef65667548128c29b5aa9502bb8dd4f9e352e7635aaefd7cf5f02ef7f9c0ccf6e1f72123bbdac7ed24d9742736ca42824a3406f5a7d161ed
+  checksum: fbce1ffff61e1e188529749beb4d3d9b7ca218d6e79d727f6ad79857b56d0ad1c0ecaca39ed9fd7f4f19ad6ac730343642f23bfb719f7853c2ddbf5bc9b27ffc
   languageName: node
   linkType: hard
 
-"@mantine/dates@npm:^7.4.0":
-  version: 7.4.0
-  resolution: "@mantine/dates@npm:7.4.0"
+"@mantine/dates@npm:^7.4.1":
+  version: 7.4.1
+  resolution: "@mantine/dates@npm:7.4.1"
   dependencies:
     clsx: 2.0.0
   peerDependencies:
-    "@mantine/core": 7.4.0
-    "@mantine/hooks": 7.4.0
+    "@mantine/core": 7.4.1
+    "@mantine/hooks": 7.4.1
     dayjs: ">=1.0.0"
     react: ^18.2.0
     react-dom: ^18.2.0
-  checksum: cc7025aab9018bd961033e1600ad98f08f75f14b7dfa345948bfaedf291148e296005adc2bc85b761f1ac1faad98c621b53d51d787f34ca27271f1d75875386b
+  checksum: 18df67777806bcdbf829287736058ba0c36c0a0142d027a55b05777e982af2a9867503232c707f831f8c51b7ab1c23d1ba6699e10ba11281554e2521ef412c71
   languageName: node
   linkType: hard
 
-"@mantine/hooks@npm:^7.4.0":
-  version: 7.4.0
-  resolution: "@mantine/hooks@npm:7.4.0"
+"@mantine/hooks@npm:^7.4.1":
+  version: 7.4.1
+  resolution: "@mantine/hooks@npm:7.4.1"
   peerDependencies:
     react: ^18.2.0
-  checksum: 6c03712bfdee5acb969848045350b1fddd00b9496f997699aab80bbb2c2d0f6ee6f01b9aae0a61088a8f3b2de97660f17db0e68d76bafbbdabd786eca5a1a659
+  checksum: dea009e43f43b2e80735bdf913118cf8016058e3d119d6bbbb41713e0ed6f1a0d12688174b0a45d13c229c316a0c14a320b017ef9596a965377c9e864b810509
   languageName: node
   linkType: hard
 
-"@mantine/notifications@npm:^7.4.0":
-  version: 7.4.0
-  resolution: "@mantine/notifications@npm:7.4.0"
+"@mantine/notifications@npm:^7.4.1":
+  version: 7.4.1
+  resolution: "@mantine/notifications@npm:7.4.1"
   dependencies:
-    "@mantine/store": 7.4.0
+    "@mantine/store": 7.4.1
     react-transition-group: 4.4.5
   peerDependencies:
-    "@mantine/core": 7.4.0
-    "@mantine/hooks": 7.4.0
+    "@mantine/core": 7.4.1
+    "@mantine/hooks": 7.4.1
     react: ^18.2.0
     react-dom: ^18.2.0
-  checksum: c51e3c15c15787a99192feaa781d7ef61cc104538f4218abc13d1d8c7ebfec33f64dfc2ef8b21fd3380f5ef3a599a158ee66f06022ca674224891b9a82d5aaf8
+  checksum: 1d88aabf072a5f5f439655db93c81c0a3843bb6bc76c21eedf0ac5b98500b3d888293eb8bfefc261f55464cba4b3920524d5845a07e784b18462ef456e5b239d
   languageName: node
   linkType: hard
 
-"@mantine/store@npm:7.4.0":
-  version: 7.4.0
-  resolution: "@mantine/store@npm:7.4.0"
+"@mantine/store@npm:7.4.1":
+  version: 7.4.1
+  resolution: "@mantine/store@npm:7.4.1"
   peerDependencies:
     react: ^18.2.0
-  checksum: 331ffd1da6d25b3622c795a57dbc5f0a634ba0887aa61b103a5bdacbba1c7879573cf6cdf1602f1ee9c8b5281a2e70e7fa822c55b625ebcbeae0eea3e4ef91b4
+  checksum: ebb0ac5de45bd4a080e1bf9ef761f9f90dc23745a6dac355a80224f17fa2b5ce4a51b7bda5fc7f1186b60ab6ee79ab509c3351792cb34caa651ce9a9407a77e4
   languageName: node
   linkType: hard
 
@@ -8339,9 +8357,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-n@npm:^16.6.1":
-  version: 16.6.1
-  resolution: "eslint-plugin-n@npm:16.6.1"
+"eslint-plugin-n@npm:^16.6.2":
+  version: 16.6.2
+  resolution: "eslint-plugin-n@npm:16.6.2"
   dependencies:
     "@eslint-community/eslint-utils": ^4.4.0
     builtins: ^5.0.1
@@ -8356,7 +8374,7 @@ __metadata:
     semver: ^7.5.3
   peerDependencies:
     eslint: ">=7.0.0"
-  checksum: 2c8e80cf07f669be287bf7af335dd450c2f0c08e4efcf8ef8ccd7d1aa9d2e93dfa20f9f204efa22e4a552057e54b7cc6597bbf9dbb5626b1d711e41054ed46ef
+  checksum: 3b468da0038cf25af582608983491b33ac2d481b6a94a0ff2e715d3b85e1ff8cb93df4cd67b689d520bea1bfb8f2b717f01606bf6b2ea19fe8f9c0999ea7057d
   languageName: node
   linkType: hard
 
@@ -12486,12 +12504,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-hook-form@npm:>=7.49.2":
-  version: 7.49.2
-  resolution: "react-hook-form@npm:7.49.2"
+"react-hook-form@npm:>=7.49.3":
+  version: 7.49.3
+  resolution: "react-hook-form@npm:7.49.3"
   peerDependencies:
     react: ^16.8.0 || ^17 || ^18
-  checksum: e982a4638d474bfd156a7d4ebb098065944895f62d8e0098195a2e0030106debea7262ddd58f920797f3b651fdc2a47831f89be0c7e0338c9cb8430fd3b202f1
+  checksum: 9769845e2749f5c9d1d033be3819bc572ffa67f19ec2e567c61a58d0d060107facdf8425aab253c2e667c00853b7706a50bd6739fca6228c284c9313420ca26f
   languageName: node
   linkType: hard
 
@@ -14130,15 +14148,15 @@ __metadata:
   resolution: "test-lib-panos-coreui@workspace:."
   dependencies:
     "@babel/core": ^7.23.7
-    "@babel/preset-env": ^7.23.7
+    "@babel/preset-env": ^7.23.8
     "@babel/preset-react": ^7.23.3
     "@babel/preset-typescript": ^7.23.3
     "@eslint/create-config": ^0.4.6
-    "@mantine/colors-generator": ^7.4.0
-    "@mantine/core": ^7.4.0
-    "@mantine/dates": ^7.4.0
-    "@mantine/hooks": ^7.4.0
-    "@mantine/notifications": ^7.4.0
+    "@mantine/colors-generator": ^7.4.1
+    "@mantine/core": ^7.4.1
+    "@mantine/dates": ^7.4.1
+    "@mantine/hooks": ^7.4.1
+    "@mantine/notifications": ^7.4.1
     "@rollup/plugin-babel": ^6.0.4
     "@rollup/plugin-commonjs": ^25.0.7
     "@rollup/plugin-node-resolve": ^15.2.3
@@ -14167,7 +14185,7 @@ __metadata:
     eslint: ^8.56.0
     eslint-config-standard-with-typescript: latest
     eslint-plugin-import: ^2.29.1
-    eslint-plugin-n: ^16.6.1
+    eslint-plugin-n: ^16.6.2
     eslint-plugin-promise: ^6.1.1
     eslint-plugin-react: latest
     eslint-plugin-react-hooks: ^4.6.0
@@ -14178,7 +14196,7 @@ __metadata:
     postcss-simple-vars: ^7.0.1
     react: ">=18.2.0"
     react-dom: ">=18.2.0"
-    react-hook-form: ">=7.49.2"
+    react-hook-form: ">=7.49.3"
     rollup: ^4.9.4
     rollup-plugin-copy: ^3.5.0
     rollup-plugin-generate-package-json: ^3.2.0

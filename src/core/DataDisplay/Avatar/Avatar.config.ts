@@ -8,7 +8,6 @@ import { rem } from "../.."
 
 export const AvatarConfig: ExtendsRootComponent<AvatarType> = {
     defaultProps: {
-        color: "majorelle-blue",
         radius: "md",
         w: rem(48),
         h: rem(48),
