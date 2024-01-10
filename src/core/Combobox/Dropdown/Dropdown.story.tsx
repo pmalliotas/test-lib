@@ -12,7 +12,7 @@ export function Usage() {
     label: "Filled",
     value: "filled"
   }, {
-    label: "Outline",
+    label: "Outline Test big text asdasdas dasdasdas",
     value: "outline"
   }]
 
@@ -25,9 +25,10 @@ export function Usage() {
         onChange={setValue}
         options={options}
         leftSection={<IconUser />}
+        width={"15rem"}
       >
         Light
       </Dropdown>
-    </div>
+    </div >
   )
 }

@@ -2,7 +2,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* padding: 1em 1.5em 1em 1em; */
   border: rem(1) solid var(--mantine-color-bright-gray-5);
 
   &:hover {
@@ -16,10 +15,15 @@
   &:focus {
     border: rem(1) solid var(--mantine-color-majorelle-blue-5);
   }
+  display: block;
+  max-width: 100%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .inputWrapper {
-  min-width: 10rem;
+  min-width: 12.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
