@@ -1,0 +1,49 @@
+.input {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 1em 1.5em 1em 1em; */
+  border: rem(1) solid var(--mantine-color-bright-gray-5);
+
+  &:hover {
+    border: rem(1) solid var(--mantine-color-silver-sand-5);
+  }
+
+  &::placeholder {
+    color: var(--mantine-color-silver-sand-5);
+  }
+
+  &:focus {
+    border: rem(1) solid var(--mantine-color-majorelle-blue-5);
+  }
+}
+
+.inputWrapper {
+  min-width: 10rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.inputSectionWithValue {
+  color: var(--mantine-color-majorelle-blue-5);
+  transform: scale(0.8);
+
+  &[data-position="left"] {
+    color: var(--mantine-color-eerie-black-6);
+  }
+}
+
+.inputSectionWithoutValue {
+  color: var(--mantine-color-majorelle-blue-5);
+  transform: scale(0.8);
+
+  &[data-position="left"] {
+    color: var(--mantine-color-silver-sand-5);
+  }
+}
+
+.dropdown {
+  color: var(--mantine-color-eerie-black-6);
+}
+

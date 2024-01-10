@@ -1,5 +1,6 @@
 export * from "./Autocomplete"
 export * from "./Combobox"
+export * from "./Dropdown"
 export * from "./MultiSelect"
 export * from "./Pill"
 export * from "./PillsInput"

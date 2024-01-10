@@ -12,6 +12,12 @@ export function Combobox(props: MantineComboboxProps) {
     )
 }
 
+Combobox.Target = MantineCombobox.Target
+Combobox.Dropdown = MantineCombobox.Dropdown
+Combobox.Options = MantineCombobox.Options
+Combobox.Option = MantineCombobox.Option
 Combobox.extend = MantineCombobox.extend
+
+export { ComboboxTarget, ComboboxDropdown, ComboboxOptions, ComboboxOption } from "@mantine/core"
 
 export default Combobox
