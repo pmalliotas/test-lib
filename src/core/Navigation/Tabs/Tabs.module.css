@@ -1,0 +1,27 @@
+.tab {
+  font-size: 0.875rem;
+  height: rem(48px);
+
+
+  &[data-active] {
+    color: var(--mantine-color-majorelle-blue-5);
+  }
+  
+  &:not([data-active]) {
+    color: var(--mantine-color-cool-grey-5);
+  }
+
+  &[disabled] {
+    color: var(--mantine-color-gainsboro-6);
+  }
+
+  &:hover {
+    background: transparent;
+    color: var(--mantine-color-eerie-black-6);
+  }
+}
+
+.tabSection {
+  height: 1.25em;
+  width: 1.25em;
+}

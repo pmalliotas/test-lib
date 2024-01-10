@@ -1,0 +1,53 @@
+[data-dates-dropdown=true] {
+  border: 1px solid var(--mantine-color-majorelle-blue-5);
+}
+
+.input {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+}
+
+.calendarHeaderLevel {
+}
+
+.sectionEnabled {
+  color: var(--mantine-color-majorelle-blue-5);
+  width: 1.5em;
+  height: 1.5em;
+  right: 1em;
+  top: 0.5em;
+}
+
+.sectionDisabled {
+  color: var(--mantine-color-majorelle-blue-1);
+  width: 1.5em;
+  height: 1.5em;
+  right: 1em;
+  top: 0.5em;
+}
+
+.calendarHeader {
+  display: flex;
+  align-items: center;
+}
+
+.calendarHeaderControl {
+  color: var(--mantine-color-majorelle-blue-5);
+  width: 2.5em;
+  height: 2.5em;
+  padding: 0.5em;
+}
+
+.day {
+  color: var(--mantine-color-eerie-black-5);
+
+  &[data-selected=true] {
+    color: #fff;
+  }
+}
+
+.weekday {
+  color: var(--mantine-color-silver-sand-5);
+}
