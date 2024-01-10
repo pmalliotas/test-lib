@@ -3,4 +3,4 @@
 @import "@mantine/notifications/styles.css";
 @import "@mantine/dropzone/styles.css";
 
-/* @import "./generated/styles.css" */
+@import "./generated/styles.css"

@@ -27,19 +27,22 @@ export function Dropzone(props: DropzoneProps) {
                 <Stack align="center" justify="center" gap="lg" miw={rem(280)} mih={rem(185)} style={{ pointerEvents: "none" }}>
                     <MantineDropzone.Accept>
                         <IconUpload
-                            style={{ width: "2rem", height: "2rem", color: "var(--mantine-color-blue-6)" }}
+                            style={{ width: "2rem", height: "2rem", color: "var(--mantine-color-fresh-sky-blue-6)" }}
                             stroke={1.5}
                         />
                     </MantineDropzone.Accept>
                     <MantineDropzone.Reject>
                         <IconX
-                            style={{ width: "2rem", height: "2rem", color: "var(--mantine-color-red-6)" }}
+                            style={{ width: "2rem", height: "2rem", color: "var(--mantine-color-coral-red-6)" }}
                             stroke={1.5}
                         />
                     </MantineDropzone.Reject>
                     <MantineDropzone.Idle>
                         <IconUpload
-                            style={{ width: "2rem", height: "2rem", color: "var(--mantine-color-cool-grey-5)" }}
+                            style={{
+                                width: "2rem", height: "2rem",
+                                color: props.disabled ? "var(--mantine-color-silver-sand-5)" : "var(--mantine-color-cool-grey-5)"
+                            }}
                             stroke={1.5}
                         />
                     </MantineDropzone.Idle>
@@ -47,7 +50,9 @@ export function Dropzone(props: DropzoneProps) {
                     <Stack justify="center" gap="0.5rem">
                         <Text
                             inline
-                            c="cool-grey"
+                            style={{
+                                color: props.disabled ? "var(--mantine-color-silver-sand-5)" : "var(--mantine-color-cool-grey-5)"
+                            }}
                         >
                             Drag files here to upload
                         </Text>
@@ -58,9 +63,9 @@ export function Dropzone(props: DropzoneProps) {
                                 textAlign: "center",
                                 textDecoration: "underline",
                                 textUnderlineOffset: rem(6),
-                                cursor: "pointer",
+                                cursor: props.disabled ? "default" : "pointer",
+                                color: props.disabled ? "var(--mantine-color-silver-sand-5)" : "var(--mantine-color-majorelle-blue-5)"
                             }}
-                            c="majorelle-blue"
                         >
                             or browse for files
                         </Text>

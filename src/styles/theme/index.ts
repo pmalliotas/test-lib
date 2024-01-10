@@ -1,11 +1,11 @@
 import { createTheme, rem, type MantineThemeOverride } from "@mantine/core"
 
 import styles from "./styles.module.css"
-import { Anchor, Avatar, Badge, Button, Checkbox, Chip, Notification, Tabs, Tooltip } from "../../core"
+import { Anchor, Avatar, Badge, Button, Checkbox, Chip, FileInput, Notification, Tabs, TextInput, Textarea, Tooltip } from "../../core"
 
 const DEFAULT_FONT_FAMILY = "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"
 import { ButtonConfig } from "../../core/Buttons/Button/Button.config"
-import { COLORS, GRAY_COLORS, SECONDARY_COLORS } from "../utils"
+import { COLORS } from "../utils"
 import { AvatarConfig } from "../../core/DataDisplay/Avatar/Avatar.config"
 import { CheckboxConfig } from "../../core/Inputs/Checkbox/Checkbox.config"
 import { TooltipConfig } from "../../core/Overlays/Tooltip/Tooltip.config"
@@ -16,6 +16,9 @@ import { BadgeConfig } from "../../core/DataDisplay/Badge/Badge.config"
 import { TabsConfig } from "../../core/Navigation/Tabs/Tabs.config"
 import { DatePickerInput } from "@mantine/dates"
 import { DatePickerInputConfig } from "../../dates/DatePickerInput/DatePickerInput.config"
+import { TextInputConfig } from "../../core/Inputs/TextInput/TextInput.config"
+import { TextareaConfig } from "../../core/Inputs/Textarea/TextArea.config"
+import { FileInputConfig } from "../../core/Inputs/FileInput/FileInput.config"
 
 export const theme: MantineThemeOverride = createTheme({
     activeClassName: styles.active,
@@ -27,6 +30,7 @@ export const theme: MantineThemeOverride = createTheme({
         lg: "74em",
         xl: "90em",
     },
+
     primaryColor: "majorelle-blue",
     colors: COLORS,
     fontFamily: "Verdana, sans-serif",
@@ -106,7 +110,9 @@ export const theme: MantineThemeOverride = createTheme({
         Tooltip: Tooltip.extend(TooltipConfig),
         Notification: Notification.extend(NotificationConfig),
         Tabs: Tabs.extend(TabsConfig),
-        DatePickerInput: DatePickerInput.extend(DatePickerInputConfig)
+        DatePickerInput: DatePickerInput.extend(DatePickerInputConfig),
+        TextInput: TextInput.extend(TextInputConfig),
+        Textarea: Textarea.extend(TextareaConfig),
     },
     other: {
 

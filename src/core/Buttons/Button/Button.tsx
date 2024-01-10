@@ -4,7 +4,6 @@ import { ButtonFactory, Button as MantineButton, polymorphicFactory } from "@man
 import { type ButtonProps as MantineButtonProps } from "@mantine/core"
 
 export type ButtonProps = MantineButtonProps & {
-    /** test disabled */
     disabled?: boolean
 }
 

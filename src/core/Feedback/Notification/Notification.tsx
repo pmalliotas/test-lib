@@ -5,8 +5,10 @@ import { type NotificationProps as MantineNotificationProps } from "@mantine/cor
 import { type NotificationFactory as MantineNotificationFactory } from "@mantine/core"
 
 import classes from "./Notification.module.css"
-import { IconAlertCircle, IconAlertTriangle, IconCircleCheck, IconCircleOff, IconInfoCircle } from "@tabler/icons-react"
+import { IconAlertTriangle, IconCircleCheck, IconInfoCircle } from "@tabler/icons-react"
 
+
+// eslint-disable-next-line react-refresh/only-export-components
 export enum NOTIFICATION_TYPES {
     INFO = "INFO",
     SUCCESS = "SUCCESS",
