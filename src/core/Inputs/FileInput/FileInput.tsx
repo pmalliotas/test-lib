@@ -26,7 +26,19 @@ export function FileInput(props: FileInputProps) {
             ref={fileInputRef}
             size="md"
             inputWrapperOrder={["label", "input", "description", "error"]}
-            rightSection={<Button onClick={() => fileInputRef.current?.click()} leftSection={<IconUpload />} color="eerie-black" w="10rem">Upload</Button>}
+            rightSection={(
+                <Button
+                    size="sm"
+                    onClick={() => fileInputRef.current?.click()}
+                    leftSection={<IconUpload />}
+                    color="eerie-black"
+                    style={{
+                        height: "2rem"
+                    }}
+                >
+                    Upload
+                </Button>
+            )}
             valueComponent={ValueComponent}
             {...props}
         />
@@ -43,11 +55,11 @@ const ValueComponent: FileInputProps["valueComponent"] = ({ value }) => {
         return (
             <PillGroup>
                 {value.map((file, index) => (
-                    <Pill key={index} withRemoveButton>{file.name}</Pill>
+                    <Pill size="md" radius="sm" key={index} withRemoveButton>{file.name}</Pill>
                 ))}
             </PillGroup>
         )
     }
 
-    return <Pill withRemoveButton>{value.name}</Pill>
+    return <Pill size="md" radius="sm" withRemoveButton>{value.name}</Pill>
 }

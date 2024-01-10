@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { IconPictureInPicture } from "@tabler/icons-react"
+import { IconPictureInPicture, IconUser } from "@tabler/icons-react"
 import { Accordion } from "./Accordion"
 
 export default { title: "Accordion" }
@@ -7,7 +7,7 @@ export default { title: "Accordion" }
 const _items = (
   <>
     <Accordion.Item value="customize">
-      <Accordion.Control>Customization</Accordion.Control>
+      <Accordion.Control icon={<IconUser />}>Customization</Accordion.Control>
       <Accordion.Panel>
         Colors, fonts, shadows and many other parts are customizable to fit your design needs
       </Accordion.Panel>
@@ -31,110 +31,16 @@ const _items = (
   </>
 )
 
-export const Variants = () => (
-  <>
-    <Accordion
-      defaultValue="flex"
-      style={{ maxWidth: 400 }}
-      mx="auto"
-      mt="xl"
-      variant="default"
-      radius="md"
-    >
-      {_items}
-    </Accordion>
-
-    <Accordion
-      defaultValue="flex"
-      style={{ maxWidth: 400 }}
-      mx="auto"
-      mt={50}
-      variant="contained"
-      radius="md"
-    >
-      {_items}
-    </Accordion>
-
-    <Accordion
-      defaultValue="flex"
-      style={{ maxWidth: 400 }}
-      mx="auto"
-      mt={50}
-      variant="filled"
-      radius="md"
-    >
-      {_items}
-    </Accordion>
-
-    <Accordion
-      defaultValue="flex"
-      style={{ maxWidth: 400 }}
-      mx="auto"
-      mt={50}
-      variant="separated"
-      radius="md"
-    >
-      {_items}
-    </Accordion>
-  </>
-)
-
-export const ChevronPositions = () => (
-  <>
-    <Accordion
-      defaultValue="flex"
-      style={{ maxWidth: 400 }}
-      mx="auto"
-      mt="xl"
-      variant="default"
-      radius="md"
-    >
-      {_items}
-    </Accordion>
-
-    <Accordion
-      defaultValue="flex"
-      style={{ maxWidth: 400 }}
-      mx="auto"
-      mt="xl"
-      variant="default"
-      radius="md"
-      chevronPosition="left"
-    >
-      {_items}
-    </Accordion>
-  </>
-)
-
-export const Multiple = () => (
-  <Accordion multiple defaultValue={["flex"]} style={{ maxWidth: 400 }} mx="auto">
-    {_items}
-  </Accordion>
-)
-
-export const ControlledSingle = () => {
-  const [value, setValue] = useState<string | null>(null)
-  return (
-    <Accordion value={value} onChange={setValue} style={{ maxWidth: 400 }} mx="auto">
-      {_items}
-    </Accordion>
-  )
-}
-
 export const ControlledMultiple = () => {
-  const [value, setValue] = useState<string[]>([])
+  const [value, setValue] = useState<string | string[] | null>([])
   return (
-    <Accordion multiple value={value} onChange={setValue} style={{ maxWidth: 400 }} mx="auto">
-      {_items}
-    </Accordion>
+    <div style={{ padding: 40, backgroundColor: "#F2F2F2" }}>
+      <Accordion multiple value={value} onChange={setValue} style={{ maxWidth: 400 }} mx="auto">
+        {_items}
+      </Accordion>
+    </div>
   )
 }
-
-export const NoLoop = () => (
-  <Accordion loop={false} style={{ maxWidth: 400 }} mx="auto">
-    {_items}
-  </Accordion>
-)
 
 export const Disabled = () => (
   <Accordion loop={false} style={{ maxWidth: 400 }} mx="auto">
@@ -160,12 +66,6 @@ export const Disabled = () => (
         keyboard
       </Accordion.Panel>
     </Accordion.Item>
-  </Accordion>
-)
-
-export const Unstyled = () => (
-  <Accordion unstyled style={{ maxWidth: 400 }} mx="auto">
-    {_items}
   </Accordion>
 )
 

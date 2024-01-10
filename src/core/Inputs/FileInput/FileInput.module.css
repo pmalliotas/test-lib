@@ -20,7 +20,8 @@
 }
 
 .input {
-  padding: 1em;
+  height: 3rem;
+  font-size: 0.875rem;
   border: rem(1) solid var(--mantine-color-gainsboro-5);
 
   &:hover {
