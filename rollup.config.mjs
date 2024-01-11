@@ -51,11 +51,11 @@ const commonPlugins = [
     prettier: true
   }),
   // terser(),
-  copy({
-    targets: [
-      { src: "src/styles/styles.css", dest: "dist/styles" },
-    ]
-  })
+  // copy({
+  //   targets: [
+  //     { src: "src/styles/styles.css", dest: "dist/styles" },
+  //   ]
+  // })
 ]
 
 // Returns rollup configuration for a given subpath
@@ -101,7 +101,7 @@ function subpath(commonPlugins, folder) {
 export default [
   // Build all components in ./src/*
   ...getSubpathFolders("./src").map((folder) => subpath(commonPlugins, folder)),
-
+  subpath(commonPlugins, "styles/theme")
   // Build the main file that includes all components and utils
   // {
   //   input: "src/index.ts",

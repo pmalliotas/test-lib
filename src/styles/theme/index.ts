@@ -3,6 +3,8 @@ import { createTheme, rem, type MantineThemeOverride } from "@mantine/core"
 import styles from "./styles.module.css"
 import { Anchor, Avatar, Badge, Button, Checkbox, Chip, Notification, Tabs, TextInput, Textarea, Tooltip } from "../../core"
 
+import "../styles.css"
+
 const DEFAULT_FONT_FAMILY = "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"
 import { ButtonConfig } from "../../core/Buttons/Button/Button.config"
 import { COLORS } from "../utils"

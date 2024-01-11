@@ -117,7 +117,6 @@ export function AsLink() {
       >
         Button
       </Button>
-      {/* @ts-expect-error - TODO sd */}
       <Button size="xl" onClick={(event) => event.preventDefault()}>
         Button
       </Button>
