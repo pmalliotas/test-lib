@@ -11,6 +11,7 @@ import svgr from "@svgr/rollup"
 import generatePackageJson from "rollup-plugin-generate-package-json"
 import replace from "@rollup/plugin-replace"
 import { getSubpathFolders } from "./scripts/buildUtils.mjs"
+import cssOnly from "rollup-plugin-css-only"
 
 // import cssOnly from "rollup-plugin-css-only"
 
@@ -25,7 +26,9 @@ const commonPlugins = [
     useTsconfigDeclarationDir: true,
   }),
 
-  nodeResolve(),
+  nodeResolve({
+    extensions: [".css"]
+  }),
   commonjs(),
   postcss({
     extract: true,
@@ -41,7 +44,8 @@ const commonPlugins = [
     inject: {
       insertAt: "top",
     },
-    extensions: [".css"]
+    extensions: [".css"],
+
   }),
   replace({
     __IS_DEV__: process.env.NODE_ENV === "development",
@@ -53,12 +57,12 @@ const commonPlugins = [
     prettier: true
   }),
   // terser(),
-  copy({
-    targets: [
-      // { src: "src/styles/styles.css", dest: "dist/styles" },
-      { src: "postcss.config.js", dest: "dist/config" },
-    ]
-  })
+  // copy({
+  //   targets: [
+  //     // { src: "src/styles/styles.css", dest: "dist/styles" },
+  //     { src: "postcss.config.js", dest: "dist/config" },
+  //   ]
+  // })
 ]
 
 // Returns rollup configuration for a given subpath
@@ -121,26 +125,7 @@ export default [
         format: "cjs",
       }
     ],
-    plugins: [
-      ...commonPlugins,
-      generatePackageJson({
-        baseContents: {
-          name: `${packageJson.name}`,
-          private: true,
-          sideEffects: false,
-          main: "./index.cjs.js",
-          module: "./index.esm.js",
-          types: "./index.d.ts",
-          peerDependencies: packageJson.peerDependencies,
-          files: [
-            "config/postcss.config.js",
-            "styles/index.esm.css"
-          ]
-        },
-        outputFolder: "dist"
-      }),
-    ],
-
+    plugins: commonPlugins,
     external,
     onwarn: function (warning, warn) {
       if (warning.code === "THIS_IS_UNDEFINED") {

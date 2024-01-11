@@ -3,9 +3,6 @@
 @import "@mantine/notifications/styles.css";
 @import "@mantine/dropzone/styles.css";
 
-/* @import "./generated/styles.css" */
-
-
 :root {
 	--mantine-color-eerie-black-0: #30303C;
 	--mantine-color-eerie-black-1: #2B2A38;
