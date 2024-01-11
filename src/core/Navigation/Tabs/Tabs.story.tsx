@@ -46,7 +46,7 @@ const verticalBase = (
       </Tabs.Tab>
     </Tabs.List>
 
-    <Tabs.Panel value="react" pl="sm" bg="red.0">
+    <Tabs.Panel value="react" pl="sm" bg="coral-red">
       React Panel
     </Tabs.Panel>
     <Tabs.Panel value="sv" pl="sm">
@@ -105,21 +105,21 @@ export function OutlineVariant() {
 export function PillsVariant() {
   return (
     <div>
-      <Wrapper variant="pills" color="green.9" defaultValue="react">
+      <Wrapper variant="pills" color="harlequin-green" defaultValue="react">
         {base}
       </Wrapper>
 
-      <Wrapper variant="pills" color="green.9" defaultValue="react" inverted>
+      <Wrapper variant="pills" color="harlequin-green" defaultValue="react" inverted>
         {base}
       </Wrapper>
 
-      <Wrapper variant="pills" color="green.9" defaultValue="react" orientation="vertical">
+      <Wrapper variant="pills" color="harlequin-green" defaultValue="react" orientation="vertical">
         {base}
       </Wrapper>
 
       <Wrapper
         variant="pills"
-        color="green.9"
+        color="harlequin-green"
         defaultValue="react"
         orientation="vertical"
         placement="right"

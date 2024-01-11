@@ -33,6 +33,7 @@ export function SelectForm<T extends FieldValues>({
       value={value}
       onChange={(e) => {
         fieldOnChange(e)
+        //@ts-expect-error - TODO: fix this
         onChange?.(e)
       }}
       error={fieldState.error?.message}

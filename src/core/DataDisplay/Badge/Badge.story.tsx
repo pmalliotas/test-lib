@@ -1,7 +1,7 @@
 import React from "react"
 import { Badge } from "./Badge"
 import { Group } from "../../Layout"
-import { Icon123, IconAccessPoint } from "@tabler/icons-react"
+import { IconAccessPoint } from "@tabler/icons-react"
 
 export default { title: "Badge" }
 

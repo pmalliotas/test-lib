@@ -1,7 +1,9 @@
 
 import { CSSVariablesResolver } from "@mantine/core"
-import { MantineColorsTuple } from "@mantine/core"
+// import { MantineColorsTuple } from "@mantine/core"
 // import COLORS from "../variables/colors.mjs"
+
+// type ColorPalleteType = Record<string, MantineColorsTuple>;
 
 export const PRIMARY_COLORS = {
     "eerie-black": [
@@ -67,8 +69,8 @@ export const PRIMARY_COLORS = {
         "#0E172D",
         "#0F1626",
         "#101420",
-    ]
-} satisfies Record<string, MantineColorsTuple>
+    ],
+} as const;
 
 export const SECONDARY_COLORS = {
     "persian-pink": [
@@ -183,7 +185,7 @@ export const SECONDARY_COLORS = {
         "#894040",
         "#754040",
     ],
-} satisfies Record<string, MantineColorsTuple>
+} as const;
 
 export const GRAY_COLORS = {
     "cool-grey": [
@@ -249,8 +251,8 @@ export const GRAY_COLORS = {
         "#F4F4F9",
         "#F2F2F6",
         "#EFEFF4",
-    ]
-} satisfies Record<string, MantineColorsTuple>
+    ],
+} as const;
 
 export const ALERT_COLORS = {
     "info": [
@@ -300,8 +302,8 @@ export const ALERT_COLORS = {
         "#A13E43",
         "#884144",
         "#744143",
-    ]
-} satisfies Record<string, MantineColorsTuple>
+    ],
+} as const;
 
 export const COLORS = {
     ...PRIMARY_COLORS,

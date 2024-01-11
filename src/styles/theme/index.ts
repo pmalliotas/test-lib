@@ -1,7 +1,7 @@
 import { createTheme, rem, type MantineThemeOverride } from "@mantine/core"
 
 import styles from "./styles.module.css"
-import { Anchor, Avatar, Badge, Button, Checkbox, Chip, FileInput, Notification, Tabs, TextInput, Textarea, Tooltip } from "../../core"
+import { Anchor, Avatar, Badge, Button, Checkbox, Chip, Notification, Tabs, TextInput, Textarea, Tooltip } from "../../core"
 
 const DEFAULT_FONT_FAMILY = "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"
 import { ButtonConfig } from "../../core/Buttons/Button/Button.config"
@@ -17,7 +17,7 @@ import { TabsConfig } from "../../core/Navigation/Tabs/Tabs.config"
 import { DatePickerInput } from "@mantine/dates"
 import { DatePickerInputConfig } from "../../dates/DatePickerInput/DatePickerInput.config"
 import { TextInputConfig } from "../../core/Inputs/TextInput/TextInput.config"
-import { TextareaConfig } from "../../core/Inputs/Textarea/TextArea.config"
+import { TextareaConfig } from "../../core/Inputs/Textarea/Textarea.config"
 
 export const theme: MantineThemeOverride = createTheme({
     activeClassName: styles.active,

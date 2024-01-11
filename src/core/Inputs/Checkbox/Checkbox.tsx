@@ -25,5 +25,5 @@ Checkbox.Group = MantineCheckbox.Group
 Checkbox.extend = MantineCheckbox.extend
 
 
-export { CheckboxGroup } from "@mantine/core"
+export { CheckboxGroup, type CheckboxGroupProps } from "@mantine/core"
 export default Checkbox

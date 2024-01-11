@@ -25,4 +25,4 @@ export function Radio(props: RadioProps) {
 Radio.Group = MantineRadio.Group
 Radio.extend = MantineRadio.extend
 
-export { RadioGroup } from "@mantine/core"
+export { RadioGroup, type RadioGroupProps } from "@mantine/core"

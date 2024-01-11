@@ -26,4 +26,4 @@ export function Switch(props: SwitchProps) {
 Switch.Group = MantineSwitch.Group
 Switch.extend = MantineSwitch.extend
 
-export { SwitchGroup } from "@mantine/core"
+export { SwitchGroup,type SwitchGroupProps } from "@mantine/core"

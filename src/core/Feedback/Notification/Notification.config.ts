@@ -1,7 +1,6 @@
 import { ExtendsRootComponent } from "@mantine/core/lib/core/factory/factory"
 import { rem } from "@mantine/core"
 import { NOTIFICATION_TYPES, NotificationFactory } from "./Notification"
-import { IconAlertCircle, IconAlertTriangle, IconCircleCheck, IconCircleOff, IconInfoCircle } from "@tabler/icons-react"
 
 export const NotificationConfig: ExtendsRootComponent<NotificationFactory> = {
     defaultProps: {

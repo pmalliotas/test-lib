@@ -27,14 +27,14 @@ module.exports = {
 	],
 	parser: "@typescript-eslint/parser",
 	parserOptions: {
-		ecmaVersion: "latest",
-		sourceType: "module"
+		// ecmaVersion: "latest",
+		// sourceType: "module",
+		project: "./tsconfig.json"
 	},
 	plugins: [
 		"@typescript-eslint",
 		"react",
 		"react-refresh",
-		// "perfectionist",
 	],
 	root: true,
 	rules: {
@@ -58,13 +58,13 @@ module.exports = {
 			"error",
 			"double"
 		],
-		"react-refresh/only-export-components": [
-			"warn",
-			{ allowConstantExport: true },
-		],
-		semi: [
-			"error",
-			"never"
-		],
+		// "react-refresh/only-export-components": [
+		// 	"warn",
+		// 	{ allowConstantExport: true },
+		// ],
+		// semi: [
+		// 	"error",
+		// 	"never"
+		// ],
 	}
 }

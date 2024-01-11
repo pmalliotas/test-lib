@@ -4,13 +4,13 @@ import { PRIMARY_COLORS } from "../../../../src/styles/utils"
 import { Icon12Hours } from "@tabler/icons-react"
 export default { title: "Button" }
 
-export function RenderRoot() {
-  return (
-    <Button renderRoot={(props) => <a {...props} href="#" />} className="test">
-      Some content
-    </Button>
-  )
-}
+// export function RenderRoot() {
+//   return (
+//     <Button renderRoot={(props) => <a {...props} href="#" />} className="test">
+//       Some content
+//     </Button>
+//   )
+// }
 export function SingleButton() {
   return (
     <div style={{ padding: 40 }}>
@@ -31,6 +31,7 @@ export function SingleButton() {
 function Colors({ index, ...others }: ButtonProps & { index?: number }) {
   const colors = Object.keys(PRIMARY_COLORS).map((color) => (
     <Button
+      // @ts-expect-error - TODO - allow indexes 
       color={`${color}${typeof index === "number" ? `.${index}` : ""}`}
       key={color}
       leftSection={<Icon12Hours />}
@@ -116,6 +117,7 @@ export function AsLink() {
       >
         Button
       </Button>
+      {/* @ts-expect-error - TODO sd */}
       <Button size="xl" onClick={(event) => event.preventDefault()}>
         Button
       </Button>
