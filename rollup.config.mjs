@@ -122,6 +122,12 @@ export default [
       }
     ],
     plugins: commonPlugins,
+    packageJson: {
+      files: [
+        "config",
+        "styles/index.esm.css"
+      ]
+    },
     external,
     onwarn: function (warning, warn) {
       if (warning.code === "THIS_IS_UNDEFINED") {
