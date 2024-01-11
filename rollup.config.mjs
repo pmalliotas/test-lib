@@ -121,13 +121,26 @@ export default [
         format: "cjs",
       }
     ],
-    plugins: commonPlugins,
-    packageJson: {
-      files: [
-        "config",
-        "styles/index.esm.css"
-      ]
-    },
+    plugins: [
+      ...commonPlugins,
+      generatePackageJson({
+        baseContents: {
+          name: `${packageJson.name}`,
+          private: true,
+          sideEffects: false,
+          main: "./index.cjs.js",
+          module: "./index.esm.js",
+          types: "./index.d.ts",
+          peerDependencies: packageJson.peerDependencies,
+          files: [
+            "config/postcss.config.js",
+            "styles/index.esm.css"
+          ]
+        },
+        outputFolder: "dist"
+      }),
+    ],
+
     external,
     onwarn: function (warning, warn) {
       if (warning.code === "THIS_IS_UNDEFINED") {
