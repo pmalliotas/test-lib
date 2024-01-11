@@ -101,29 +101,29 @@ function subpath(commonPlugins, folder) {
 export default [
   // Build all components in ./src/*
   ...getSubpathFolders("./src").map((folder) => subpath(commonPlugins, folder)),
-  subpath(commonPlugins, "styles/theme")
+  subpath(commonPlugins, "styles/theme"),
   // Build the main file that includes all components and utils
-  // {
-  //   input: "src/index.ts",
-  //   output: [
-  //     {
-  //       file: "dist/index.esm.js",
-  //       exports: "named",
-  //       format: "esm",
-  //     },
-  //     {
-  //       file: "dist/index.cjs.js",
-  //       exports: "named",
-  //       format: "cjs",
-  //     }
-  //   ],
-  //   plugins: commonPlugins,
-  //   external,
-  //   onwarn: function (warning, warn) {
-  //     if (warning.code === "THIS_IS_UNDEFINED") {
-  //       return
-  //     }
-  //     warn(warning)
-  //   },
-  // },
+  {
+    input: "src/index.ts",
+    output: [
+      {
+        file: "dist/index.esm.js",
+        exports: "named",
+        format: "esm",
+      },
+      {
+        file: "dist/index.cjs.js",
+        exports: "named",
+        format: "cjs",
+      }
+    ],
+    plugins: commonPlugins,
+    external,
+    onwarn: function (warning, warn) {
+      if (warning.code === "THIS_IS_UNDEFINED") {
+        return
+      }
+      warn(warning)
+    },
+  },
 ]
