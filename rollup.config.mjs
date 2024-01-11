@@ -53,11 +53,12 @@ const commonPlugins = [
     prettier: true
   }),
   // terser(),
-  // copy({
-  //   targets: [
-  //     { src: "src/styles/styles.css", dest: "dist/styles" },
-  //   ]
-  // })
+  copy({
+    targets: [
+      // { src: "src/styles/styles.css", dest: "dist/styles" },
+      { src: "postcss.config.js", dest: "dist/config" },
+    ]
+  })
 ]
 
 // Returns rollup configuration for a given subpath
