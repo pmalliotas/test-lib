@@ -5,7 +5,7 @@ import { Anchor, Avatar, Badge, Button, Checkbox, Chip, Notification, Tabs, Text
 
 import "../styles.css"
 
-const DEFAULT_FONT_FAMILY = "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"
+const DEFAULT_FONT_FAMILY = "-apple-system BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji"
 import { ButtonConfig } from "../../core/Buttons/Button/Button.config"
 import { COLORS } from "../utils"
 import { AvatarConfig } from "../../core/DataDisplay/Avatar/Avatar.config"
@@ -33,7 +33,7 @@ export const theme: MantineThemeOverride = createTheme({
     },
     primaryColor: "majorelle-blue",
     colors: COLORS,
-    fontFamily: "Verdana, sans-serif",
+    fontFamily: "Segoe UI, Roboto, Verdana, sans-serif",
     fontFamilyMonospace: "Monaco, Courier, monospace",
     fontSizes: {
         xs: rem(10),

@@ -12,6 +12,8 @@ import generatePackageJson from "rollup-plugin-generate-package-json"
 import replace from "@rollup/plugin-replace"
 import { getSubpathFolders } from "./scripts/buildUtils.mjs"
 
+// import cssOnly from "rollup-plugin-css-only"
+
 const external = [
   ...Object.keys(packageJson.dependencies || {}),
   ...Object.keys(packageJson.peerDependencies || {}),
@@ -59,7 +61,7 @@ const commonPlugins = [
 ]
 
 // Returns rollup configuration for a given subpath
-function subpath(commonPlugins, folder) {
+function subpath(commonPlugins, folder, extraPlugins = []) {
   return {
     input: `src/${folder}/index.ts`,
     output: [
@@ -76,6 +78,7 @@ function subpath(commonPlugins, folder) {
     ],
     plugins: [
       ...commonPlugins,
+      ...extraPlugins,
       generatePackageJson({
         baseContents: {
           name: `${packageJson.name}/${folder}`,
